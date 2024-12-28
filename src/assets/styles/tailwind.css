@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer utilities {
   .bg-page {
-    background-color: var(--aw-color-bg-page);
+    background: linear-gradient(to right, #DAD3D0 50%, #EBE6E2 50%);
   }
   .bg-dark {
     background-color: var(--aw-color-bg-page-dark);

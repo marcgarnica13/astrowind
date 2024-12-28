@@ -273,6 +273,12 @@ export interface Steps extends Omit<Headline, 'classes'>, Widget {
   isReversed?: boolean;
 }
 
+export interface HeroTitle extends Omit<Headline, 'classes'>, Widget {
+  actions?: string | CallToAction[];
+  image?: string | Image;
+  isReversed?: boolean;
+}
+
 export interface Content extends Omit<Headline, 'classes'>, Widget {
   content?: string;
   image?: string | unknown;
