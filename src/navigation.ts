@@ -36,7 +36,7 @@ export const headerData = {
       ],
     }
   ],
-  actions: [{ text: 'Book a session', href: 'mailto:haberstock.stefanie@gmail.com' }],
+  actions: [{ text: 'Book a session', variant: 'primary', href: 'mailto:haberstock.stefanie@gmail.com' }],
 };
 
 export const footerData = {
