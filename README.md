@@ -247,7 +247,7 @@ To customize Font families, Colors or more Elements refer to the following files
 You can create an optimized production build with:
 
 ```shell
-npm run build
+npm run build 
 ```
 
 Now, your website is ready to be deployed. All generated files are located at
