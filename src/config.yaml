@@ -1,6 +1,6 @@
 site:
   name: STEFFI
-  site: 'https://astrowind.vercel.app'
+  site: 'https://marcgarnica13.github.io/astrowind/'
   base: '/'
   trailingSlash: false
 
