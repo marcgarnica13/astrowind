@@ -1,4 +1,4 @@
-import { getAsset, getBlogPermalink, getPermalink } from './utils/permalinks';
+import { getBlogPermalink, getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -87,18 +87,17 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'home', href: getPermalink('/') },
+    { text: 'about', href: getPermalink('/about') },
+    { text: 'services', href: getPermalink('/services') },
+    { text: 'blog', href: getPermalink('/blog') },
+    { text: 'policies', href: getPermalink('/policies') },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/steffi.hx/' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/stefanie-haberstock-1780431a8/' },
   ],
   footNote: `
-    <img class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm" src="https://onwidget.com/favicon/favicon-32x32.png" alt="onWidget logo" loading="lazy"></img>
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
+    Made using<a class="text-blue-600 underline dark:text-muted" href="https://astro.build/themes/details/astrowind/"> AstroWind</a> · All rights reserved.
   `,
 };
