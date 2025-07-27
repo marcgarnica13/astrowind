@@ -4,11 +4,11 @@ export const headerData = {
   links: [
     {
       text: 'about',
-      href: getPermalink('/about')
+      href: getPermalink('/about'),
     },
     {
       text: 'services',
-      href: getPermalink('/services')
+      href: getPermalink('/services'),
     },
     {
       text: 'Blog (example dropdown)',
@@ -34,9 +34,9 @@ export const headerData = {
           href: getPermalink('astro', 'tag'),
         },
       ],
-    }
+    },
   ],
-  actions: [{ text: 'Book a session', variant: 'primary', href: 'mailto:haberstock.stefanie@gmail.com' }],
+  actions: [{ text: 'Free consultation', variant: 'primary', href: 'mailto:haberstock.stefanie@gmail.com' }],
 };
 
 export const footerData = {
@@ -95,7 +95,11 @@ export const footerData = {
   ],
   socialLinks: [
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/steffi.hx/' },
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/stefanie-haberstock-1780431a8/' },
+    {
+      ariaLabel: 'LinkedIn',
+      icon: 'tabler:brand-linkedin',
+      href: 'https://www.linkedin.com/in/stefanie-haberstock-1780431a8/',
+    },
   ],
   footNote: `
     Made using<a class="text-blue-600 underline dark:text-muted" href="https://astro.build/themes/details/astrowind/"> AstroWind</a> · All rights reserved.
