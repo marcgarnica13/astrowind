@@ -1,0 +1,47 @@
+# STEFFI AstroWind Project - Onboarded ✓
+
+## Project Overview
+This is a customized version of the AstroWind template - a high-performance website template built with Astro 5.0 and Tailwind CSS. The project is named "STEFFI" and is deployed to GitHub Pages.
+
+## Key Information
+- **Framework**: Astro 5.0 with static site generation
+- **Styling**: Tailwind CSS with custom theme support (currently set to light:only)
+- **Language**: TypeScript
+- **Package Manager**: npm
+- **Node Version**: 18.17.1+ | 20.3.0+ | 21.0.0+
+
+## Repository Details
+- **GitHub Repository**: marcgarnica13/astrowind
+- **Live Site**: https://marcgarnica13.github.io/astrowind
+- **Base Path**: /astrowind (configured for GitHub Pages)
+
+## Development Quick Start
+```bash
+npm install       # Install dependencies
+npm run dev       # Start dev server at localhost:4321
+npm run build     # Build for production
+npm run preview   # Preview production build
+```
+
+## Code Quality Commands
+```bash
+npm run check     # Run all checks (Astro, ESLint, Prettier)
+npm run fix       # Auto-fix ESLint and Prettier issues
+```
+
+## Deployment
+The project is configured for GitHub Pages deployment via GitHub Actions. Pushing to the `main` branch triggers automatic deployment.
+
+## Project Status
+- Multiple pages have been modified (see git status)
+- New CV PDF asset added
+- Policies page created
+- All changes are uncommitted
+
+## Key Features
+- SEO optimized with sitemap generation
+- Blog system with categories and tags
+- Image optimization with Astro Assets
+- Analytics integration ready
+- Dark mode support (currently disabled)
+- Responsive design with RTL support
