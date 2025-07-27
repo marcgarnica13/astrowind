@@ -1,0 +1,101 @@
+{
+  "pageTitle": "Dienstleistungen",
+  "hero": {
+    "title": "Transformieren Sie Ihre Führung & Ihr Team",
+    "subtitle": "Umfassende Lösungen für nachhaltigen Organisationserfolg"
+  },
+  "services": {
+    "executiveCoaching": {
+      "title": "Executive Coaching",
+      "description": "Einzelcoaching für Führungskräfte",
+      "features": [
+        "Persönliche Führungsanalyse",
+        "360-Grad-Feedback-Integration",
+        "Entwicklung strategischen Denkens",
+        "Verbesserung emotionaler Intelligenz",
+        "Work-Life-Integration Strategien"
+      ]
+    },
+    "teamDevelopment": {
+      "title": "Teamentwicklung",
+      "description": "Aufbau leistungsstarker, zusammenhaltender Teams",
+      "features": [
+        "Teamdynamik-Bewertung",
+        "Vertrauens- und Zusammenarbeitsworkshops",
+        "Kommunikationsverbesserung",
+        "Konfliktlösungsstrategien",
+        "Leistungsoptimierung"
+      ]
+    },
+    "leadershipPrograms": {
+      "title": "Führungskräfteentwicklungsprogramme",
+      "description": "Umfassende Programme für aufstrebende und etablierte Führungskräfte",
+      "features": [
+        "Maßgeschneidertes Curriculum-Design",
+        "Mehrteilige Lernreisen",
+        "Peer-Coaching-Kreise",
+        "Action-Learning-Projekte",
+        "ROI-Messung"
+      ]
+    },
+    "workshopsFacilitation": {
+      "title": "Workshops & Moderation",
+      "description": "Interaktive Sitzungen zur Kompetenzentwicklung",
+      "features": [
+        "Maßgeschneidertes Workshop-Design",
+        "Virtuelle und Präsenzoptionen",
+        "Engagierte Moderationsmethoden",
+        "Praktische Tools und Frameworks",
+        "Nachbetreuung nach Workshops"
+      ]
+    },
+    "organizationalWellbeing": {
+      "title": "Organisationales Wohlbefinden",
+      "description": "Integration psychischer Gesundheit in Ihre Kultur",
+      "features": [
+        "Entwicklung von Wohlbefindensstrategien",
+        "Training zur psychischen Gesundheit",
+        "Resilienz-Aufbauprogramme",
+        "Burnout-Präventionsinitiativen",
+        "Unterstützung bei Kulturtransformation"
+      ]
+    },
+    "changeManagement": {
+      "title": "Change Management",
+      "description": "Erfolgreiche Organisationstransformation begleiten",
+      "features": [
+        "Bewertung der Veränderungsbereitschaft",
+        "Stakeholder-Engagement-Planung",
+        "Kommunikationsstrategie",
+        "Widerstandsmanagement",
+        "Nachhaltige Veränderungsimplementierung"
+      ]
+    }
+  },
+  "process": {
+    "title": "Wie wir zusammenarbeiten",
+    "steps": {
+      "discovery": {
+        "title": "Entdeckung",
+        "description": "Verstehen Ihres einzigartigen Kontexts und Ihrer Ziele"
+      },
+      "design": {
+        "title": "Design",
+        "description": "Maßgeschneiderte Lösungen für Ihre Bedürfnisse erstellen"
+      },
+      "deliver": {
+        "title": "Durchführung",
+        "description": "Implementierung mit Exzellenz und Engagement"
+      },
+      "sustain": {
+        "title": "Nachhaltigkeit",
+        "description": "Dauerhafte Wirkung und kontinuierliches Wachstum sicherstellen"
+      }
+    }
+  },
+  "cta": {
+    "title": "Bereit zur Transformation?",
+    "description": "Lassen Sie uns besprechen, wie diese Dienstleistungen Ihre Ziele unterstützen können",
+    "button": "Beratung vereinbaren"
+  }
+}

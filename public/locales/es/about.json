@@ -1,0 +1,47 @@
+{
+  "pageTitle": "Acerca de",
+  "hero": {
+    "title": "Acerca de Steffi Haberstock",
+    "subtitle": "Coach de Liderazgo | Desarrolladora de Equipos | Defensora de la Salud Mental"
+  },
+  "intro": {
+    "title": "Mi trayectoria",
+    "content": "Con más de 15 años de experiencia en desarrollo organizacional y coaching de liderazgo, he dedicado mi carrera a ayudar a individuos y equipos a desbloquear su máximo potencial mientras mantienen su bienestar."
+  },
+  "mission": {
+    "title": "Mi misión",
+    "content": "Crear lugares de trabajo donde coexistan el alto rendimiento y la conexión humana, donde los líderes inspiren a través de la empatía, y donde los equipos prosperen mediante la confianza y la colaboración."
+  },
+  "values": {
+    "title": "Valores fundamentales",
+    "authenticity": {
+      "title": "Autenticidad",
+      "description": "Ser genuino y verdadero en todas las interacciones"
+    },
+    "empathy": {
+      "title": "Empatía",
+      "description": "Comprender y conectar con las experiencias de otros"
+    },
+    "growth": {
+      "title": "Crecimiento",
+      "description": "Aprendizaje y desarrollo continuo"
+    },
+    "balance": {
+      "title": "Equilibrio",
+      "description": "Integrar el bienestar con el rendimiento"
+    }
+  },
+  "experience": {
+    "title": "Experiencia profesional",
+    "description": "Mi experiencia abarca diversas industrias y culturas organizacionales, aportando una perspectiva única a cada compromiso."
+  },
+  "approach": {
+    "title": "Mi enfoque",
+    "description": "Creo en prácticas basadas en evidencia combinadas con una comprensión humana profunda. Mi metodología integra las últimas investigaciones en neurociencia, psicología y comportamiento organizacional."
+  },
+  "cta": {
+    "title": "Conectemos",
+    "description": "¿Listo para explorar cómo podemos trabajar juntos?",
+    "button": "Programar una conversación"
+  }
+}

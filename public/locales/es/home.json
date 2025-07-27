@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "title": "Empoderando mentes. Desarrollando equipos. Transformando el liderazgo.",
+    "tagline": "Hablemos.",
+    "primaryAction": "Consulta gratuita",
+    "secondaryAction": "Explora mis servicios"
+  },
+  "bigNote": {
+    "title": "Donde la conexión humana se encuentra con el alto rendimiento",
+    "exploreServices": "Explora mis servicios"
+  },
+  "features": {
+    "sectionTitle": "Lo que ofrezco",
+    "title": "Ofertas principales",
+    "subtitle": "En el corazón de mi trabajo está la creencia de que el rendimiento sostenible y el bienestar no son mutuamente excluyentes. Me especializo en:",
+    "items": {
+      "leadershipDevelopment": {
+        "title": "Desarrollo de Liderazgo",
+        "description": "Empoderar a los líderes con las herramientas y la mentalidad para navegar la complejidad e inspirar a sus equipos."
+      },
+      "teamCoaching": {
+        "title": "Coaching de Equipos",
+        "description": "Crear equipos de alto rendimiento mediante mejor comunicación, confianza y colaboración."
+      },
+      "mentalHealthAdvocacy": {
+        "title": "Promoción de la Salud Mental",
+        "description": "Integrar el bienestar mental en la cultura organizacional para el éxito sostenible."
+      },
+      "changeManagement": {
+        "title": "Gestión del Cambio",
+        "description": "Guiar a las organizaciones a través de la transformación con enfoques centrados en las personas."
+      },
+      "executiveCoaching": {
+        "title": "Coaching Ejecutivo",
+        "description": "Coaching individual para líderes senior para mejorar su impacto y efectividad."
+      },
+      "workshopsFacilitation": {
+        "title": "Talleres y Facilitación",
+        "description": "Sesiones interactivas diseñadas para desarrollar habilidades y fomentar conexiones significativas."
+      }
+    }
+  },
+  "steps": {
+    "sectionTitle": "Mi enfoque",
+    "title": "Cómo trabajo",
+    "subtitle": "Mi enfoque se basa en crear cambios sostenibles a través de la conexión humana y prácticas basadas en evidencia."
+  },
+  "content": {
+    "title": "Uniendo la conexión humana y el alto rendimiento",
+    "subtitle": "Combino amplia experiencia en desarrollo de liderazgo con una comprensión profunda de la psicología humana para crear experiencias transformadoras.",
+    "description": "Con más de 15 años de experiencia trabajando con organizaciones globales, he sido testigo de primera mano de cómo los equipos más exitosos son aquellos que priorizan tanto el rendimiento como las personas. Mi metodología integra la ciencia del liderazgo de vanguardia con herramientas prácticas que impulsan resultados reales.",
+    "actions": {
+      "moreAboutMe": "Más sobre mí",
+      "schedule": "Programar una conversación"
+    }
+  },
+  "stats": {
+    "stat1": {
+      "amount": "15+",
+      "description": "Años de experiencia"
+    },
+    "stat2": {
+      "amount": "500+",
+      "description": "Líderes entrenados"
+    },
+    "stat3": {
+      "amount": "50+",
+      "description": "Organizaciones atendidas"
+    },
+    "stat4": {
+      "amount": "98%",
+      "description": "Satisfacción del cliente"
+    }
+  },
+  "testimonials": {
+    "title": "Lo que dicen los clientes",
+    "subtitle": "Descubre lo que los clientes tienen que decir sobre sus experiencias transformadoras."
+  },
+  "faqs": {
+    "sectionTitle": "Preguntas frecuentes",
+    "title": "Preguntas frecuentes",
+    "subtitle": "Encuentra respuestas a preguntas comunes sobre mis servicios y enfoque."
+  },
+  "callToAction": {
+    "sectionTitle": "¿Listo para transformar?",
+    "title": "Comienza tu viaje hoy",
+    "subtitle": "Ya sea que busques desarrollar tus habilidades de liderazgo, transformar tu equipo o crear una cultura organizacional más saludable, estoy aquí para ayudar.",
+    "primaryAction": "Programar consulta gratuita"
+  },
+  "blog": {
+    "sectionTitle": "Últimas perspectivas",
+    "title": "Artículos recientes",
+    "viewAllPosts": "Ver todas las publicaciones"
+  }
+}

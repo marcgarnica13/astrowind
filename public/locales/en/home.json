@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "title": "Empowering Minds. Developing Teams. Transforming Leadership.",
+    "tagline": "Let's talk.",
+    "primaryAction": "Free consultation",
+    "secondaryAction": "Explore my services"
+  },
+  "bigNote": {
+    "title": "Where human connection meets high performance",
+    "exploreServices": "Explore my services"
+  },
+  "features": {
+    "sectionTitle": "What I offer",
+    "title": "Key offerings",
+    "subtitle": "At the heart of my work lies the belief that sustainable performance and well-being are not mutually exclusive. I specialize in:",
+    "items": {
+      "leadershipDevelopment": {
+        "title": "Leadership Development",
+        "description": "Empowering leaders with the tools and mindset to navigate complexity and inspire their teams."
+      },
+      "teamCoaching": {
+        "title": "Team Coaching",
+        "description": "Creating high-performing teams through improved communication, trust, and collaboration."
+      },
+      "mentalHealthAdvocacy": {
+        "title": "Mental Health Advocacy",
+        "description": "Integrating mental wellness into organizational culture for sustainable success."
+      },
+      "changeManagement": {
+        "title": "Change Management",
+        "description": "Guiding organizations through transformation with human-centered approaches."
+      },
+      "executiveCoaching": {
+        "title": "Executive Coaching",
+        "description": "One-on-one coaching for senior leaders to enhance their impact and effectiveness."
+      },
+      "workshopsFacilitation": {
+        "title": "Workshops & Facilitation",
+        "description": "Interactive sessions designed to build skills and foster meaningful connections."
+      }
+    }
+  },
+  "steps": {
+    "sectionTitle": "My approach",
+    "title": "How I work",
+    "subtitle": "My approach is rooted in creating sustainable change through human connection and evidence-based practices."
+  },
+  "content": {
+    "title": "Bridging Human Connection and High Performance",
+    "subtitle": "I combine extensive experience in leadership development with a deep understanding of human psychology to create transformative experiences.",
+    "description": "With over 15 years of experience working with global organizations, I've witnessed firsthand how the most successful teams are those that prioritize both performance and people. My methodology integrates cutting-edge leadership science with practical tools that drive real results.",
+    "actions": {
+      "moreAboutMe": "More about me",
+      "schedule": "Schedule a conversation"
+    }
+  },
+  "stats": {
+    "stat1": {
+      "amount": "15+",
+      "description": "Years of Experience"
+    },
+    "stat2": {
+      "amount": "500+",
+      "description": "Leaders Coached"
+    },
+    "stat3": {
+      "amount": "50+",
+      "description": "Organizations Served"
+    },
+    "stat4": {
+      "amount": "98%",
+      "description": "Client Satisfaction"
+    }
+  },
+  "testimonials": {
+    "title": "What clients say",
+    "subtitle": "Discover what clients have to say about their transformative experiences."
+  },
+  "faqs": {
+    "sectionTitle": "FAQs",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about my services and approach."
+  },
+  "callToAction": {
+    "sectionTitle": "Ready to transform?",
+    "title": "Start your journey today",
+    "subtitle": "Whether you're looking to develop your leadership skills, transform your team, or create a healthier organizational culture, I'm here to help.",
+    "primaryAction": "Schedule a free consultation"
+  },
+  "blog": {
+    "sectionTitle": "Latest insights",
+    "title": "Recent articles",
+    "viewAllPosts": "View all posts"
+  }
+}

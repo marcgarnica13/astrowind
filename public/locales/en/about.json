@@ -1,0 +1,47 @@
+{
+  "pageTitle": "About",
+  "hero": {
+    "title": "About Steffi Haberstock",
+    "subtitle": "Leadership Coach | Team Developer | Mental Health Advocate"
+  },
+  "intro": {
+    "title": "My Journey",
+    "content": "With over 15 years of experience in organizational development and leadership coaching, I've dedicated my career to helping individuals and teams unlock their full potential while maintaining their well-being."
+  },
+  "mission": {
+    "title": "My Mission",
+    "content": "To create workplaces where high performance and human connection coexist, where leaders inspire through empathy, and where teams thrive through trust and collaboration."
+  },
+  "values": {
+    "title": "Core Values",
+    "authenticity": {
+      "title": "Authenticity",
+      "description": "Being genuine and true in all interactions"
+    },
+    "empathy": {
+      "title": "Empathy",
+      "description": "Understanding and connecting with others' experiences"
+    },
+    "growth": {
+      "title": "Growth",
+      "description": "Continuous learning and development"
+    },
+    "balance": {
+      "title": "Balance",
+      "description": "Integrating well-being with performance"
+    }
+  },
+  "experience": {
+    "title": "Professional Background",
+    "description": "My expertise spans across various industries and organizational cultures, bringing a unique perspective to each engagement."
+  },
+  "approach": {
+    "title": "My Approach",
+    "description": "I believe in evidence-based practices combined with deep human understanding. My methodology integrates the latest research in neuroscience, psychology, and organizational behavior."
+  },
+  "cta": {
+    "title": "Let's Connect",
+    "description": "Ready to explore how we can work together?",
+    "button": "Schedule a conversation"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "pageTitle": "Servicios",
+  "hero": {
+    "title": "Transforma tu liderazgo y equipo",
+    "subtitle": "Soluciones integrales para el éxito organizacional sostenible"
+  },
+  "services": {
+    "executiveCoaching": {
+      "title": "Coaching Ejecutivo",
+      "description": "Coaching individual para líderes senior",
+      "features": [
+        "Evaluación personal de liderazgo",
+        "Integración de feedback 360 grados",
+        "Desarrollo del pensamiento estratégico",
+        "Mejora de la inteligencia emocional",
+        "Estrategias de integración trabajo-vida"
+      ]
+    },
+    "teamDevelopment": {
+      "title": "Desarrollo de Equipos",
+      "description": "Construyendo equipos cohesivos de alto rendimiento",
+      "features": [
+        "Evaluación de dinámicas de equipo",
+        "Talleres de confianza y colaboración",
+        "Mejora de la comunicación",
+        "Estrategias de resolución de conflictos",
+        "Optimización del rendimiento"
+      ]
+    },
+    "leadershipPrograms": {
+      "title": "Programas de Desarrollo de Liderazgo",
+      "description": "Programas integrales para líderes emergentes y establecidos",
+      "features": [
+        "Diseño de currículum personalizado",
+        "Viajes de aprendizaje multi-módulo",
+        "Círculos de coaching entre pares",
+        "Proyectos de aprendizaje en acción",
+        "Medición del ROI"
+      ]
+    },
+    "workshopsFacilitation": {
+      "title": "Talleres y Facilitación",
+      "description": "Sesiones interactivas para el desarrollo de habilidades",
+      "features": [
+        "Diseño de talleres personalizados",
+        "Opciones virtuales y presenciales",
+        "Métodos de facilitación atractivos",
+        "Herramientas y marcos prácticos",
+        "Apoyo posterior al taller"
+      ]
+    },
+    "organizationalWellbeing": {
+      "title": "Bienestar Organizacional",
+      "description": "Integrando la salud mental en tu cultura",
+      "features": [
+        "Desarrollo de estrategias de bienestar",
+        "Formación en conciencia de salud mental",
+        "Programas de construcción de resiliencia",
+        "Iniciativas de prevención del burnout",
+        "Apoyo en transformación cultural"
+      ]
+    },
+    "changeManagement": {
+      "title": "Gestión del Cambio",
+      "description": "Guiando la transformación organizacional exitosa",
+      "features": [
+        "Evaluación de preparación para el cambio",
+        "Planificación del compromiso de stakeholders",
+        "Estrategia de comunicación",
+        "Gestión de resistencia",
+        "Implementación de cambio sostenible"
+      ]
+    }
+  },
+  "process": {
+    "title": "Cómo trabajamos juntos",
+    "steps": {
+      "discovery": {
+        "title": "Descubrimiento",
+        "description": "Comprender tu contexto único y objetivos"
+      },
+      "design": {
+        "title": "Diseño",
+        "description": "Crear soluciones personalizadas para tus necesidades"
+      },
+      "deliver": {
+        "title": "Ejecución",
+        "description": "Implementar con excelencia y compromiso"
+      },
+      "sustain": {
+        "title": "Sostenibilidad",
+        "description": "Asegurar impacto duradero y crecimiento continuo"
+      }
+    }
+  },
+  "cta": {
+    "title": "¿Listo para transformar?",
+    "description": "Discutamos cómo estos servicios pueden apoyar tus objetivos",
+    "button": "Programar una consulta"
+  }
+}

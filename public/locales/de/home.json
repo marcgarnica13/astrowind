@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "title": "Gedanken stärken. Teams entwickeln. Führung transformieren.",
+    "tagline": "Lassen Sie uns sprechen.",
+    "primaryAction": "Kostenlose Beratung",
+    "secondaryAction": "Meine Leistungen entdecken"
+  },
+  "bigNote": {
+    "title": "Wo menschliche Verbindung auf Höchstleistung trifft",
+    "exploreServices": "Meine Leistungen entdecken"
+  },
+  "features": {
+    "sectionTitle": "Was ich anbiete",
+    "title": "Hauptangebote",
+    "subtitle": "Im Kern meiner Arbeit liegt der Glaube, dass nachhaltige Leistung und Wohlbefinden sich nicht gegenseitig ausschließen. Ich spezialisiere mich auf:",
+    "items": {
+      "leadershipDevelopment": {
+        "title": "Führungskräfteentwicklung",
+        "description": "Führungskräfte mit den Werkzeugen und der Denkweise ausstatten, um Komplexität zu navigieren und ihre Teams zu inspirieren."
+      },
+      "teamCoaching": {
+        "title": "Team-Coaching",
+        "description": "Hochleistungsteams durch verbesserte Kommunikation, Vertrauen und Zusammenarbeit schaffen."
+      },
+      "mentalHealthAdvocacy": {
+        "title": "Förderung psychischer Gesundheit",
+        "description": "Integration von psychischem Wohlbefinden in die Organisationskultur für nachhaltigen Erfolg."
+      },
+      "changeManagement": {
+        "title": "Change Management",
+        "description": "Organisationen mit menschenzentrierten Ansätzen durch Transformation führen."
+      },
+      "executiveCoaching": {
+        "title": "Executive Coaching",
+        "description": "Einzelcoaching für Führungskräfte zur Verbesserung ihrer Wirkung und Effektivität."
+      },
+      "workshopsFacilitation": {
+        "title": "Workshops & Moderation",
+        "description": "Interaktive Sitzungen zur Entwicklung von Fähigkeiten und zur Förderung bedeutungsvoller Verbindungen."
+      }
+    }
+  },
+  "steps": {
+    "sectionTitle": "Mein Ansatz",
+    "title": "Wie ich arbeite",
+    "subtitle": "Mein Ansatz basiert auf der Schaffung nachhaltiger Veränderungen durch menschliche Verbindung und evidenzbasierte Praktiken."
+  },
+  "content": {
+    "title": "Brücke zwischen menschlicher Verbindung und Höchstleistung",
+    "subtitle": "Ich kombiniere umfangreiche Erfahrung in der Führungskräfteentwicklung mit einem tiefen Verständnis der menschlichen Psychologie, um transformative Erfahrungen zu schaffen.",
+    "description": "Mit über 15 Jahren Erfahrung in der Arbeit mit globalen Organisationen habe ich aus erster Hand erlebt, wie die erfolgreichsten Teams diejenigen sind, die sowohl Leistung als auch Menschen priorisieren. Meine Methodik integriert modernste Führungswissenschaft mit praktischen Werkzeugen, die echte Ergebnisse liefern.",
+    "actions": {
+      "moreAboutMe": "Mehr über mich",
+      "schedule": "Gespräch vereinbaren"
+    }
+  },
+  "stats": {
+    "stat1": {
+      "amount": "15+",
+      "description": "Jahre Erfahrung"
+    },
+    "stat2": {
+      "amount": "500+",
+      "description": "Gecoachte Führungskräfte"
+    },
+    "stat3": {
+      "amount": "50+",
+      "description": "Betreute Organisationen"
+    },
+    "stat4": {
+      "amount": "98%",
+      "description": "Kundenzufriedenheit"
+    }
+  },
+  "testimonials": {
+    "title": "Was Kunden sagen",
+    "subtitle": "Entdecken Sie, was Kunden über ihre transformativen Erfahrungen zu sagen haben."
+  },
+  "faqs": {
+    "sectionTitle": "Häufige Fragen",
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Finden Sie Antworten auf häufige Fragen zu meinen Leistungen und meinem Ansatz."
+  },
+  "callToAction": {
+    "sectionTitle": "Bereit zur Transformation?",
+    "title": "Beginnen Sie Ihre Reise heute",
+    "subtitle": "Ob Sie Ihre Führungskompetenzen entwickeln, Ihr Team transformieren oder eine gesündere Organisationskultur schaffen möchten - ich bin hier, um zu helfen.",
+    "primaryAction": "Kostenlose Beratung vereinbaren"
+  },
+  "blog": {
+    "sectionTitle": "Neueste Erkenntnisse",
+    "title": "Aktuelle Artikel",
+    "viewAllPosts": "Alle Beiträge anzeigen"
+  }
+}

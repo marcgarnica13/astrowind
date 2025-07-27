@@ -1,0 +1,47 @@
+{
+  "pageTitle": "Über uns",
+  "hero": {
+    "title": "Über Steffi Haberstock",
+    "subtitle": "Leadership Coach | Teamentwicklerin | Förderin psychischer Gesundheit"
+  },
+  "intro": {
+    "title": "Mein Werdegang",
+    "content": "Mit über 15 Jahren Erfahrung in der Organisationsentwicklung und im Leadership Coaching habe ich meine Karriere darauf ausgerichtet, Einzelpersonen und Teams dabei zu helfen, ihr volles Potenzial zu entfalten und gleichzeitig ihr Wohlbefinden zu erhalten."
+  },
+  "mission": {
+    "title": "Meine Mission",
+    "content": "Arbeitsplätze zu schaffen, an denen Höchstleistung und menschliche Verbindung koexistieren, wo Führungskräfte durch Empathie inspirieren und wo Teams durch Vertrauen und Zusammenarbeit gedeihen."
+  },
+  "values": {
+    "title": "Kernwerte",
+    "authenticity": {
+      "title": "Authentizität",
+      "description": "Echt und wahrhaftig in allen Interaktionen sein"
+    },
+    "empathy": {
+      "title": "Empathie",
+      "description": "Die Erfahrungen anderer verstehen und sich damit verbinden"
+    },
+    "growth": {
+      "title": "Wachstum",
+      "description": "Kontinuierliches Lernen und Entwicklung"
+    },
+    "balance": {
+      "title": "Balance",
+      "description": "Wohlbefinden mit Leistung integrieren"
+    }
+  },
+  "experience": {
+    "title": "Beruflicher Hintergrund",
+    "description": "Meine Expertise erstreckt sich über verschiedene Branchen und Organisationskulturen und bringt eine einzigartige Perspektive in jedes Engagement."
+  },
+  "approach": {
+    "title": "Mein Ansatz",
+    "description": "Ich glaube an evidenzbasierte Praktiken kombiniert mit tiefem menschlichen Verständnis. Meine Methodik integriert die neuesten Forschungen in Neurowissenschaften, Psychologie und Organisationsverhalten."
+  },
+  "cta": {
+    "title": "Lassen Sie uns verbinden",
+    "description": "Bereit zu erkunden, wie wir zusammenarbeiten können?",
+    "button": "Gespräch vereinbaren"
+  }
+}

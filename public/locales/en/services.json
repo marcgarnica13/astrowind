@@ -1,0 +1,101 @@
+{
+  "pageTitle": "Services",
+  "hero": {
+    "title": "Transform Your Leadership & Team",
+    "subtitle": "Comprehensive solutions for sustainable organizational success"
+  },
+  "services": {
+    "executiveCoaching": {
+      "title": "Executive Coaching",
+      "description": "One-on-one coaching for senior leaders",
+      "features": [
+        "Personal leadership assessment",
+        "360-degree feedback integration",
+        "Strategic thinking development",
+        "Emotional intelligence enhancement",
+        "Work-life integration strategies"
+      ]
+    },
+    "teamDevelopment": {
+      "title": "Team Development",
+      "description": "Building high-performing, cohesive teams",
+      "features": [
+        "Team dynamics assessment",
+        "Trust and collaboration workshops",
+        "Communication enhancement",
+        "Conflict resolution strategies",
+        "Performance optimization"
+      ]
+    },
+    "leadershipPrograms": {
+      "title": "Leadership Development Programs",
+      "description": "Comprehensive programs for emerging and established leaders",
+      "features": [
+        "Custom curriculum design",
+        "Multi-module learning journeys",
+        "Peer coaching circles",
+        "Action learning projects",
+        "ROI measurement"
+      ]
+    },
+    "workshopsFacilitation": {
+      "title": "Workshops & Facilitation",
+      "description": "Interactive sessions for skill development",
+      "features": [
+        "Custom workshop design",
+        "Virtual and in-person options",
+        "Engaging facilitation methods",
+        "Practical tools and frameworks",
+        "Post-workshop support"
+      ]
+    },
+    "organizationalWellbeing": {
+      "title": "Organizational Well-being",
+      "description": "Integrating mental health into your culture",
+      "features": [
+        "Well-being strategy development",
+        "Mental health awareness training",
+        "Resilience building programs",
+        "Burnout prevention initiatives",
+        "Culture transformation support"
+      ]
+    },
+    "changeManagement": {
+      "title": "Change Management",
+      "description": "Guiding successful organizational transformation",
+      "features": [
+        "Change readiness assessment",
+        "Stakeholder engagement planning",
+        "Communication strategy",
+        "Resistance management",
+        "Sustainable change implementation"
+      ]
+    }
+  },
+  "process": {
+    "title": "How We Work Together",
+    "steps": {
+      "discovery": {
+        "title": "Discovery",
+        "description": "Understanding your unique context and goals"
+      },
+      "design": {
+        "title": "Design",
+        "description": "Creating customized solutions for your needs"
+      },
+      "deliver": {
+        "title": "Deliver",
+        "description": "Implementing with excellence and engagement"
+      },
+      "sustain": {
+        "title": "Sustain",
+        "description": "Ensuring lasting impact and continuous growth"
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to transform?",
+    "description": "Let's discuss how these services can support your goals",
+    "button": "Schedule a consultation"
+  }
+}

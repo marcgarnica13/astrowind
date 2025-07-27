@@ -1,0 +1,92 @@
+---
+import { locales, localeLabels, getAlternateUrls, getLocaleFromUrl, type Locale } from '~/utils/i18n';
+import { Icon } from 'astro-icon/components';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+const currentLocale = getLocaleFromUrl(Astro.url) as Locale;
+const alternateUrls = getAlternateUrls(Astro.url.pathname, currentLocale);
+---
+
+<div class={`relative ${className || ''}`}>
+  <button
+    id="language-button"
+    type="button"
+    class="flex items-center justify-center w-9 h-9 text-gray-700 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 rounded-lg transition duration-150 ease-in-out"
+    aria-label="Change language"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    <Icon name="tabler:language" class="w-5 h-5" />
+  </button>
+
+  <div
+    id="language-dropdown"
+    class="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-50 hidden"
+    role="menu"
+    aria-orientation="vertical"
+  >
+    {locales.map((locale) => (
+      <a
+        href={alternateUrls[locale]}
+        class={`block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-150 ease-in-out ${
+          locale === currentLocale ? 'bg-gray-50 dark:bg-gray-700' : ''
+        }`}
+        role="menuitem"
+        hreflang={locale}
+      >
+        <div class="flex items-center justify-between">
+          <span>{localeLabels[locale]}</span>
+          {locale === currentLocale && (
+            <Icon name="tabler:check" class="w-4 h-4 text-primary" />
+          )}
+        </div>
+      </a>
+    ))}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('language-button');
+    const dropdown = document.getElementById('language-dropdown');
+
+    if (button && dropdown) {
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isHidden = dropdown.classList.contains('hidden');
+        
+        if (isHidden) {
+          dropdown.classList.remove('hidden');
+          button.setAttribute('aria-expanded', 'true');
+        } else {
+          dropdown.classList.add('hidden');
+          button.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', () => {
+        dropdown.classList.add('hidden');
+        button.setAttribute('aria-expanded', 'false');
+      });
+
+      // Prevent dropdown from closing when clicking inside
+      dropdown.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+
+      // Close dropdown on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          dropdown.classList.add('hidden');
+          button.setAttribute('aria-expanded', 'false');
+          button.focus();
+        }
+      });
+    }
+  });
+</script>

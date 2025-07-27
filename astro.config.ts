@@ -10,6 +10,7 @@ import partytown from '@astrojs/partytown';
 import icon from 'astro-icon';
 import compress from 'astro-compress';
 import type { AstroIntegration } from 'astro';
+import i18next from 'astro-i18next';
 
 import astrowind from './vendor/integration';
 
@@ -23,8 +24,14 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
 
 export default defineConfig({
   output: 'static',
+  
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'de', 'es'],
+  },
 
   integrations: [
+    i18next(),
     tailwind({
       applyBaseStyles: false,
     }),
