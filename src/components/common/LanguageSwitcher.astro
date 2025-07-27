@@ -6,6 +6,12 @@ interface Props {
   class?: string;
 }
 
+const localeFlags: Record<Locale, string> = {
+  en: '🇬🇧',
+  de: '🇩🇪', 
+  es: '🇪🇸',
+};
+
 const { class: className } = Astro.props;
 const currentLocale = getLocaleFromUrl(Astro.url) as Locale;
 const alternateUrls = getAlternateUrls(Astro.url.pathname, currentLocale);
@@ -20,7 +26,7 @@ const alternateUrls = getAlternateUrls(Astro.url.pathname, currentLocale);
     aria-haspopup="true"
     aria-expanded="false"
   >
-    <Icon name="tabler:language" class="w-5 h-5" />
+    <span class="text-lg">{localeFlags[currentLocale]}</span>
   </button>
 
   <div
@@ -39,7 +45,10 @@ const alternateUrls = getAlternateUrls(Astro.url.pathname, currentLocale);
         hreflang={locale}
       >
         <div class="flex items-center justify-between">
-          <span>{localeLabels[locale]}</span>
+          <div class="flex items-center gap-2">
+            <span class="text-sm">{localeFlags[locale]}</span>
+            <span>{localeLabels[locale]}</span>
+          </div>
           {locale === currentLocale && (
             <Icon name="tabler:check" class="w-4 h-4 text-primary" />
           )}

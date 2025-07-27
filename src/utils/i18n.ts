@@ -23,7 +23,9 @@ export function getLocalizedPath(path: string, locale?: string): string {
  */
 export function getLocaleFromUrl(url: URL | string): Locale {
   const pathname = typeof url === 'string' ? url : url.pathname;
-  const segments = pathname.split('/').filter(Boolean);
+  // Remove base path (/astrowind) from pathname for analysis
+  const pathWithoutBase = pathname.replace('/astrowind', '');
+  const segments = pathWithoutBase.split('/').filter(Boolean);
   
   if (segments.length > 0 && locales.includes(segments[0] as Locale)) {
     return segments[0] as Locale;
@@ -36,13 +38,16 @@ export function getLocaleFromUrl(url: URL | string): Locale {
  * Remove locale from URL path
  */
 export function removeLocaleFromPath(pathname: string): string {
-  const segments = pathname.split('/').filter(Boolean);
+  // Remove base path (/astrowind) from pathname for analysis
+  const pathWithoutBase = pathname.replace('/astrowind', '');
+  const segments = pathWithoutBase.split('/').filter(Boolean);
   
   if (segments.length > 0 && locales.includes(segments[0] as Locale)) {
-    return '/' + segments.slice(1).join('/');
+    const cleanPath = '/' + segments.slice(1).join('/');
+    return cleanPath === '/' ? '/' : cleanPath;
   }
   
-  return pathname;
+  return pathWithoutBase || '/';
 }
 
 /**
@@ -51,12 +56,17 @@ export function removeLocaleFromPath(pathname: string): string {
 export function getAlternateUrls(currentPath: string, currentLocale: Locale): Record<Locale, string> {
   const cleanPath = removeLocaleFromPath(currentPath);
   const alternates: Record<string, string> = {};
+  const basePath = '/astrowind'; // Get from config
   
   locales.forEach(locale => {
     if (locale === defaultLocale) {
-      alternates[locale] = cleanPath || '/';
+      // English: /astrowind/about
+      const path = cleanPath === '/' ? '' : cleanPath;
+      alternates[locale] = `${basePath}${path}`;
     } else {
-      alternates[locale] = `/${locale}${cleanPath}` || `/${locale}`;
+      // Other locales: /astrowind/de/about  
+      const path = cleanPath === '/' ? '' : cleanPath;
+      alternates[locale] = `${basePath}/${locale}${path}`;
     }
   });
   

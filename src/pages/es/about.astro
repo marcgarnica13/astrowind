@@ -1,0 +1,194 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'S.H. Acerca de',
+  description: 'Conoce más sobre Steffi Haberstock y su misión.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Imagen de caos',
+    }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Consulta gratuita',
+        href: 'mailto:haberstock.stefanie@gmail.com',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Acerca de Steffi Haberstock
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Con más de una década de experiencia en desarrollo de liderazgo y dinámicas de equipo, Steffi se dedica a transformar lugares de trabajo a través de métodos innovadores de coaching y consultoría estratégica.
+      </span>
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">Acerca de Steffi Haberstock.</span>
+      Su pasión radica en empoderar a líderes e inspirar a equipos para alcanzar su máximo potencial.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="¿Por qué elegir STEFFI?"
+    subtitle="Aquí están los números que hablan por sí solos:"
+    stats={[
+      { title: 'Años de experiencia', amount: '10+' },
+      { title: 'Clientes satisfechos', amount: '500+' },
+      { title: 'Proyectos exitosos', amount: '150+' },
+      { title: 'Países atendidos', amount: '25+' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Nuestras competencias principales"
+    subtitle="Lo que nos hace únicos en el desarrollo de liderazgo:"
+    columns={3}
+    items={[
+      {
+        title: 'Desarrollo de liderazgo',
+        description: 'Programas personalizados para desarrollar competencias de liderazgo en todos los niveles.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Dinámicas de equipo',
+        description: 'Estrategias para mejorar la colaboración y productividad de los equipos.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Desarrollo organizacional',
+        description: 'Enfoques integrales para transformar culturas empresariales.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Coaching ejecutivo',
+        description: 'Coaching individualizado para ejecutivos para maximizar su efectividad.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Gestión del cambio',
+        description: 'Acompañamiento de empresas a través de procesos de cambio estratégico.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Resolución de conflictos',
+        description: 'Mediación profesional y estrategias de resolución de conflictos para equipos.',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Nuestro enfoque"
+    subtitle="Cómo trabajamos para lograr resultados sostenibles:"
+    items={[
+      {
+        title: 'Evaluación integral',
+        description:
+          'Comenzamos con un análisis completo de sus estructuras de liderazgo actuales y dinámicas de equipo.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Soluciones personalizadas',
+        description:
+          'Cada empresa es única. Desarrollamos estrategias individuales que se adaptan a su cultura.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Implementación práctica',
+        description:
+          'Nuestros métodos están orientados a la práctica y son directamente aplicables en su trabajo diario.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Acompañamiento continuo',
+        description:
+          'Permanecemos a su lado para asegurar el éxito a largo plazo de los cambios implementados.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Resultados medibles',
+        description:
+          'Establecemos KPIs claros y medimos el progreso para demostrar el ROI de su inversión.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Sostenibilidad',
+        description:
+          'Nuestro objetivo es crear sistemas autosostenibles que continúen funcionando después de nuestro compromiso.',
+        icon: 'tabler:check',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-slate-800"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Steps2 Widget ***************** -->
+
+  <Steps2
+    title="Nuestro proceso"
+    subtitle="Un enfoque estructurado para su éxito:"
+    items={[
+      {
+        title: 'Consulta inicial',
+        description:
+          'Evaluación gratuita de su situación actual e identificación de los principales desafíos.',
+      },
+      {
+        title: 'Desarrollo de estrategia',
+        description:
+          'Desarrollo conjunto de un plan personalizado para alcanzar sus objetivos.',
+      },
+      {
+        title: 'Implementación',
+        description:
+          'Implementación gradual de las estrategias desarrolladas con apoyo continuo.',
+      },
+      {
+        title: 'Evaluación y ajuste',
+        description:
+          'Revisión regular del progreso y ajuste de métodos según sea necesario.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Programar consulta gratuita',
+        href: 'mailto:haberstock.stefanie@gmail.com',
+      },
+    ]}
+  >
+    <Fragment slot="title">¿Listo para el cambio?</Fragment>
+
+    <Fragment slot="subtitle">
+      Transformemos juntos sus desafíos de liderazgo en oportunidades de crecimiento.
+    </Fragment>
+  </CallToAction>
+</Layout>

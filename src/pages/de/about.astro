@@ -1,0 +1,194 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'S.H. Über uns',
+  description: 'Erfahren Sie mehr über Steffi Haberstock und ihre Mission.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Chaos Bild',
+    }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Kostenlose Beratung',
+        href: 'mailto:haberstock.stefanie@gmail.com',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Über Steffi Haberstock
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Mit über einem Jahrzehnt Erfahrung in der Führungsentwicklung und Teamdynamik widmet sich Steffi der Transformation von Arbeitsplätzen durch innovative Coaching-Methoden und strategische Beratung.
+      </span>
+      <span class="block mb-1 sm:hidden font-bold text-blue-600">Über Steffi Haberstock.</span>
+      Ihre Leidenschaft liegt darin, Führungskräfte zu befähigen und Teams zu inspirieren, ihr volles Potenzial zu entfalten.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Warum STEFFI wählen?"
+    subtitle="Hier sind die Zahlen, die für sich sprechen:"
+    stats={[
+      { title: 'Jahre Erfahrung', amount: '10+' },
+      { title: 'Zufriedene Kunden', amount: '500+' },
+      { title: 'Erfolgreiche Projekte', amount: '150+' },
+      { title: 'Länder bedient', amount: '25+' },
+    ]}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Unsere Kernkompetenzen"
+    subtitle="Was uns einzigartig macht in der Führungsentwicklung:"
+    columns={3}
+    items={[
+      {
+        title: 'Führungsentwicklung',
+        description: 'Maßgeschneiderte Programme zur Entwicklung von Führungskompetenzen auf allen Ebenen.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Teamdynamik',
+        description: 'Strategien zur Verbesserung der Zusammenarbeit und Produktivität von Teams.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Organisationsentwicklung',
+        description: 'Umfassende Ansätze zur Transformation von Unternehmenskulturen.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Executive Coaching',
+        description: 'Individuelles Coaching für Führungskräfte zur Maximierung ihrer Wirksamkeit.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Change Management',
+        description: 'Begleitung von Unternehmen durch strategische Veränderungsprozesse.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Konfliktlösung',
+        description: 'Professionelle Mediation und Konfliktlösungsstrategien für Teams.',
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Unser Ansatz"
+    subtitle="Wie wir arbeiten, um nachhaltige Ergebnisse zu erzielen:"
+    items={[
+      {
+        title: 'Ganzheitliche Bewertung',
+        description:
+          'Wir beginnen mit einer umfassenden Analyse Ihrer aktuellen Führungsstrukturen und Teamdynamiken.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Maßgeschneiderte Lösungen',
+        description:
+          'Jedes Unternehmen ist einzigartig. Wir entwickeln individuelle Strategien, die zu Ihrer Kultur passen.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Praktische Umsetzung',
+        description:
+          'Unsere Methoden sind praxisorientiert und direkt in Ihrem Arbeitsalltag anwendbar.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Kontinuierliche Begleitung',
+        description:
+          'Wir bleiben an Ihrer Seite, um den langfristigen Erfolg der implementierten Veränderungen sicherzustellen.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Messbare Ergebnisse',
+        description:
+          'Wir setzen klare KPIs und messen den Fortschritt, um den ROI Ihrer Investition zu demonstrieren.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Nachhaltigkeit',
+        description:
+          'Unser Ziel ist es, selbsttragende Systeme zu schaffen, die auch nach unserem Engagement weiter funktionieren.',
+        icon: 'tabler:check',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-slate-800"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Steps2 Widget ***************** -->
+
+  <Steps2
+    title="Unser Prozess"
+    subtitle="Ein strukturierter Ansatz für Ihren Erfolg:"
+    items={[
+      {
+        title: 'Erstberatung',
+        description:
+          'Kostenlose Bewertung Ihrer aktuellen Situation und Identifikation der wichtigsten Herausforderungen.',
+      },
+      {
+        title: 'Strategieentwicklung',
+        description:
+          'Gemeinsame Entwicklung eines maßgeschneiderten Plans zur Erreichung Ihrer Ziele.',
+      },
+      {
+        title: 'Implementierung',
+        description:
+          'Schrittweise Umsetzung der entwickelten Strategien mit kontinuierlicher Unterstützung.',
+      },
+      {
+        title: 'Bewertung & Anpassung',
+        description:
+          'Regelmäßige Überprüfung des Fortschritts und Anpassung der Methoden nach Bedarf.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Kostenlose Beratung vereinbaren',
+        href: 'mailto:haberstock.stefanie@gmail.com',
+      },
+    ]}
+  >
+    <Fragment slot="title">Bereit für Veränderung?</Fragment>
+
+    <Fragment slot="subtitle">
+      Lassen Sie uns gemeinsam Ihre Führungsherausforderungen in Wachstumschancen verwandeln.
+    </Fragment>
+  </CallToAction>
+</Layout>

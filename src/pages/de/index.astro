@@ -1,0 +1,185 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import BigNote from '~/components/widgets/BigNote.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+
+const metadata = {
+  title: 'Steffi Haberstock',
+  description: 'Ermächtigung von Köpfen. Entwicklung von Teams. Transformation von Führung.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero2
+    title="Ermächtigung von Köpfen. Entwicklung von Teams. Transformation von Führung."
+    tagline="Lassen Sie uns sprechen."
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Schritte Bild',
+    }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Kostenlose Beratung',
+        href: 'mailto:haberstock.stefanie@gmail.com',
+        icon: 'tabler:download',
+      },
+      {
+        variant: 'secondary',
+        text: 'Mehr erfahren',
+        href: '/de/about',
+      },
+    ]}
+  />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Merkmale"
+    title="Was Sie von STEFFI erwarten können"
+    subtitle="Eines der am meisten bewerteten und umfassenden Vorlagen auf dem Markt. Die meisten Websites benötigen dasselbe Standarddesign."
+    items={[
+      {
+        title: 'Astro + Tailwind CSS-Integration',
+        description:
+          'Eine nahtlose Integration zwischen zwei großartigen Frameworks, die Flexibilität, Leistung und Entwicklererfahrung bietet.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Bereit für Produktion',
+        description:
+          'AstroWind ist gut strukturiert, organisiert und sauber. Professionelles, pixelgenaues Design.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'SEO-freundlich',
+        description:
+          'SEO beste Praktiken in Kombination mit OpenGraph und Twitter Cards out-of-the-box. Finden Sie die Sichtbarkeit, die Ihre Website verdient.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Offener Code',
+        description:
+          'Code ist vollständig offen. Fühlen Sie sich frei, ihn zu verwenden und anzupassen. Fügen Sie Ihre eigenen Komponenten hinzu und schaffen Sie Einzigartigkeit.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Entwicklerfreundlich',
+        description:
+          'Der Code ist sauber, strukturiert und folgt den besten Praktiken. Einfach zu verstehen und anzupassen.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Blog optimiert',
+        description:
+          'Blog-System mit Kategorien und Tags. RSS-Feed und Kommentarsystem. Alles, was Sie für den Start benötigen.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Innen AstroWind Vorlage"
+    title="AstroWind's Bauplan: Spaß trifft Funktionalität!"
+    items={[
+      {
+        title: 'Basierend auf Astro 5.0',
+        description:
+          'Nutzen Sie die Leistung von Astro 5.0 mit unserer Vorlage. Nutzen Sie Komponenten-Inseln, automatische Optimierung und das effiziente Routing-System.',
+      },
+      {
+        title: 'Styled mit Tailwind CSS',
+        description:
+          'Nutzen Sie die Flexibilität von Tailwind CSS für nahtloses Styling. Profitieren Sie von seinem utility-first Ansatz und responsivem Design.',
+      },
+      {
+        title: 'Querformatiges Layout-Design',
+        description:
+          'Präsentieren Sie Ihre Inhalte ansprechend mit einem vielseitigen, querformatigen Layout, das sich an verschiedene Arten von Websites anpasst.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Bunte Bücher Bild',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Aufbau auf modernen Fundamenten</h3>
+      Gewinnen Sie einen Wettbewerbsvorteil, indem Sie die besten der Klasse Frameworks einbauen.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-slate-800"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Holen Sie sich Ihre Traumwebsite in 3 einfachen Schritten."
+    items={[
+      {
+        title: 'Schritt 1: <span class="font-medium">Herunterladen</span>',
+        description:
+          'Laden Sie die AstroWind Vorlage von GitHub herunter. Entpacken Sie das Archiv und navigieren Sie zum Projektverzeichnis.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Schritt 2: <span class="font-medium">Hinzufügen von Inhalten</span>',
+        description:
+          'Bearbeiten Sie die Konfigurationsdatei mit Ihren Daten. Aktualisieren Sie die Homepage mit Ihren Informationen.',
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Schritt 3: <span class="font-medium">Anpassen</span>',
+        description:
+          'Aktualisieren Sie Farben, Schriftarten und mehr. Stellen Sie Ihre Website auf Ihrer bevorzugten Hosting-Plattform bereit.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Bereit!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Schritte Bild',
+    }}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Kostenlose Beratung',
+        href: 'mailto:haberstock.stefanie@gmail.com',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Seien Sie sehr produktiv! Diese hilfsbereite Vorlage macht es einfach.
+    </Fragment>
+  </CallToAction>
+</Layout>

@@ -1,0 +1,229 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'S.H. Dienstleistungen',
+  description: 'Entdecken Sie unsere umfassenden Führungs- und Teamentwicklungsdienstleistungen.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Kostenlose Beratung',
+        href: 'mailto:haberstock.stefanie@gmail.com',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Unsere <span class="text-accent dark:text-white highlight">Dienstleistungen</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Transformative Lösungen für moderne Führungsherausforderungen. Von Executive Coaching bis hin zur Organisationsentwicklung - wir bieten umfassende Dienstleistungen, die nachhaltige Veränderungen bewirken.
+      </span>
+      Entdecken Sie, wie wir Ihr Unternehmen voranbringen können.
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Kerndienstleistungen"
+    subtitle="Maßgeschneiderte Lösungen für Ihre Führungs- und Entwicklungsbedürfnisse:"
+    columns={2}
+    items={[
+      {
+        title: 'Executive Coaching',
+        description:
+          'Individuelles Coaching für Führungskräfte zur Entwicklung ihrer Führungskompetenzen und zur Maximierung ihrer Wirksamkeit.',
+        icon: 'tabler:user-star',
+      },
+      {
+        title: 'Teamentwicklung',
+        description:
+          'Umfassende Programme zur Verbesserung der Teamdynamik, Zusammenarbeit und Produktivität.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Organisationsentwicklung',
+        description:
+          'Strategische Beratung zur Transformation von Unternehmenskulturen und Verbesserung der organisationalen Effektivität.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Change Management',
+        description:
+          'Professionelle Begleitung von Veränderungsprozessen zur Sicherstellung erfolgreicher Transformationen.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Konfliktlösung',
+        description:
+          'Mediation und Konfliktlösungsstrategien zur Wiederherstellung produktiver Arbeitsbeziehungen.',
+        icon: 'tabler:peace',
+      },
+      {
+        title: 'Führungskräfteentwicklung',
+        description:
+          'Strukturierte Programme zur Entwicklung von Führungsnachwuchs und zur Stärkung bestehender Führungskompetenzen.',
+        icon: 'tabler:trophy',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="Executive Coaching"
+    subtitle="Individualisierte Führungsentwicklung für maximale Wirksamkeit"
+    items={[
+      {
+        title: '1-zu-1 Coaching-Sitzungen',
+        description:
+          'Vertrauliche, auf Ihre spezifischen Bedürfnisse zugeschnittene Coaching-Gespräche.',
+      },
+      {
+        title: '360-Grad-Feedback',
+        description:
+          'Umfassende Bewertung Ihrer Führungskompetenzen aus verschiedenen Perspektiven.',
+      },
+      {
+        title: 'Persönlicher Entwicklungsplan',
+        description:
+          'Strukturierter Plan zur kontinuierlichen Weiterentwicklung Ihrer Führungsfähigkeiten.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Executive Coaching Bild',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    title="Teamentwicklung"
+    subtitle="Stärkung der Teamdynamik für außergewöhnliche Leistungen"
+    items={[
+      {
+        title: 'Team-Workshops',
+        description:
+          'Interaktive Workshops zur Verbesserung der Kommunikation und Zusammenarbeit.',
+      },
+      {
+        title: 'Teambuilding-Aktivitäten',
+        description:
+          'Kreative Ansätze zur Stärkung des Teamgeists und des Vertrauens.',
+      },
+      {
+        title: 'Performance-Optimierung',
+        description:
+          'Strategien zur Maximierung der Teamleistung und Effizienz.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Teamentwicklung Bild',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-slate-800"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="Organisationsentwicklung"
+    subtitle="Nachhaltige Transformation für zukunftsfähige Unternehmen"
+    items={[
+      {
+        title: 'Kulturanalyse',
+        description:
+          'Tiefgreifende Bewertung der aktuellen Unternehmenskultur und Identifikation von Verbesserungsmöglichkeiten.',
+      },
+      {
+        title: 'Change-Strategien',
+        description:
+          'Entwicklung und Implementierung maßgeschneiderter Veränderungsstrategien.',
+      },
+      {
+        title: 'Sustainable Impact',
+        description:
+          'Sicherstellung langfristiger und nachhaltiger Veränderungen in der Organisation.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Organisationsentwicklung Bild',
+    }}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Was unsere Kunden sagen"
+    subtitle="Erfahren Sie aus erster Hand, wie unsere Dienstleistungen Unternehmen transformiert haben:"
+    testimonials={[
+      {
+        testimonial: `Steffi's Executive Coaching hat meine Führungskompetenzen grundlegend transformiert. Ihre strukturierte Herangehensweise und tiefgreifenden Einsichten haben mir geholfen, ein effektiverer und empathischerer Führungskraft zu werden.`,
+        name: 'Michael Schmidt',
+        job: 'CEO, TechInnovate GmbH',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'Michael Schmidt Bild',
+        },
+      },
+      {
+        testimonial: `Die Teamentwicklungsworkshops von STEFFI haben unsere Abteilung völlig verändert. Die Kommunikation ist jetzt viel offener und unsere Produktivität hat sich um 40% gesteigert.`,
+        name: 'Sarah Weber',
+        job: 'Abteilungsleiterin, ModernCorp',
+        image: {
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Sarah Weber Bild',
+        },
+      },
+      {
+        testimonial: `Der Organisationsentwicklungsprozess war genau das, was unser Unternehmen brauchte. Steffi's systematischer Ansatz hat uns geholfen, eine positivere und produktivere Arbeitskultur zu schaffen.`,
+        name: 'Dr. Thomas Müller',
+        job: 'Geschäftsführer, HealthCare Solutions',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Dr. Thomas Müller Bild',
+        },
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Kostenlose Beratung vereinbaren',
+        href: 'mailto:haberstock.stefanie@gmail.com',
+      },
+    ]}
+  >
+    <Fragment slot="title">Bereit, Ihr Unternehmen zu transformieren?</Fragment>
+
+    <Fragment slot="subtitle">
+      Lassen Sie uns gemeinsam die perfekte Lösung für Ihre Führungs- und Entwicklungsherausforderungen finden.
+    </Fragment>
+  </CallToAction>
+</Layout>

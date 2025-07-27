@@ -1,0 +1,229 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'S.H. Servicios',
+  description: 'Descubre nuestros servicios integrales de desarrollo de liderazgo y equipos.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Consulta gratuita',
+        href: 'mailto:haberstock.stefanie@gmail.com',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Nuestros <span class="text-accent dark:text-white highlight">Servicios</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Soluciones transformadoras para desafíos de liderazgo moderno. Desde coaching ejecutivo hasta desarrollo organizacional - ofrecemos servicios integrales que generan cambios sostenibles.
+      </span>
+      Descubre cómo podemos hacer avanzar tu empresa.
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Servicios principales"
+    subtitle="Soluciones personalizadas para tus necesidades de liderazgo y desarrollo:"
+    columns={2}
+    items={[
+      {
+        title: 'Coaching ejecutivo',
+        description:
+          'Coaching individualizado para ejecutivos para desarrollar sus competencias de liderazgo y maximizar su efectividad.',
+        icon: 'tabler:user-star',
+      },
+      {
+        title: 'Desarrollo de equipos',
+        description:
+          'Programas integrales para mejorar las dinámicas de equipo, colaboración y productividad.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Desarrollo organizacional',
+        description:
+          'Consultoría estratégica para transformar culturas empresariales y mejorar la efectividad organizacional.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Gestión del cambio',
+        description:
+          'Acompañamiento profesional de procesos de cambio para asegurar transformaciones exitosas.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Resolución de conflictos',
+        description:
+          'Mediación y estrategias de resolución de conflictos para restaurar relaciones laborales productivas.',
+        icon: 'tabler:peace',
+      },
+      {
+        title: 'Desarrollo de liderazgo',
+        description:
+          'Programas estructurados para desarrollar futuros líderes y fortalecer las competencias de liderazgo existentes.',
+        icon: 'tabler:trophy',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="Coaching ejecutivo"
+    subtitle="Desarrollo de liderazgo individualizado para máxima efectividad"
+    items={[
+      {
+        title: 'Sesiones de coaching 1-a-1',
+        description:
+          'Conversaciones de coaching confidenciales, adaptadas a sus necesidades específicas.',
+      },
+      {
+        title: 'Retroalimentación 360 grados',
+        description:
+          'Evaluación integral de sus competencias de liderazgo desde diferentes perspectivas.',
+      },
+      {
+        title: 'Plan de desarrollo personal',
+        description:
+          'Plan estructurado para el desarrollo continuo de sus habilidades de liderazgo.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Imagen de coaching ejecutivo',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    title="Desarrollo de equipos"
+    subtitle="Fortalecimiento de dinámicas de equipo para rendimiento excepcional"
+    items={[
+      {
+        title: 'Talleres de equipo',
+        description:
+          'Talleres interactivos para mejorar la comunicación y colaboración.',
+      },
+      {
+        title: 'Actividades de team building',
+        description:
+          'Enfoques creativos para fortalecer el espíritu de equipo y la confianza.',
+      },
+      {
+        title: 'Optimización del rendimiento',
+        description:
+          'Estrategias para maximizar el rendimiento y eficiencia del equipo.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Imagen de desarrollo de equipos',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-slate-800"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    title="Desarrollo organizacional"
+    subtitle="Transformación sostenible para empresas preparadas para el futuro"
+    items={[
+      {
+        title: 'Análisis cultural',
+        description:
+          'Evaluación profunda de la cultura empresarial actual e identificación de oportunidades de mejora.',
+      },
+      {
+        title: 'Estrategias de cambio',
+        description:
+          'Desarrollo e implementación de estrategias de cambio personalizadas.',
+      },
+      {
+        title: 'Impacto sostenible',
+        description:
+          'Asegurar cambios a largo plazo y sostenibles en la organización.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Imagen de desarrollo organizacional',
+    }}
+  />
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Lo que dicen nuestros clientes"
+    subtitle="Descubre de primera mano cómo nuestros servicios han transformado empresas:"
+    testimonials={[
+      {
+        testimonial: `El coaching ejecutivo de Steffi transformó fundamentalmente mis competencias de liderazgo. Su enfoque estructurado y perspectivas profundas me ayudaron a convertirme en un líder más efectivo y empático.`,
+        name: 'Carlos Rodríguez',
+        job: 'CEO, InnovaTech España',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'Imagen de Carlos Rodríguez',
+        },
+      },
+      {
+        testimonial: `Los talleres de desarrollo de equipos de STEFFI cambiaron completamente nuestro departamento. La comunicación ahora es mucho más abierta y nuestra productividad aumentó un 40%.`,
+        name: 'María González',
+        job: 'Directora de Departamento, ModernCorp',
+        image: {
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Imagen de María González',
+        },
+      },
+      {
+        testimonial: `El proceso de desarrollo organizacional fue exactamente lo que nuestra empresa necesitaba. El enfoque sistemático de Steffi nos ayudó a crear una cultura laboral más positiva y productiva.`,
+        name: 'Dr. Antonio López',
+        job: 'Director General, Soluciones de Salud',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Imagen del Dr. Antonio López',
+        },
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Programar consulta gratuita',
+        href: 'mailto:haberstock.stefanie@gmail.com',
+      },
+    ]}
+  >
+    <Fragment slot="title">¿Listo para transformar tu empresa?</Fragment>
+
+    <Fragment slot="subtitle">
+      Encontremos juntos la solución perfecta para tus desafíos de liderazgo y desarrollo.
+    </Fragment>
+  </CallToAction>
+</Layout>

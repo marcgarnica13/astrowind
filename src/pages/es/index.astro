@@ -1,0 +1,185 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import BigNote from '~/components/widgets/BigNote.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+
+const metadata = {
+  title: 'Steffi Haberstock',
+  description: 'Empoderando Mentes. Desarrollando Equipos. Transformando Liderazgo.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero2
+    title="Empoderando Mentes. Desarrollando Equipos. Transformando Liderazgo."
+    tagline="Hablemos."
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Imagen de pasos',
+    }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Consulta gratuita',
+        href: 'mailto:haberstock.stefanie@gmail.com',
+        icon: 'tabler:download',
+      },
+      {
+        variant: 'secondary',
+        text: 'Saber más',
+        href: '/es/about',
+      },
+    ]}
+  />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Características"
+    title="Lo que puedes esperar de STEFFI"
+    subtitle="Una de las plantillas más valoradas y completas del mercado. La mayoría de sitios web necesitan el mismo diseño estándar."
+    items={[
+      {
+        title: 'Integración Astro + Tailwind CSS',
+        description:
+          'Una integración perfecta entre dos marcos excelentes que ofrecen flexibilidad, rendimiento y experiencia de desarrollador.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Listo para producción',
+        description:
+          'AstroWind está bien estructurado, organizado y es limpio. Diseño profesional y perfecto a nivel de píxel.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Amigable con SEO',
+        description:
+          'Mejores prácticas de SEO combinadas con OpenGraph y Twitter Cards listos para usar. Encuentra la visibilidad que tu sitio web merece.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Código abierto',
+        description:
+          'El código es completamente abierto. Siéntete libre de usarlo y personalizarlo. Añade tus propios componentes y crea singularidad.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Amigable para desarrolladores',
+        description:
+          'El código es limpio, estructurado y sigue las mejores prácticas. Fácil de entender y personalizar.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Optimizado para blog',
+        description:
+          'Sistema de blog con categorías y etiquetas. Feed RSS y sistema de comentarios. Todo lo que necesitas para empezar.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Dentro de la plantilla AstroWind"
+    title="El plan de AstroWind: ¡La diversión se encuentra con la funcionalidad!"
+    items={[
+      {
+        title: 'Basado en Astro 5.0',
+        description:
+          'Aprovecha el poder de Astro 5.0 con nuestra plantilla. Benefíciate de las islas de componentes, optimización automática y sistema de enrutamiento eficiente.',
+      },
+      {
+        title: 'Estilizado con Tailwind CSS',
+        description:
+          'Aprovecha la flexibilidad de Tailwind CSS para un estilo sin problemas. Benefíciate de su enfoque utility-first y diseño responsivo.',
+      },
+      {
+        title: 'Diseño de diseño en paisaje',
+        description:
+          'Presenta tu contenido de manera atractiva con un diseño versátil en paisaje que se adapta a varios tipos de sitios web.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Imagen de libros coloridos',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Construyendo sobre fundamentos modernos</h3>
+      Obtén una ventaja competitiva incorporando marcos de mejor clase.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-slate-800"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Obtén tu sitio web de ensueño en 3 simples pasos."
+    items={[
+      {
+        title: 'Paso 1: <span class="font-medium">Descargar</span>',
+        description:
+          'Descarga la plantilla AstroWind desde GitHub. Descomprime el archivo y navega al directorio del proyecto.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Paso 2: <span class="font-medium">Agregar contenido</span>',
+        description:
+          'Edita el archivo de configuración con tus datos. Actualiza la página de inicio con tu información.',
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Paso 3: <span class="font-medium">Personalizar</span>',
+        description:
+          'Actualiza colores, fuentes y más. Implementa tu sitio web en tu plataforma de hosting preferida.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: '¡Listo!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Imagen de pasos',
+    }}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Consulta gratuita',
+        href: 'mailto:haberstock.stefanie@gmail.com',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      ¡Sé muy productivo! Esta plantilla útil lo hace fácil.
+    </Fragment>
+  </CallToAction>
+</Layout>

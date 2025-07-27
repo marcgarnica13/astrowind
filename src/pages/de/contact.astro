@@ -1,0 +1,71 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'S.H. Kontakt',
+  description: 'Kontaktieren Sie Steffi Haberstock für eine kostenlose Beratung.',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero>
+    <Fragment slot="title">
+      Kontaktieren Sie <span class="text-accent dark:text-white highlight">Steffi</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Bereit für Veränderung? Lassen Sie uns Ihre Führungsherausforderungen in Wachstumschancen verwandeln.
+      </span>
+      Kontaktieren Sie uns für eine kostenlose Erstberatung.
+    </Fragment>
+  </Hero>
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Kontaktmöglichkeiten"
+    subtitle="Wir sind hier, um Ihnen zu helfen:"
+    items={[
+      {
+        title: 'E-Mail-Beratung',
+        description: 'Senden Sie uns eine E-Mail für eine kostenlose Erstberatung.',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Persönliche Gespräche',
+        description: 'Vereinbaren Sie ein persönliches Gespräch oder eine Videokonferenz.',
+        icon: 'tabler:phone',
+      },
+      {
+        title: 'Workshops & Seminare',
+        description: 'Informieren Sie sich über unsere aktuellen Workshops und Seminare.',
+        icon: 'tabler:presentation',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'E-Mail senden',
+        href: 'mailto:haberstock.stefanie@gmail.com',
+      },
+    ]}
+  >
+    <Fragment slot="title">Bereit für den nächsten Schritt?</Fragment>
+
+    <Fragment slot="subtitle">
+      Lassen Sie uns gemeinsam Ihre Ziele erreichen. Kontaktieren Sie uns noch heute!
+    </Fragment>
+  </CallToAction>
+</Layout>
