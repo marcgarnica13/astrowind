@@ -80,7 +80,7 @@ export default defineConfig({
   ],
 
   image: {
-    domains: ['cdn.pixabay.com'],
+    domains: [],
   },
 
   markdown: {
