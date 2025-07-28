@@ -1,71 +1,109 @@
 import { getBlogPermalink, getPermalink } from './utils/permalinks';
-import { getLocalizedPath, type Locale } from './utils/i18n';
 
-// Generate locale-aware navigation data
-export function getHeaderData(locale: Locale = 'en') {
-  const localizedPath = (path: string) => {
-    if (locale === 'en') return getPermalink(path);
+// Navigation translations
+const navigationLabels = {
+  en: {
+    about: 'About',
+    services: 'Services',
+    blog: 'Blog',
+    blogList: 'Blog List',
+    article: 'Article',
+    contactUs: 'Contact Us',
+    home: 'Home',
+  },
+  de: {
+    about: 'Über uns',
+    services: 'Leistungen',
+    blog: 'Blog',
+    blogList: 'Blog Liste',
+    article: 'Artikel',
+    contactUs: 'Kontakt',
+    home: 'Startseite',
+  },
+  es: {
+    about: 'Sobre mí',
+    services: 'Servicios',
+    blog: 'Blog',
+    blogList: 'Lista del Blog',
+    article: 'Artículo',
+    contactUs: 'Contáctanos',
+    home: 'Inicio',
+  },
+};
+
+// Generate navigation data for a specific locale
+export function getHeaderData(locale: string = 'en') {
+  const labels = navigationLabels[locale] || navigationLabels.en;
+
+  // Helper function to create locale-aware URLs
+  const getLocalePermalink = (path: string) => {
+    if (locale === 'en') {
+      return getPermalink(path);
+    }
     return getPermalink(`/${locale}${path}`);
   };
 
   return {
     links: [
       {
-        text: 'navigation.about',
-        href: localizedPath('/about'),
+        text: labels.about,
+        href: getLocalePermalink('/about'),
       },
       {
-        text: 'navigation.services', 
-        href: localizedPath('/services'),
+        text: labels.services,
+        href: getLocalePermalink('/services'),
       },
       {
-        text: 'navigation.blog',
+        text: labels.blog,
         links: [
           {
-            text: 'navigation.blogList',
+            text: labels.blogList,
             href: getBlogPermalink(),
           },
           {
-            text: 'navigation.blogPost',
+            text: labels.article,
             href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
           },
         ],
       },
     ],
-    actions: [{ 
-      text: 'navigation.contactUs', 
-      variant: 'primary', 
-      href: 'mailto:haberstock.stefanie@gmail.com' 
-    }],
+    actions: [
+      {
+        text: labels.contactUs,
+        variant: 'primary',
+        href: 'mailto:haberstock.stefanie@gmail.com',
+      },
+    ],
   };
 }
 
-// Backward compatibility - default English navigation
-export const headerData = getHeaderData('en');
+export function getFooterData(locale: string = 'en') {
+  const labels = navigationLabels[locale] || navigationLabels.en;
 
-// Generate locale-aware footer data
-export function getFooterData(locale: Locale = 'en') {
-  const localizedPath = (path: string) => {
-    if (locale === 'en') return getPermalink(path);
+  // Helper function to create locale-aware URLs
+  const getLocalePermalink = (path: string) => {
+    if (locale === 'en') {
+      return getPermalink(path);
+    }
     return getPermalink(`/${locale}${path}`);
   };
 
   return {
     links: [
       {
-        title: 'navigation.services',
+        title: labels.services,
         links: [
-          { text: 'navigation.about', href: localizedPath('/about') },
-          { text: 'navigation.services', href: localizedPath('/services') },
-          { text: 'navigation.contactUs', href: 'mailto:haberstock.stefanie@gmail.com' },
+          { text: labels.about, href: getLocalePermalink('/about') },
+          { text: labels.services, href: getLocalePermalink('/services') },
+          { text: labels.contactUs, href: 'mailto:haberstock.stefanie@gmail.com' },
         ],
       },
     ],
     secondaryLinks: [
-      { text: 'navigation.home', href: localizedPath('/') },
-      { text: 'navigation.about', href: localizedPath('/about') },
-      { text: 'navigation.services', href: localizedPath('/services') },
-      { text: 'navigation.blog', href: localizedPath('/blog') },
+      { text: labels.home, href: getLocalePermalink('/') },
+      { text: labels.about, href: getLocalePermalink('/about') },
+      { text: labels.services, href: getLocalePermalink('/services') },
+      { text: labels.blog, href: getPermalink('/blog') },
     ],
     socialLinks: [
       { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/steffi.hx/' },
@@ -81,5 +119,6 @@ export function getFooterData(locale: Locale = 'en') {
   };
 }
 
-// Backward compatibility - default English footer
+// Default exports (English)
+export const headerData = getHeaderData('en');
 export const footerData = getFooterData('en');

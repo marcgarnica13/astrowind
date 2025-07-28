@@ -290,3 +290,14 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
 }
 
 export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}
+
+export interface FirstLanding extends Omit<Headline, 'classes'>, Widget {
+  content?: string;
+  actions?: string | CallToAction[];
+  image?: string | unknown;
+  items?: Array<Item>;
+  columns?: number;
+  callToAction?: CallToAction;
+  isReversed?: boolean;
+  isAfterContent?: boolean;
+}

@@ -3,7 +3,6 @@ import Header from '~/components/widgets/Header.astro';
 import PageLayout from '~/layouts/PageLayout.astro';
 
 import { getHeaderData } from '~/navigation';
-import { getLocaleFromUrl } from '~/utils/i18n';
 import type { MetaData } from '~/types';
 
 export interface Props {
@@ -11,7 +10,9 @@ export interface Props {
 }
 
 const { metadata } = Astro.props;
-const currentLocale = getLocaleFromUrl(Astro.url);
+
+// Get current locale from Astro.currentLocale
+const currentLocale = Astro.currentLocale || 'en';
 const headerData = getHeaderData(currentLocale);
 ---
 

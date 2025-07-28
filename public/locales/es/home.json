@@ -10,48 +10,80 @@
     "exploreServices": "Explora mis servicios"
   },
   "features": {
-    "sectionTitle": "Lo que ofrezco",
-    "title": "Ofertas principales",
-    "subtitle": "En el corazón de mi trabajo está la creencia de que el rendimiento sostenible y el bienestar no son mutuamente excluyentes. Me especializo en:",
+    "sectionTitle": "Lo que obtienes",
+    "title": "Lo que obtienes",
+    "subtitle": "Soluciones personalizadas basadas en ciencia, diseñadas para desafíos del mundo real.",
     "items": {
-      "leadershipDevelopment": {
-        "title": "Desarrollo de Liderazgo",
-        "description": "Empoderar a los líderes con las herramientas y la mentalidad para navegar la complejidad e inspirar a sus equipos."
+      "psychologicalExpertise": {
+        "title": "Experiencia Psicológica",
+        "description": "Basado en psicología deportiva y ciencia del liderazgo, ofrezco métodos basados en evidencia para fortalecer la resistencia, el rendimiento y el bienestar."
       },
-      "teamCoaching": {
-        "title": "Coaching de Equipos",
-        "description": "Crear equipos de alto rendimiento mediante mejor comunicación, confianza y colaboración."
+      "holisticApproach": {
+        "title": "Enfoque Holístico",
+        "description": "Mente, cuerpo y entorno están profundamente interconectados — mis métodos biopsicosociales crean equilibrio y efectividad a largo plazo."
       },
-      "mentalHealthAdvocacy": {
-        "title": "Promoción de la Salud Mental",
-        "description": "Integrar el bienestar mental en la cultura organizacional para el éxito sostenible."
+      "innovativeApproaches": {
+        "title": "Enfoques Innovadores del Deporte de Alto Rendimiento",
+        "description": "Traigo estrategias probadas del deporte de élite al mundo empresarial, donde la presión, el rendimiento y la dinámica grupal se llevan al límite."
       },
-      "changeManagement": {
-        "title": "Gestión del Cambio",
-        "description": "Guiar a las organizaciones a través de la transformación con enfoques centrados en las personas."
+      "humanCenteredPhilosophy": {
+        "title": "Filosofía Centrada en el Ser Humano",
+        "description": "Veo a la persona detrás del rol — cada proyecto comienza con respeto, empatía y un compromiso con el desarrollo personal y colectivo real."
       },
-      "executiveCoaching": {
-        "title": "Coaching Ejecutivo",
-        "description": "Coaching individual para líderes senior para mejorar su impacto y efectividad."
+      "strategicGrowthFocus": {
+        "title": "Enfoque en Crecimiento Estratégico",
+        "description": "Ya sea desarrollo personal, dinámicas de equipo o salud corporativa, me enfoco en un crecimiento significativo, medible y sostenible."
       },
-      "workshopsFacilitation": {
-        "title": "Talleres y Facilitación",
-        "description": "Sesiones interactivas diseñadas para desarrollar habilidades y fomentar conexiones significativas."
+      "researchDrivenPractices": {
+        "title": "Prácticas Basadas en Investigación",
+        "description": "La investigación continua en identidad social y liderazgo asegura que mi trabajo sea vanguardista y profundamente fundamentado."
+      }
+    }
+  },
+  "content": {
+    "title": "Con quién trabajo",
+    "items": {
+      "individuals": {
+        "title": "Individuos y Atletas",
+        "description": "Aumenta la fortaleza mental, maneja el estrés, navega desafíos personales y atléticos, y crece más allá de las limitaciones."
+      },
+      "teams": {
+        "title": "Equipos", 
+        "description": "Construye identidad de equipo, fortalece la cohesión, mejora la comunicación y el rendimiento."
+      },
+      "businesses": {
+        "title": "Empresas",
+        "description": "Forma la cultura organizacional, fomenta el liderazgo y mejora el compromiso de los empleados a través de consultoría basada en identidad."
       }
     }
   },
   "steps": {
-    "sectionTitle": "Mi enfoque",
-    "title": "Cómo trabajo",
-    "subtitle": "Mi enfoque se basa en crear cambios sostenibles a través de la conexión humana y prácticas basadas en evidencia."
-  },
-  "content": {
-    "title": "Uniendo la conexión humana y el alto rendimiento",
-    "subtitle": "Combino amplia experiencia en desarrollo de liderazgo con una comprensión profunda de la psicología humana para crear experiencias transformadoras.",
-    "description": "Con más de 15 años de experiencia trabajando con organizaciones globales, he sido testigo de primera mano de cómo los equipos más exitosos son aquellos que priorizan tanto el rendimiento como las personas. Mi metodología integra la ciencia del liderazgo de vanguardia con herramientas prácticas que impulsan resultados reales.",
-    "actions": {
-      "moreAboutMe": "Más sobre mí",
-      "schedule": "Programar una conversación"
+    "title": "Comienza tu transformación personal en poco tiempo.",
+    "items": {
+      "step1": {
+        "title": "Paso 1: <span class=\"font-medium\">Consulta Inicial Gratuita</span>",
+        "description": "Comienza con una conversación gratuita y sin compromiso, en línea o en persona, donde nos conocemos. Aclaramos tus objetivos, desafíos y si mi enfoque es el adecuado para tus necesidades.",
+        "icon": "tabler:message-circle-question"
+      },
+      "step2": {
+        "title": "Paso 2: <span class=\"font-medium\">Concepto Personalizado</span>",
+        "description": "Basándome en tu situación y objetivos, creo un plan personalizado, ya sea enfocado en entrenamiento mental, desarrollo de liderazgo, identidad de equipo o bienestar holístico.",
+        "icon": "tabler:adjustments"
+      },
+      "step3": {
+        "title": "Paso 3: <span class=\"font-medium\">Fase de Trabajo Colaborativo</span>",
+        "description": "A través de sesiones regulares o talleres, ponemos las estrategias en práctica. Recibirás herramientas prácticas, retroalimentación y métodos de reflexión que potencian el crecimiento sostenible.",
+        "icon": "tabler:brand-asana"
+      },
+      "step4": {
+        "title": "Paso 4: <span class=\"font-medium\">Implementación Independiente</span>",
+        "description": "Mi objetivo final es hacerte (o a tu equipo) autosuficiente. Te proporciono las habilidades y estrategias necesarias para continuar prosperando de forma independiente, mucho después de nuestra colaboración.",
+        "icon": "tabler:target-arrow"
+      },
+      "ready": {
+        "title": "¡Listo!",
+        "icon": "tabler:check"
+      }
     }
   },
   "stats": {
@@ -82,10 +114,9 @@
     "subtitle": "Encuentra respuestas a preguntas comunes sobre mis servicios y enfoque."
   },
   "callToAction": {
-    "sectionTitle": "¿Listo para transformar?",
-    "title": "Comienza tu viaje hoy",
-    "subtitle": "Ya sea que busques desarrollar tus habilidades de liderazgo, transformar tu equipo o crear una cultura organizacional más saludable, estoy aquí para ayudar.",
-    "primaryAction": "Programar consulta gratuita"
+    "title": "¡Comienza Hoy!",
+    "subtitle": "No esperes al cambio: créalo. Desbloqueemos tu potencial juntos.",
+    "primaryAction": "Consulta gratuita"
   },
   "blog": {
     "sectionTitle": "Últimas perspectivas",

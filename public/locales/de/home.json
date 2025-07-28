@@ -1,57 +1,89 @@
 {
   "hero": {
     "title": "Gedanken stärken. Teams entwickeln. Führung transformieren.",
-    "tagline": "Lassen Sie uns sprechen.",
+    "tagline": "Lass uns reden.",
     "primaryAction": "Kostenlose Beratung",
-    "secondaryAction": "Meine Leistungen entdecken"
+    "secondaryAction": "Meine Services erkunden"
   },
   "bigNote": {
     "title": "Wo menschliche Verbindung auf Höchstleistung trifft",
-    "exploreServices": "Meine Leistungen entdecken"
+    "exploreServices": "Meine Services erkunden"
   },
   "features": {
-    "sectionTitle": "Was ich anbiete",
-    "title": "Hauptangebote",
-    "subtitle": "Im Kern meiner Arbeit liegt der Glaube, dass nachhaltige Leistung und Wohlbefinden sich nicht gegenseitig ausschließen. Ich spezialisiere mich auf:",
+    "sectionTitle": "Was du bekommst",
+    "title": "Was du bekommst",
+    "subtitle": "Maßgeschneiderte Lösungen basierend auf Wissenschaft, entwickelt für reale Herausforderungen.",
     "items": {
-      "leadershipDevelopment": {
-        "title": "Führungskräfteentwicklung",
-        "description": "Führungskräfte mit den Werkzeugen und der Denkweise ausstatten, um Komplexität zu navigieren und ihre Teams zu inspirieren."
+      "psychologicalExpertise": {
+        "title": "Psychologische Expertise",
+        "description": "Gegründet in Sportpsychologie und Führungswissenschaft biete ich evidenzbasierte Methoden zur Stärkung von Resilienz, Leistung und Wohlbefinden."
       },
-      "teamCoaching": {
-        "title": "Team-Coaching",
-        "description": "Hochleistungsteams durch verbesserte Kommunikation, Vertrauen und Zusammenarbeit schaffen."
+      "holisticApproach": {
+        "title": "Ganzheitlicher Ansatz",
+        "description": "Geist, Körper und Umwelt sind tief miteinander verbunden — meine biopsychosozialen Methoden schaffen Balance und langfristige Wirksamkeit."
       },
-      "mentalHealthAdvocacy": {
-        "title": "Förderung psychischer Gesundheit",
-        "description": "Integration von psychischem Wohlbefinden in die Organisationskultur für nachhaltigen Erfolg."
+      "innovativeApproaches": {
+        "title": "Innovative Ansätze aus dem Hochleistungssport",
+        "description": "Ich bringe erprobte Strategien aus dem Spitzensport in die Geschäftswelt — wo Druck, Leistung und Gruppendynamik an ihre Grenzen gebracht werden."
       },
-      "changeManagement": {
-        "title": "Change Management",
-        "description": "Organisationen mit menschenzentrierten Ansätzen durch Transformation führen."
+      "humanCenteredPhilosophy": {
+        "title": "Menschenzentrierte Philosophie",
+        "description": "Ich sehe den Menschen hinter der Rolle — jedes Projekt beginnt mit Respekt, Empathie und einem Engagement für echte persönliche und kollektive Entwicklung."
       },
-      "executiveCoaching": {
-        "title": "Executive Coaching",
-        "description": "Einzelcoaching für Führungskräfte zur Verbesserung ihrer Wirkung und Effektivität."
+      "strategicGrowthFocus": {
+        "title": "Strategischer Wachstumsfokus",
+        "description": "Ob Persönlichkeitsentwicklung, Teamdynamik oder Unternehmensgesundheit — ich fokussiere auf bedeutungsvolles, messbares und nachhaltiges Wachstum."
       },
-      "workshopsFacilitation": {
-        "title": "Workshops & Moderation",
-        "description": "Interaktive Sitzungen zur Entwicklung von Fähigkeiten und zur Förderung bedeutungsvoller Verbindungen."
+      "researchDrivenPractices": {
+        "title": "Forschungsbasierte Praktiken",
+        "description": "Kontinuierliche Forschung in sozialer Identität und Führung stellt sicher, dass meine Arbeit sowohl innovativ als auch fundiert ist."
+      }
+    }
+  },
+  "content": {
+    "title": "Mit wem ich arbeite",
+    "items": {
+      "individuals": {
+        "title": "Einzelpersonen & Athleten",
+        "description": "Stärke mentale Kraft, bewältige Stress, navigiere persönliche und athletische Herausforderungen und wachse über Grenzen hinaus."
+      },
+      "teams": {
+        "title": "Teams", 
+        "description": "Baue Teamidentität auf, stärke Zusammenhalt, verbessere Kommunikation und Leistung."
+      },
+      "businesses": {
+        "title": "Unternehmen",
+        "description": "Forme Unternehmenskultur, fördere Führung und verbessere Mitarbeiterengagement durch identitätsbasierte Beratung."
       }
     }
   },
   "steps": {
-    "sectionTitle": "Mein Ansatz",
-    "title": "Wie ich arbeite",
-    "subtitle": "Mein Ansatz basiert auf der Schaffung nachhaltiger Veränderungen durch menschliche Verbindung und evidenzbasierte Praktiken."
-  },
-  "content": {
-    "title": "Brücke zwischen menschlicher Verbindung und Höchstleistung",
-    "subtitle": "Ich kombiniere umfangreiche Erfahrung in der Führungskräfteentwicklung mit einem tiefen Verständnis der menschlichen Psychologie, um transformative Erfahrungen zu schaffen.",
-    "description": "Mit über 15 Jahren Erfahrung in der Arbeit mit globalen Organisationen habe ich aus erster Hand erlebt, wie die erfolgreichsten Teams diejenigen sind, die sowohl Leistung als auch Menschen priorisieren. Meine Methodik integriert modernste Führungswissenschaft mit praktischen Werkzeugen, die echte Ergebnisse liefern.",
-    "actions": {
-      "moreAboutMe": "Mehr über mich",
-      "schedule": "Gespräch vereinbaren"
+    "title": "Beginne deine persönliche Transformation in kürzester Zeit.",
+    "items": {
+      "step1": {
+        "title": "Schritt 1: <span class=\"font-medium\">Kostenlose Erstberatung</span>",
+        "description": "Beginne mit einem kostenlosen, unverbindlichen Gespräch, online oder persönlich, wo wir uns kennenlernen. Wir klären deine Ziele, Herausforderungen und ob mein Ansatz der richtige für deine Bedürfnisse ist.",
+        "icon": "tabler:message-circle-question"
+      },
+      "step2": {
+        "title": "Schritt 2: <span class=\"font-medium\">Personalisiertes Konzept</span>",
+        "description": "Basierend auf deiner Situation und deinen Zielen erstelle ich einen maßgeschneiderten Plan — ob fokussiert auf mentales Training, Führungsentwicklung, Teamidentität oder ganzheitliches Wohlbefinden.",
+        "icon": "tabler:adjustments"
+      },
+      "step3": {
+        "title": "Schritt 3: <span class=\"font-medium\">Kollaborative Arbeitsphase</span>",
+        "description": "Durch regelmäßige Sitzungen oder Workshops setzen wir die Strategien in die Praxis um. Du erhältst praktische Werkzeuge, Feedback und Reflexionsmethoden, die nachhaltiges Wachstum fördern.",
+        "icon": "tabler:brand-asana"
+      },
+      "step4": {
+        "title": "Schritt 4: <span class=\"font-medium\">Selbständige Umsetzung</span>",
+        "description": "Mein ultimatives Ziel ist es, dich (oder dein Team) selbstständig zu machen. Ich statte dich mit den Fähigkeiten und Strategien aus, die du brauchst, um auch lange nach unserer Zusammenarbeit eigenständig zu gedeihen.",
+        "icon": "tabler:target-arrow"
+      },
+      "ready": {
+        "title": "Fertig!",
+        "icon": "tabler:check"
+      }
     }
   },
   "stats": {
@@ -61,7 +93,7 @@
     },
     "stat2": {
       "amount": "500+",
-      "description": "Gecoachte Führungskräfte"
+      "description": "Trainierte Führungskräfte"
     },
     "stat3": {
       "amount": "50+",
@@ -74,21 +106,20 @@
   },
   "testimonials": {
     "title": "Was Kunden sagen",
-    "subtitle": "Entdecken Sie, was Kunden über ihre transformativen Erfahrungen zu sagen haben."
+    "subtitle": "Entdecken Sie, was Kunden über ihre transformativen Erfahrungen sagen."
   },
   "faqs": {
-    "sectionTitle": "Häufige Fragen",
+    "sectionTitle": "FAQs",
     "title": "Häufig gestellte Fragen",
-    "subtitle": "Finden Sie Antworten auf häufige Fragen zu meinen Leistungen und meinem Ansatz."
+    "subtitle": "Finden Sie Antworten auf häufige Fragen zu meinen Dienstleistungen und meinem Ansatz."
   },
   "callToAction": {
-    "sectionTitle": "Bereit zur Transformation?",
-    "title": "Beginnen Sie Ihre Reise heute",
-    "subtitle": "Ob Sie Ihre Führungskompetenzen entwickeln, Ihr Team transformieren oder eine gesündere Organisationskultur schaffen möchten - ich bin hier, um zu helfen.",
-    "primaryAction": "Kostenlose Beratung vereinbaren"
+    "title": "Beginne Heute!",
+    "subtitle": "Warte nicht auf Veränderung — erschaffe sie. Lass uns dein Potenzial gemeinsam entfalten.",
+    "primaryAction": "Kostenlose Beratung"
   },
   "blog": {
-    "sectionTitle": "Neueste Erkenntnisse",
+    "sectionTitle": "Neueste Einblicke",
     "title": "Aktuelle Artikel",
     "viewAllPosts": "Alle Beiträge anzeigen"
   }

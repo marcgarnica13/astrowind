@@ -1,71 +1,79 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'S.H. Contacto',
-  description: 'Contacta a Steffi Haberstock para una consulta gratuita.',
-  ignoreTitleTemplate: true,
+  title: 'Contact',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- HeroText Widget ******************* -->
 
-  <Hero>
-    <Fragment slot="title">
-      Contacta a <span class="text-accent dark:text-white highlight">Steffi</span>
-    </Fragment>
+  <HeroText tagline="Contact" title="Let's Connect!" />
 
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        ¿Listo para el cambio? Transformemos juntos tus desafíos de liderazgo en oportunidades de crecimiento.
-      </span>
-      Contáctanos para una consulta inicial gratuita.
-    </Fragment>
-  </Hero>
+  <ContactUs
+    id="form"
+    title="Drop us a message today!"
+    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+    }}
+    disclaimer={{
+      label:
+        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+    }}
+    description="Our support team typically responds within 24 business hours."
+  />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Formas de contacto"
-    subtitle="Estamos aquí para ayudarte:"
+    title="We are here to help!"
     items={[
       {
-        title: 'Consulta por email',
-        description: 'Envíanos un email para una consulta inicial gratuita.',
+        title: 'General support',
+        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+      },
+      {
+        title: 'Contact sales',
+        description:
+          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+      },
+      {
+        title: 'Technical support',
+        description:
+          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+      },
+      {
+        title: 'Phone',
+        description: '+1 (234) 567-890',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Email',
+        description: 'contact@support.com',
         icon: 'tabler:mail',
       },
       {
-        title: 'Conversaciones personales',
-        description: 'Programa una conversación personal o videoconferencia.',
-        icon: 'tabler:phone',
-      },
-      {
-        title: 'Talleres y seminarios',
-        description: 'Infórmate sobre nuestros talleres y seminarios actuales.',
-        icon: 'tabler:presentation',
+        title: 'Location',
+        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        icon: 'tabler:map-pin',
       },
     ]}
   />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Enviar email',
-        href: 'mailto:haberstock.stefanie@gmail.com',
-      },
-    ]}
-  >
-    <Fragment slot="title">¿Listo para el siguiente paso?</Fragment>
-
-    <Fragment slot="subtitle">
-      Alcancemos juntos tus objetivos. ¡Contáctanos hoy mismo!
-    </Fragment>
-  </CallToAction>
 </Layout>

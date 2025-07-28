@@ -15,15 +15,14 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 
 const metadata = {
   title: 'Steffi Haberstock',
-  description: 'Ermächtigung von Köpfen. Entwicklung von Teams. Transformation von Führung.',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero2
-    title="Ermächtigung von Köpfen. Entwicklung von Teams. Transformation von Führung."
-    tagline="Lassen Sie uns sprechen."
+    title="Geist stärken. Teams entwickeln. Führung transformieren."
+    tagline="Lass uns reden."
     image={{
       src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
       alt: 'Schritte Bild',
@@ -31,60 +30,65 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Kostenlose Beratung',
+        text: 'Kostenloses Beratungsgespräch',
         href: 'mailto:haberstock.stefanie@gmail.com',
-        icon: 'tabler:download',
       },
-      {
-        variant: 'secondary',
-        text: 'Mehr erfahren',
-        href: '/de/about',
-      },
+      { text: 'Meine Leistungen entdecken', href: '#features' },
     ]}
   />
 
+  <!-- Note Widget ******************* -->
+
+  <BigNote
+    title="<span class='text-white text-7xl'>Wo menschliche Verbindung auf Höchstleistung trifft</span>"
+    subtitle="<br/><a href='#features' class='text-white'><u>Meine Leistungen entdecken</u></a>"
+    ><Fragment slot="bg">
+      <div class="absolute inset-0 bg-primary dark:bg-transparent"></div>
+    </Fragment>
+  </BigNote>
+
+  <!-- Note Widget ******************* -->
   <!-- Features Widget *************** -->
 
   <Features
     id="features"
-    tagline="Merkmale"
-    title="Was Sie von STEFFI erwarten können"
-    subtitle="Eines der am meisten bewerteten und umfassenden Vorlagen auf dem Markt. Die meisten Websites benötigen dasselbe Standarddesign."
+    title="Was Sie bekommen"
+    subtitle="Maßgeschneiderte Lösungen, wissenschaftlich fundiert und für reale Herausforderungen entwickelt."
     items={[
       {
-        title: 'Astro + Tailwind CSS-Integration',
+        title: 'Psychologische Expertise',
         description:
-          'Eine nahtlose Integration zwischen zwei großartigen Frameworks, die Flexibilität, Leistung und Entwicklererfahrung bietet.',
-        icon: 'tabler:brand-tailwind',
+          'Basierend auf Sportpsychologie und Führungswissenschaft biete ich evidenzbasierte Methoden zur Stärkung von Resilienz, Leistung und Wohlbefinden.',
+        icon: 'tabler:brain',
       },
       {
-        title: 'Bereit für Produktion',
+        title: 'Ganzheitlicher Ansatz',
         description:
-          'AstroWind ist gut strukturiert, organisiert und sauber. Professionelles, pixelgenaues Design.',
-        icon: 'tabler:components',
+          'Geist, Körper und Umgebung sind tief miteinander verbunden — meine biopsychosozialen Methoden schaffen Balance und langfristige Wirksamkeit.',
+        icon: 'tabler:broadcast',
       },
       {
-        title: 'SEO-freundlich',
+        title: 'Innovative Ansätze aus dem Hochleistungssport',
         description:
-          'SEO beste Praktiken in Kombination mit OpenGraph und Twitter Cards out-of-the-box. Finden Sie die Sichtbarkeit, die Ihre Website verdient.',
-        icon: 'tabler:list-check',
+          'Ich bringe erprobte Strategien aus dem Spitzensport in die Geschäftswelt — wo Druck, Leistung und Gruppendynamik an ihre Grenzen getrieben werden.',
+        icon: 'tabler:exchange',
       },
       {
-        title: 'Offener Code',
+        title: 'Menschenzentrierte Philosophie',
         description:
-          'Code ist vollständig offen. Fühlen Sie sich frei, ihn zu verwenden und anzupassen. Fügen Sie Ihre eigenen Komponenten hinzu und schaffen Sie Einzigartigkeit.',
+          'Ich sehe den Menschen hinter der Rolle — jedes Projekt beginnt mit Respekt, Empathie und dem Engagement für echte persönliche und kollektive Entwicklung.',
+        icon: 'tabler:user-circle',
+      },
+      {
+        title: 'Strategischer Wachstumsfokus',
+        description:
+          'Ob Persönlichkeitsentwicklung, Teamdynamik oder Unternehmensgesundheit — ich konzentriere mich auf sinnvolles, messbares und nachhaltiges Wachstum.',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Entwicklerfreundlich',
+        title: 'Forschungsbasierte Praktiken',
         description:
-          'Der Code ist sauber, strukturiert und folgt den besten Praktiken. Einfach zu verstehen und anzupassen.',
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Blog optimiert',
-        description:
-          'Blog-System mit Kategorien und Tags. RSS-Feed und Kommentarsystem. Alles, was Sie für den Start benötigen.',
+          'Laufende Forschung zu sozialer Identität und Führung sorgt dafür, dass meine Arbeit sowohl hochmodern als auch tiefgreifend fundiert ist.',
         icon: 'tabler:bulb',
       },
     ]}
@@ -94,65 +98,67 @@ const metadata = {
 
   <Content
     isReversed
-    tagline="Innen AstroWind Vorlage"
-    title="AstroWind's Bauplan: Spaß trifft Funktionalität!"
     items={[
       {
-        title: 'Basierend auf Astro 5.0',
+        title: 'Einzelpersonen & Athleten',
         description:
-          'Nutzen Sie die Leistung von Astro 5.0 mit unserer Vorlage. Nutzen Sie Komponenten-Inseln, automatische Optimierung und das effiziente Routing-System.',
+          'Mentale Stärke stärken, Stress bewältigen, persönliche und sportliche Herausforderungen meistern und über Grenzen hinauswachsen.',
       },
       {
-        title: 'Styled mit Tailwind CSS',
-        description:
-          'Nutzen Sie die Flexibilität von Tailwind CSS für nahtloses Styling. Profitieren Sie von seinem utility-first Ansatz und responsivem Design.',
+        title: 'Teams',
+        description: 'Teamidentität aufbauen, Zusammenhalt stärken, Kommunikation und Leistung verbessern.',
       },
       {
-        title: 'Querformatiges Layout-Design',
+        title: 'Unternehmen',
         description:
-          'Präsentieren Sie Ihre Inhalte ansprechend mit einem vielseitigen, querformatigen Layout, das sich an verschiedene Arten von Websites anpasst.',
+          'Unternehmenskultur gestalten, Führung fördern und Mitarbeiterengagement durch identitätsgetriebene Beratung verbessern.',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Bunte Bücher Bild',
+      alt: 'Farbenfrohes Bild',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Aufbau auf modernen Fundamenten</h3>
-      Gewinnen Sie einen Wettbewerbsvorteil, indem Sie die besten der Klasse Frameworks einbauen.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Mit wem ich arbeite</h3>
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-slate-800"></div>
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Holen Sie sich Ihre Traumwebsite in 3 einfachen Schritten."
+    title="Ihr Weg zu nachhaltiger Veränderung und persönlichem Wachstum."
     items={[
       {
-        title: 'Schritt 1: <span class="font-medium">Herunterladen</span>',
+        title: 'Schritt 1: <span class="font-medium">Kostenloses Erstgespräch</span>',
         description:
-          'Laden Sie die AstroWind Vorlage von GitHub herunter. Entpacken Sie das Archiv und navigieren Sie zum Projektverzeichnis.',
-        icon: 'tabler:package',
+          'Beginnen Sie mit einem kostenlosen, unverbindlichen Gespräch — online oder persönlich. Wir lernen uns kennen, klären Ihre Ziele und Herausforderungen und prüfen, ob mein Ansatz zu Ihren Bedürfnissen passt.',
+        icon: 'tabler:message-circle-question',
       },
       {
-        title: 'Schritt 2: <span class="font-medium">Hinzufügen von Inhalten</span>',
+        title: 'Schritt 2: <span class="font-medium">Individuelles Konzept</span>',
         description:
-          'Bearbeiten Sie die Konfigurationsdatei mit Ihren Daten. Aktualisieren Sie die Homepage mit Ihren Informationen.',
-        icon: 'tabler:letter-case',
+          'Basierend auf Ihrer Situation und Ihren Zielen erstelle ich einen maßgeschneiderten Plan — sei es Mentaltraining, Führungsentwicklung, Teamidentität oder ganzheitliches Wohlbefinden.',
+        icon: 'tabler:adjustments',
       },
       {
-        title: 'Schritt 3: <span class="font-medium">Anpassen</span>',
+        title: 'Schritt 3: <span class="font-medium">Gemeinsame Arbeitsphase</span>',
         description:
-          'Aktualisieren Sie Farben, Schriftarten und mehr. Stellen Sie Ihre Website auf Ihrer bevorzugten Hosting-Plattform bereit.',
-        icon: 'tabler:paint',
+          'In regelmäßigen Sitzungen oder Workshops setzen wir die Strategien in die Praxis um. Sie erhalten praktische Werkzeuge, Feedback und Reflexionsmethoden für nachhaltiges Wachstum.',
+        icon: 'tabler:brand-asana',
       },
       {
-        title: 'Bereit!',
+        title: 'Schritt 4: <span class="font-medium">Eigenständige Umsetzung</span>',
+        description:
+          'Mein Ziel ist es, Sie (oder Ihr Team) selbstständig zu machen. Ich statte Sie mit den Fähigkeiten und Strategien aus, die Sie brauchen, um auch nach unserer Zusammenarbeit erfolgreich zu sein.',
+        icon: 'tabler:target-arrow',
+      },
+      {
+        title: 'Fertig!',
         icon: 'tabler:check',
       },
     ]}
@@ -168,18 +174,15 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Kostenlose Beratung',
+        text: 'Kostenloses Beratungsgespräch',
         href: 'mailto:haberstock.stefanie@gmail.com',
-        icon: 'tabler:download',
+        target: '_blank',
+        icon: 'tabler:mail',
       },
     ]}
   >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
+    <Fragment slot="title"> Starten Sie noch heute! </Fragment>
 
-    <Fragment slot="subtitle">
-      Seien Sie sehr produktiv! Diese hilfsbereite Vorlage macht es einfach.
-    </Fragment>
+    <Fragment slot="subtitle"> Warten Sie nicht auf Veränderung — gestalten Sie sie. Lassen Sie uns gemeinsam Ihr Potenzial entfalten. </Fragment>
   </CallToAction>
 </Layout>

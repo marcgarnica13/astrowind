@@ -1,10 +1,19 @@
 ---
-import { locales, localeLabels, getAlternateUrls, getLocaleFromUrl, type Locale } from '~/utils/i18n';
+import { getRelativeLocaleUrl } from 'astro:i18n';
 import { Icon } from 'astro-icon/components';
 
 interface Props {
   class?: string;
 }
+
+const locales = ['en', 'de', 'es'] as const;
+type Locale = typeof locales[number];
+
+const localeLabels: Record<Locale, string> = {
+  en: 'English',
+  de: 'Deutsch',
+  es: 'Español',
+};
 
 const localeFlags: Record<Locale, string> = {
   en: '🇬🇧',
@@ -13,8 +22,38 @@ const localeFlags: Record<Locale, string> = {
 };
 
 const { class: className } = Astro.props;
-const currentLocale = getLocaleFromUrl(Astro.url) as Locale;
-const alternateUrls = getAlternateUrls(Astro.url.pathname, currentLocale);
+
+// Get current locale from Astro.currentLocale
+const currentLocale = Astro.currentLocale as Locale || 'en';
+
+// Generate URLs manually to preserve current page across language switch
+const generateLanguageURL = (locale: Locale) => {
+  const basePath = '/astrowind';
+  let currentPath = Astro.url.pathname;
+  
+  // Remove base path if present
+  currentPath = currentPath.replace(/^\/astrowind/, '');
+  
+  // Remove current locale prefix if present  
+  currentPath = currentPath.replace(/^\/(en|de|es)/, '');
+  
+  // Ensure path starts with /
+  if (!currentPath.startsWith('/')) {
+    currentPath = '/' + currentPath;
+  }
+  
+  // If empty, use root
+  if (currentPath === '' || currentPath === '/') {
+    currentPath = '';
+  }
+  
+  // Build the URL manually - this preserves the current page
+  if (locale === 'en') {
+    return basePath + currentPath;
+  } else {
+    return basePath + '/' + locale + currentPath;
+  }
+};
 ---
 
 <div class={`relative ${className || ''}`}>
@@ -37,7 +76,7 @@ const alternateUrls = getAlternateUrls(Astro.url.pathname, currentLocale);
   >
     {locales.map((locale) => (
       <a
-        href={alternateUrls[locale]}
+        href={generateLanguageURL(locale)}
         class={`block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-150 ease-in-out ${
           locale === currentLocale ? 'bg-gray-50 dark:bg-gray-700' : ''
         }`}

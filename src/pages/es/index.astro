@@ -15,14 +15,13 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 
 const metadata = {
   title: 'Steffi Haberstock',
-  description: 'Empoderando Mentes. Desarrollando Equipos. Transformando Liderazgo.',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
   <Hero2
-    title="Empoderando Mentes. Desarrollando Equipos. Transformando Liderazgo."
+    title="Fortaleciendo Mentes. Desarrollando Equipos. Transformando Liderazgo."
     tagline="Hablemos."
     image={{
       src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
@@ -33,58 +32,63 @@ const metadata = {
         variant: 'primary',
         text: 'Consulta gratuita',
         href: 'mailto:haberstock.stefanie@gmail.com',
-        icon: 'tabler:download',
       },
-      {
-        variant: 'secondary',
-        text: 'Saber más',
-        href: '/es/about',
-      },
+      { text: 'Descubre mis servicios', href: '#features' },
     ]}
   />
 
+  <!-- Note Widget ******************* -->
+
+  <BigNote
+    title="<span class='text-white text-7xl'>Donde la conexión humana encuentra el alto rendimiento</span>"
+    subtitle="<br/><a href='#features' class='text-white'><u>Descubre mis servicios</u></a>"
+    ><Fragment slot="bg">
+      <div class="absolute inset-0 bg-primary dark:bg-transparent"></div>
+    </Fragment>
+  </BigNote>
+
+  <!-- Note Widget ******************* -->
   <!-- Features Widget *************** -->
 
   <Features
     id="features"
-    tagline="Características"
-    title="Lo que puedes esperar de STEFFI"
-    subtitle="Una de las plantillas más valoradas y completas del mercado. La mayoría de sitios web necesitan el mismo diseño estándar."
+    title="Lo que obtienes"
+    subtitle="Soluciones personalizadas basadas en ciencia, diseñadas para desafíos del mundo real."
     items={[
       {
-        title: 'Integración Astro + Tailwind CSS',
+        title: 'Experiencia Psicológica',
         description:
-          'Una integración perfecta entre dos marcos excelentes que ofrecen flexibilidad, rendimiento y experiencia de desarrollador.',
-        icon: 'tabler:brand-tailwind',
+          'Basada en psicología deportiva y ciencias del liderazgo, ofrezco métodos basados en evidencia para fortalecer la resistencia, el rendimiento y el bienestar.',
+        icon: 'tabler:brain',
       },
       {
-        title: 'Listo para producción',
+        title: 'Enfoque Holístico',
         description:
-          'AstroWind está bien estructurado, organizado y es limpio. Diseño profesional y perfecto a nivel de píxel.',
-        icon: 'tabler:components',
+          'Mente, cuerpo y entorno están profundamente interconectados — mis métodos biopsicosociales crean equilibrio y efectividad a largo plazo.',
+        icon: 'tabler:broadcast',
       },
       {
-        title: 'Amigable con SEO',
+        title: 'Enfoques Innovadores del Deporte de Alto Rendimiento',
         description:
-          'Mejores prácticas de SEO combinadas con OpenGraph y Twitter Cards listos para usar. Encuentra la visibilidad que tu sitio web merece.',
-        icon: 'tabler:list-check',
+          'Traigo estrategias probadas del deporte de élite al mundo empresarial — donde la presión, el rendimiento y la dinámica grupal se llevan al límite.',
+        icon: 'tabler:exchange',
       },
       {
-        title: 'Código abierto',
+        title: 'Filosofía Centrada en el Ser Humano',
         description:
-          'El código es completamente abierto. Siéntete libre de usarlo y personalizarlo. Añade tus propios componentes y crea singularidad.',
+          'Veo a la persona detrás del rol — cada proyecto comienza con respeto, empatía y compromiso con el desarrollo personal y colectivo real.',
+        icon: 'tabler:user-circle',
+      },
+      {
+        title: 'Enfoque de Crecimiento Estratégico',
+        description:
+          'Ya sea desarrollo personal, dinámica de equipos o salud corporativa, me concentro en un crecimiento significativo, medible y sostenible.',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Amigable para desarrolladores',
+        title: 'Prácticas Basadas en Investigación',
         description:
-          'El código es limpio, estructurado y sigue las mejores prácticas. Fácil de entender y personalizar.',
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Optimizado para blog',
-        description:
-          'Sistema de blog con categorías y etiquetas. Feed RSS y sistema de comentarios. Todo lo que necesitas para empezar.',
+          'La investigación continua en identidad social y liderazgo asegura que mi trabajo sea tanto vanguardista como profundamente fundamentado.',
         icon: 'tabler:bulb',
       },
     ]}
@@ -94,62 +98,64 @@ const metadata = {
 
   <Content
     isReversed
-    tagline="Dentro de la plantilla AstroWind"
-    title="El plan de AstroWind: ¡La diversión se encuentra con la funcionalidad!"
     items={[
       {
-        title: 'Basado en Astro 5.0',
+        title: 'Individuos y Atletas',
         description:
-          'Aprovecha el poder de Astro 5.0 con nuestra plantilla. Benefíciate de las islas de componentes, optimización automática y sistema de enrutamiento eficiente.',
+          'Fortalecer la fuerza mental, manejar el estrés, navegar desafíos personales y deportivos, y crecer más allá de las limitaciones.',
       },
       {
-        title: 'Estilizado con Tailwind CSS',
-        description:
-          'Aprovecha la flexibilidad de Tailwind CSS para un estilo sin problemas. Benefíciate de su enfoque utility-first y diseño responsivo.',
+        title: 'Equipos',
+        description: 'Construir identidad de equipo, fortalecer la cohesión, mejorar la comunicación y el rendimiento.',
       },
       {
-        title: 'Diseño de diseño en paisaje',
+        title: 'Empresas',
         description:
-          'Presenta tu contenido de manera atractiva con un diseño versátil en paisaje que se adapta a varios tipos de sitios web.',
+          'Dar forma a la cultura organizacional, fomentar el liderazgo y mejorar el compromiso de los empleados a través de consultoría basada en identidad.',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Imagen de libros coloridos',
+      alt: 'Imagen colorida',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Construyendo sobre fundamentos modernos</h3>
-      Obtén una ventaja competitiva incorporando marcos de mejor clase.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Con quién trabajo</h3>
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-slate-800"></div>
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Obtén tu sitio web de ensueño en 3 simples pasos."
+    title="Tu camino hacia el cambio sostenible y el crecimiento personal."
     items={[
       {
-        title: 'Paso 1: <span class="font-medium">Descargar</span>',
+        title: 'Paso 1: <span class="font-medium">Consulta Inicial Gratuita</span>',
         description:
-          'Descarga la plantilla AstroWind desde GitHub. Descomprime el archivo y navega al directorio del proyecto.',
-        icon: 'tabler:package',
+          'Comienza con una conversación gratuita y sin compromiso, en línea o en persona. Nos conocemos, aclaramos tus objetivos, desafíos y si mi enfoque es adecuado para tus necesidades.',
+        icon: 'tabler:message-circle-question',
       },
       {
-        title: 'Paso 2: <span class="font-medium">Agregar contenido</span>',
+        title: 'Paso 2: <span class="font-medium">Concepto Personalizado</span>',
         description:
-          'Edita el archivo de configuración con tus datos. Actualiza la página de inicio con tu información.',
-        icon: 'tabler:letter-case',
+          'Basado en tu situación y objetivos, creo un plan personalizado — ya sea entrenamiento mental, desarrollo de liderazgo, identidad de equipo o bienestar integral.',
+        icon: 'tabler:adjustments',
       },
       {
-        title: 'Paso 3: <span class="font-medium">Personalizar</span>',
+        title: 'Paso 3: <span class="font-medium">Fase de Trabajo Colaborativo</span>',
         description:
-          'Actualiza colores, fuentes y más. Implementa tu sitio web en tu plataforma de hosting preferida.',
-        icon: 'tabler:paint',
+          'A través de sesiones regulares o talleres, ponemos las estrategias en práctica. Recibirás herramientas prácticas, retroalimentación y métodos de reflexión para un crecimiento sostenible.',
+        icon: 'tabler:brand-asana',
+      },
+      {
+        title: 'Paso 4: <span class="font-medium">Implementación Independiente</span>',
+        description:
+          'Mi objetivo final es hacerte (o a tu equipo) autosuficiente. Te equiparé con las habilidades y estrategias necesarias para continuar prosperando de forma independiente, mucho después de nuestra colaboración.',
+        icon: 'tabler:target-arrow',
       },
       {
         title: '¡Listo!',
@@ -170,16 +176,13 @@ const metadata = {
         variant: 'primary',
         text: 'Consulta gratuita',
         href: 'mailto:haberstock.stefanie@gmail.com',
-        icon: 'tabler:download',
+        target: '_blank',
+        icon: 'tabler:mail',
       },
     ]}
   >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
+    <Fragment slot="title"> ¡Comienza hoy! </Fragment>
 
-    <Fragment slot="subtitle">
-      ¡Sé muy productivo! Esta plantilla útil lo hace fácil.
-    </Fragment>
+    <Fragment slot="subtitle"> No esperes al cambio — créalo. Desbloqueemos tu potencial juntos. </Fragment>
   </CallToAction>
 </Layout>

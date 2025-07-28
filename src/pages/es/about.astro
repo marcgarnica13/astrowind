@@ -8,8 +8,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'S.H. Acerca de',
-  description: 'Conoce más sobre Steffi Haberstock y su misión.',
+  title: 'S.H. About',
   ignoreTitleTemplate: true,
 };
 ---
@@ -20,175 +19,108 @@ const metadata = {
   <Hero
     image={{
       src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Imagen de caos',
+      alt: 'Imagen de Caos',
     }}
+    ,
     actions={[
       {
         variant: 'primary',
         text: 'Consulta gratuita',
         href: 'mailto:haberstock.stefanie@gmail.com',
       },
+      { text: 'Descargar CV', icon: 'tabler:download', href: 'src/assets/cv.pdf', target: '_blank' },
     ]}
   >
-    <Fragment slot="title">
-      Acerca de Steffi Haberstock
-    </Fragment>
+    <Fragment slot="title"> Hola, soy Stefanie </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        Con más de una década de experiencia en desarrollo de liderazgo y dinámicas de equipo, Steffi se dedica a transformar lugares de trabajo a través de métodos innovadores de coaching y consultoría estratégica.
-      </span>
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">Acerca de Steffi Haberstock.</span>
-      Su pasión radica en empoderar a líderes e inspirar a equipos para alcanzar su máximo potencial.
+      Mi pasión radica en ayudar a las personas a crecer — no solo como profesionales, sino como individuos. <br />Apoyo a atletas,
+      equipos y organizaciones para desbloquear su máximo potencial,<br />navegar desafíos y construir fortaleza duradera
+      — mental, emocional y socialmente.
     </Fragment>
   </Hero>
 
   <!-- Stats Widget ****************** -->
 
-  <Stats
-    title="¿Por qué elegir STEFFI?"
-    subtitle="Aquí están los números que hablan por sí solos:"
+  <!-- <Stats
+    title="Statistics about us"
     stats={[
-      { title: 'Años de experiencia', amount: '10+' },
-      { title: 'Clientes satisfechos', amount: '500+' },
-      { title: 'Proyectos exitosos', amount: '150+' },
-      { title: 'Países atendidos', amount: '25+' },
+      { title: 'Offices', amount: '4' },
+      { title: 'Employees', amount: '248' },
+      { title: 'Templates', amount: '12' },
+      { title: 'Awards', amount: '24' },
     ]}
-  />
+  /> -->
 
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Nuestras competencias principales"
-    subtitle="Lo que nos hace únicos en el desarrollo de liderazgo:"
-    columns={3}
-    items={[
-      {
-        title: 'Desarrollo de liderazgo',
-        description: 'Programas personalizados para desarrollar competencias de liderazgo en todos los niveles.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Dinámicas de equipo',
-        description: 'Estrategias para mejorar la colaboración y productividad de los equipos.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Desarrollo organizacional',
-        description: 'Enfoques integrales para transformar culturas empresariales.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Coaching ejecutivo',
-        description: 'Coaching individualizado para ejecutivos para maximizar su efectividad.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Gestión del cambio',
-        description: 'Acompañamiento de empresas a través de procesos de cambio estratégico.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Resolución de conflictos',
-        description: 'Mediación profesional y estrategias de resolución de conflictos para equipos.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Nuestro enfoque"
-    subtitle="Cómo trabajamos para lograr resultados sostenibles:"
-    items={[
-      {
-        title: 'Evaluación integral',
-        description:
-          'Comenzamos con un análisis completo de sus estructuras de liderazgo actuales y dinámicas de equipo.',
-        icon: 'tabler:check',
-      },
-      {
-        title: 'Soluciones personalizadas',
-        description:
-          'Cada empresa es única. Desarrollamos estrategias individuales que se adaptan a su cultura.',
-        icon: 'tabler:check',
-      },
-      {
-        title: 'Implementación práctica',
-        description:
-          'Nuestros métodos están orientados a la práctica y son directamente aplicables en su trabajo diario.',
-        icon: 'tabler:check',
-      },
-      {
-        title: 'Acompañamiento continuo',
-        description:
-          'Permanecemos a su lado para asegurar el éxito a largo plazo de los cambios implementados.',
-        icon: 'tabler:check',
-      },
-      {
-        title: 'Resultados medibles',
-        description:
-          'Establecemos KPIs claros y medimos el progreso para demostrar el ROI de su inversión.',
-        icon: 'tabler:check',
-      },
-      {
-        title: 'Sostenibilidad',
-        description:
-          'Nuestro objetivo es crear sistemas autosostenibles que continúen funcionando después de nuestro compromiso.',
-        icon: 'tabler:check',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-slate-800"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- Steps2 Widget ***************** -->
+  <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Nuestro proceso"
-    subtitle="Un enfoque estructurado para su éxito:"
+    title="Mi Filosofía"
+    subtitle="Creo que el verdadero desarrollo — ya sea personal, basado en equipos u organizacional — está enraizado en la conexión auténtica, el empoderamiento estratégico y una visión holística de la experiencia humana. Estos valores fundamentales dan forma a cada aspecto de mi trabajo."
     items={[
       {
-        title: 'Consulta inicial',
+        title: 'Enfoque Centrado en el Humano',
         description:
-          'Evaluación gratuita de su situación actual e identificación de los principales desafíos.',
+          'Detrás de cada meta, cada equipo y cada organización hay un ser humano — con fortalezas, historias y potencial únicos. Siempre pongo al individuo en el centro de cada proceso, respetando el crecimiento personal como la base para el éxito duradero.',
       },
       {
-        title: 'Desarrollo de estrategia',
+        title: 'Empoderamiento a través del Conocimiento e Identidad',
         description:
-          'Desarrollo conjunto de un plan personalizado para alcanzar sus objetivos.',
+          'El crecimiento real sucede cuando las personas se entienden a sí mismas y sus roles dentro de un todo más grande. Mi enfoque equipa a individuos y equipos con herramientas para fomentar la resistencia, fortalecer la identidad y tomar posesión de su viaje — haciéndome finalmente innecesaria.',
       },
       {
-        title: 'Implementación',
+        title: 'Desarrollo Holístico y Sostenible',
         description:
-          'Implementación gradual de las estrategias desarrolladas con apoyo continuo.',
-      },
-      {
-        title: 'Evaluación y ajuste',
-        description:
-          'Revisión regular del progreso y ajuste de métodos según sea necesario.',
+          'La mente, el cuerpo, el ambiente y la cultura están profundamente interconectados. Trabajo biopsicosocialmente e integrativamente — reconociendo que el rendimiento y liderazgo sostenibles emergen cuando la fortaleza mental, la salud física y el propósito compartido se unen.',
       },
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Mi Experiencia"
+    subtitle="A lo largo de los años, he construido una base diversa de experiencia académica, experiencia práctica y colaboración internacional. Mi trabajo combina profundidad científica con comprensión del mundo real — always centrado en el desarrollo humano, rendimiento e identidad."
+    isReversed={true}
+    callToAction={{
+      text: 'Ver más',
+      href: '/services',
+    }}
+    items={[
+      {
+        title: 'Fundamentos Académicos y Profesionales',
+        description:
+          'Tengo una Maestría en Psicología del Deporte y del Ejercicio, una Licenciatura en Deporte y Salud en Prevención y Terapia, y actualmente estoy cursando un Doctorado en la Universidad Alemana del Deporte de Colonia. Además, estoy ampliando mi viaje académico con un grado en Psicología combinado con un minor en Negocios — construyendo puentes entre la psicología individual y el éxito organizacional.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Trabajo con Equipos e Individuos',
+        description:
+          'He trabajado con una amplia gama de individuos — desde atletas de élite y equipos nacionales paralímpicos hasta clientes privados que buscan crecimiento personal y resistencia. Mi experiencia práctica incluye entrenamiento mental, desarrollo de identidad y apoyo al rendimiento tanto en entornos deportivos como corporativos.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Conferencias Internacionales y Compromisos de Oratoria',
+        description:
+          'Regularmente doy conferencias, talleres y charlas magistrales en alemán, inglés y español — compartiendo mi experiencia a través de fronteras.',
+        icon: 'tabler:microphone-2',
+      },
+    ]}
+  />
 
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Programar consulta gratuita',
+        text: 'Consulta gratuita',
         href: 'mailto:haberstock.stefanie@gmail.com',
+        target: '_blank',
+        icon: 'tabler:mail',
       },
     ]}
   >
-    <Fragment slot="title">¿Listo para el cambio?</Fragment>
+    <Fragment slot="title"> ¡Comienza Hoy! </Fragment>
 
-    <Fragment slot="subtitle">
-      Transformemos juntos sus desafíos de liderazgo en oportunidades de crecimiento.
-    </Fragment>
+    <Fragment slot="subtitle"> No esperes al cambio — créalo. Liberemos tu potencial juntos. </Fragment>
   </CallToAction>
 </Layout>

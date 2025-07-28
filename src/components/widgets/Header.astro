@@ -7,7 +7,6 @@ import LanguageSwitcher from '~/components/common/LanguageSwitcher.astro';
 import Button from '~/components/ui/Button.astro';
 import type { CallToAction } from '~/types';
 import { getAsset, getHomePermalink, trimSlash } from '~/utils/permalinks';
-import { getLocaleFromUrl } from '~/utils/i18n';
 
 interface Link {
   text?: string;
@@ -47,46 +46,6 @@ const {
 } = Astro.props;
 
 const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
-const currentLocale = getLocaleFromUrl(Astro.url);
-
-// Simple translations lookup
-const translations = {
-  en: {
-    'navigation.home': 'Home',
-    'navigation.about': 'About',
-    'navigation.services': 'Services',
-    'navigation.blog': 'Blog',
-    'navigation.contactUs': 'Free consultation',
-    'navigation.blogList': 'Blog List',
-    'navigation.blogPost': 'Blog Post',
-  },
-  de: {
-    'navigation.home': 'Startseite',
-    'navigation.about': 'Über uns',
-    'navigation.services': 'Dienstleistungen',
-    'navigation.blog': 'Blog',
-    'navigation.contactUs': 'Kostenlose Beratung',
-    'navigation.blogList': 'Blog-Liste',
-    'navigation.blogPost': 'Blog-Beitrag',
-  },
-  es: {
-    'navigation.home': 'Inicio',
-    'navigation.about': 'Acerca de',
-    'navigation.services': 'Servicios',
-    'navigation.blog': 'Blog',
-    'navigation.contactUs': 'Consulta gratuita',
-    'navigation.blogList': 'Lista de blog',
-    'navigation.blogPost': 'Entrada de blog',
-  },
-};
-
-// Helper function to translate navigation text
-const translateText = (text: string) => {
-  if (text.startsWith('navigation.')) {
-    return translations[currentLocale]?.[text] || translations['en']?.[text] || text;
-  }
-  return text;
-};
 ---
 
 <header
@@ -128,7 +87,7 @@ const translateText = (text: string) => {
                     type="button"
                     class="hover:text-link dark:hover:text-white px-4 py-3 flex items-center whitespace-nowrap"
                   >
-                    {translateText(text)}{' '}
+                    {text}{' '}
                     <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
                   </button>
                   <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
@@ -141,7 +100,7 @@ const translateText = (text: string) => {
                           ]}
                           href={href2}
                         >
-                          {translateText(text2)}
+                          {text2}
                         </a>
                       </li>
                     ))}
@@ -155,7 +114,7 @@ const translateText = (text: string) => {
                   ]}
                   href={href}
                 >
-                  {translateText(text)}
+                  {text}
                 </a>
               )}
             </li>
@@ -198,7 +157,7 @@ const translateText = (text: string) => {
           actions?.length ? (
             <span class="ml-4 rtl:ml-0 rtl:mr-4">
               {actions.map((btnProps) => (
-                <Button {...btnProps} text={translateText(btnProps.text)} class="ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto" />
+                <Button {...btnProps} class="ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm w-auto" />
               ))}
             </span>
           ) : (
