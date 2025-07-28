@@ -97,43 +97,58 @@ const generateLanguageURL = (locale: Locale) => {
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  function initLanguageSwitcher() {
     const button = document.getElementById('language-button');
     const dropdown = document.getElementById('language-dropdown');
 
     if (button && dropdown) {
-      button.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isHidden = dropdown.classList.contains('hidden');
-        
-        if (isHidden) {
-          dropdown.classList.remove('hidden');
-          button.setAttribute('aria-expanded', 'true');
-        } else {
-          dropdown.classList.add('hidden');
-          button.setAttribute('aria-expanded', 'false');
-        }
-      });
+      // Remove existing listeners to prevent duplicates
+      button.removeEventListener('click', handleButtonClick);
+      document.removeEventListener('click', handleOutsideClick);
+      dropdown.removeEventListener('click', handleDropdownClick);
+      document.removeEventListener('keydown', handleEscapeKey);
 
-      // Close dropdown when clicking outside
-      document.addEventListener('click', () => {
+      // Add new listeners
+      button.addEventListener('click', handleButtonClick);
+      document.addEventListener('click', handleOutsideClick);
+      dropdown.addEventListener('click', handleDropdownClick);
+      document.addEventListener('keydown', handleEscapeKey);
+    }
+
+    function handleButtonClick(e) {
+      e.stopPropagation();
+      const isHidden = dropdown.classList.contains('hidden');
+      
+      if (isHidden) {
+        dropdown.classList.remove('hidden');
+        button.setAttribute('aria-expanded', 'true');
+      } else {
         dropdown.classList.add('hidden');
         button.setAttribute('aria-expanded', 'false');
-      });
-
-      // Prevent dropdown from closing when clicking inside
-      dropdown.addEventListener('click', (e) => {
-        e.stopPropagation();
-      });
-
-      // Close dropdown on Escape key
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          dropdown.classList.add('hidden');
-          button.setAttribute('aria-expanded', 'false');
-          button.focus();
-        }
-      });
+      }
     }
-  });
+
+    function handleOutsideClick() {
+      dropdown.classList.add('hidden');
+      button.setAttribute('aria-expanded', 'false');
+    }
+
+    function handleDropdownClick(e) {
+      e.stopPropagation();
+    }
+
+    function handleEscapeKey(e) {
+      if (e.key === 'Escape') {
+        dropdown.classList.add('hidden');
+        button.setAttribute('aria-expanded', 'false');
+        button.focus();
+      }
+    }
+  }
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
+  
+  // Re-initialize on Astro page transitions
+  document.addEventListener('astro:page-load', initLanguageSwitcher);
 </script>
