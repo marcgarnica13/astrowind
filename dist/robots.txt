@@ -1,4 +1,2 @@
 User-agent: *
 Disallow:
-
-Sitemap: https://marcgarnica13.github.io/sitemap-index.xml

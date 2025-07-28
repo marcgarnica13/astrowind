@@ -71,29 +71,93 @@ npm run fix:prettier # Fix formatting
 2. Run `npm run check` to ensure code quality
 3. Fix any issues with `npm run fix`
 4. Commit changes
-5. Push to `main` branch to trigger deployment
+5. Push to `main` branch to trigger automatic Vercel deployment
 
-### 🚀 Deployment
+### 🚀 Deployment & Hostname Configuration
 
-#### GitHub Pages Configuration
-- **Repository**: marcgarnica13/astrowind
-- **Deploy Branch**: main
-- **Build Output**: dist/
-- **Site URL**: https://marcgarnica13.github.io/astrowind
-- **Base Path**: /astrowind (configured in config.yaml)
+#### Current Configuration
+**Local Development:**
+- **URL**: `http://localhost:4321`
+- **Base Path**: `/` (root)
+- **Configuration**: Uses original GitHub Pages config with base path, but Astro dev server ignores it
+- **Works because**: Local development always serves from root regardless of config
+
+**Production (Vercel):**
+- **URL**: `https://steffi.vercel.app`
+- **Base Path**: `/` (root - updated in `src/config.yaml`)
+- **Domain**: Custom Vercel domain (not subdirectory)
+
+#### Key Configuration Files
+
+**`src/config.yaml`:**
+```yaml
+site:
+  name: STEFFI
+  site: 'https://steffi.vercel.app'  # Production URL
+  base: '/'                          # Root deployment
+  trailingSlash: false
+```
+
+**`astro.config.ts`:**
+```typescript
+export default defineConfig({
+  output: 'static',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'de', 'es'],
+    routing: {
+      prefixDefaultLocale: false  # English at root: /
+    }
+  }
+})
+```
+
+**`vercel.json`:**
+```json
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/_astro/(.*)",
+      "headers": [{
+        "key": "Cache-Control",
+        "value": "public, max-age=31536000, immutable"
+      }]
+    }
+  ]
+}
+```
+
+#### How URLs Work
+
+**Local Development (`npm run dev`):**
+- `http://localhost:4321/` → English homepage
+- `http://localhost:4321/de/` → German homepage  
+- `http://localhost:4321/es/` → Spanish homepage
+- `http://localhost:4321/about` → English about page
+- `http://localhost:4321/de/about` → German about page
+
+**Production (Vercel):**
+- `https://steffi.vercel.app/` → English homepage
+- `https://steffi.vercel.app/de/` → German homepage
+- `https://steffi.vercel.app/es/` → Spanish homepage
+- `https://steffi.vercel.app/about` → English about page
+- `https://steffi.vercel.app/de/about` → German about page
 
 #### Deployment Process
 1. Push changes to `main` branch
-2. GitHub Actions workflow triggers automatically
+2. Vercel automatically detects changes via Git integration
 3. Builds the site using `npm run build`
-4. Deploys to GitHub Pages
-5. Site updates at https://marcgarnica13.github.io/astrowind
+4. Deploys to Vercel edge network with custom domain
+5. Site updates at https://steffi.vercel.app
 
-#### Manual Deployment
+#### Manual Build Testing
 ```bash
-npm run build       # Build the site
+npm run build       # Build the site locally
+npm run preview     # Preview production build locally
 # The dist/ folder contains the built site
-# GitHub Actions handles the actual deployment
+# Vercel handles automatic deployment on push
 ```
 
 ### ⚙️ Configuration
@@ -125,15 +189,15 @@ npm run build       # Build the site
 
 ### 📝 Current Project State
 
-#### Modified Files (Uncommitted)
-- Multiple page files updated
-- Navigation structure modified
-- New CV PDF added (src/assets/cv.pdf)
-- New policies page created
+#### Recent Changes
+- Migrated from GitHub Pages to Vercel deployment
+- Updated base path from `/astrowind` to root
+- Removed GitHub Actions workflow
+- Updated internal links and asset paths
 
 #### Deployment Status
-- GitHub Actions configured and working
-- Site live at GitHub Pages
+- Vercel deployment configured and working
+- Site live at https://steffi.vercel.app
 - Automatic deployment on push to main
 
 ### 🚨 Important Notes
@@ -148,8 +212,8 @@ npm run build       # Build the site
 
 1. **Build errors**: Check `npm run check:astro` first
 2. **Styling issues**: Verify Tailwind classes and custom styles
-3. **Deployment issues**: Check GitHub Actions logs
-4. **404 errors**: Verify base path in links
+3. **Deployment issues**: Check Vercel deployment logs
+4. **404 errors**: Verify internal link paths
 5. **Image issues**: Ensure proper imports and optimization
 
 ### 🎯 Common Tasks

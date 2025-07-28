@@ -28,11 +28,10 @@ const currentLocale = Astro.currentLocale as Locale || 'en';
 
 // Generate URLs manually to preserve current page across language switch
 const generateLanguageURL = (locale: Locale) => {
-  const basePath = '/astrowind';
   let currentPath = Astro.url.pathname;
   
-  // Remove base path if present
-  currentPath = currentPath.replace(/^\/astrowind/, '');
+  // Remove base path if present (no longer needed for Vercel)
+  // currentPath = currentPath.replace(/^\/astrowind/, '');
   
   // Remove current locale prefix if present  
   currentPath = currentPath.replace(/^\/(en|de|es)/, '');
@@ -49,9 +48,9 @@ const generateLanguageURL = (locale: Locale) => {
   
   // Build the URL manually - this preserves the current page
   if (locale === 'en') {
-    return basePath + currentPath;
+    return currentPath || '/';
   } else {
-    return basePath + '/' + locale + currentPath;
+    return '/' + locale + currentPath;
   }
 };
 ---
