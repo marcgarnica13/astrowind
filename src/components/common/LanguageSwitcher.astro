@@ -97,25 +97,25 @@ const generateLanguageURL = (locale: Locale) => {
 </div>
 
 <script>
+  // Store references to event handlers to properly remove them
+  let currentHandlers = null;
+
   function initLanguageSwitcher() {
     const button = document.getElementById('language-button');
     const dropdown = document.getElementById('language-dropdown');
 
-    if (button && dropdown) {
-      // Remove existing listeners to prevent duplicates
-      button.removeEventListener('click', handleButtonClick);
-      document.removeEventListener('click', handleOutsideClick);
-      dropdown.removeEventListener('click', handleDropdownClick);
-      document.removeEventListener('keydown', handleEscapeKey);
+    if (!button || !dropdown) return;
 
-      // Add new listeners
-      button.addEventListener('click', handleButtonClick);
-      document.addEventListener('click', handleOutsideClick);
-      dropdown.addEventListener('click', handleDropdownClick);
-      document.addEventListener('keydown', handleEscapeKey);
+    // Remove existing listeners if they exist
+    if (currentHandlers) {
+      button.removeEventListener('click', currentHandlers.buttonClick);
+      document.removeEventListener('click', currentHandlers.outsideClick);
+      dropdown.removeEventListener('click', currentHandlers.dropdownClick);
+      document.removeEventListener('keydown', currentHandlers.escapeKey);
     }
 
-    function handleButtonClick(e) {
+    // Create new handler functions
+    const handleButtonClick = (e) => {
       e.stopPropagation();
       const isHidden = dropdown.classList.contains('hidden');
       
@@ -126,28 +126,48 @@ const generateLanguageURL = (locale: Locale) => {
         dropdown.classList.add('hidden');
         button.setAttribute('aria-expanded', 'false');
       }
-    }
+    };
 
-    function handleOutsideClick() {
-      dropdown.classList.add('hidden');
-      button.setAttribute('aria-expanded', 'false');
-    }
+    const handleOutsideClick = () => {
+      if (dropdown && button) {
+        dropdown.classList.add('hidden');
+        button.setAttribute('aria-expanded', 'false');
+      }
+    };
 
-    function handleDropdownClick(e) {
+    const handleDropdownClick = (e) => {
       e.stopPropagation();
-    }
+    };
 
-    function handleEscapeKey(e) {
-      if (e.key === 'Escape') {
+    const handleEscapeKey = (e) => {
+      if (e.key === 'Escape' && dropdown && button) {
         dropdown.classList.add('hidden');
         button.setAttribute('aria-expanded', 'false');
         button.focus();
       }
-    }
+    };
+
+    // Store handlers for cleanup
+    currentHandlers = {
+      buttonClick: handleButtonClick,
+      outsideClick: handleOutsideClick,
+      dropdownClick: handleDropdownClick,
+      escapeKey: handleEscapeKey
+    };
+
+    // Add new listeners
+    button.addEventListener('click', handleButtonClick);
+    document.addEventListener('click', handleOutsideClick);
+    dropdown.addEventListener('click', handleDropdownClick);
+    document.addEventListener('keydown', handleEscapeKey);
   }
 
-  // Initialize on page load
-  document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
+  // Initialize immediately if DOM is already loaded, otherwise wait for DOMContentLoaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLanguageSwitcher);
+  } else {
+    initLanguageSwitcher();
+  }
   
   // Re-initialize on Astro page transitions
   document.addEventListener('astro:page-load', initLanguageSwitcher);
