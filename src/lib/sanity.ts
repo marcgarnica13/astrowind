@@ -4,7 +4,7 @@ export const sanityClient = createClient({
   projectId: process.env.SANITY_PROJECT_ID || 'j1zdlt7i',
   dataset: process.env.SANITY_DATASET || 'production',
   apiVersion: process.env.SANITY_API_VERSION || '2024-01-01',
-  useCdn: true, // Use CDN for better performance in production
+  useCdn: false, // Use live API for fresh data in server-side rendering
   token: process.env.SANITY_TOKEN, // Only needed for write operations
 })
 
