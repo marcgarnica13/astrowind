@@ -1,155 +1,61 @@
 ---
+import { getPageContent } from '~/lib/sanity';
+import Layout from '~/layouts/PageLayout.astro';
+
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
-import Layout from '~/layouts/PageLayout.astro';
 
-const metadata = {
-  title: 'S.H. Services',
-  ignoreTitleTemplate: true,
-};
+// Get content from Sanity
+const pageData = await getPageContent('services', 'es');
+const { metadata, heroWidget, features2, contentSections, cta } = pageData || {};
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    title="Encuentra el camino correcto para tu crecimiento."
-    subtitle="El camino de cada persona es único. Elige el enfoque que se adapte a tus objetivos — ya sea creciendo como persona, construyendo un equipo o transformando una organización."
-    actions={[
-      { text: 'Soy un Individuo o Atleta', href: '#athletes' },
-      { variant: 'primary', text: 'Soy parte de un Equipo', href: '#teams' },
-      { text: 'Represento una Empresa u Organización', href: '#organizations' },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Imagen Hero de AstroWind',
-    }}
-  />
+  {heroWidget && (
+    <Hero
+      title={heroWidget.title}
+      subtitle={heroWidget.subtitle}
+      actions={heroWidget.actions}
+      image={heroWidget.image}
+    />
+  )}
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
-    columns={3}
-    items={[
-      {
-        title: 'Soy un Individuo o Atleta',
-        description:
-          'Quiero fortalecer mi mentalidad, aumentar la resiliencia y superar desafíos personales o profesionales. Estoy listo para desarrollar claridad, motivación y fuerza interior sostenible.',
-        icon: 'tabler:user',
-      },
-      {
-        title: 'Soy parte de un Equipo',
-        description:
-          'Queremos crecer más fuertes juntos — construyendo confianza, una visión compartida y una identidad de equipo poderosa. Buscamos comunicarnos mejor, colaborar más efectivamente y alcanzar nuestro máximo potencial como grupo.',
-        icon: 'tabler:users-group',
-      },
-      {
-        title: 'Represento una Empresa u Organización',
-        description:
-          'Buscamos empoderar el liderazgo, crear una cultura laboral saludable y alinear a nuestra gente detrás de un propósito compartido. Queremos un crecimiento sostenible — construido sobre identidad, conexión y rendimiento.',
-        icon: 'tabler:loader',
-      },
-    ]}
-  />
+  {features2 && (
+    <Features2
+      columns={features2.columns}
+      items={features2.items}
+    />
+  )}
 
-  <!-- Content Widget **************** -->
+  <!-- Content Widgets *************** -->
 
-  <Content
-    isReversed
-    items={[
-      {
-        title: 'Estrategias Personalizadas',
-        description:
-          'Cada persona, equipo y organización es única. Desarrollo enfoques a medida que se centran en sus desafíos y objetivos específicos.',
-        icon: 'tabler:wand',
-      },
-      {
-        title: 'Basado en Ciencia',
-        description:
-          'Mis métodos se basan en la investigación actual en psicología del deporte y del rendimiento, combinada con experiencia práctica trabajando con atletas de élite y equipos.',
-        icon: 'tabler:settings',
-      },
-      {
-        title: 'Enfoque Holístico',
-        description:
-          'Veo los aspectos mentales, emocionales y sociales como inseparablemente conectados. El cambio sostenible surge cuando incluimos todas las dimensiones de la experiencia humana.',
-        icon: 'tabler:presentation',
-      },
-      {
-        title: 'Desarrollo a Largo Plazo',
-        description:
-          'Mi objetivo es equiparte con herramientas y estrategias que funcionen más allá de nuestra colaboración. Serás empoderado para continuar tu propio camino.',
-        icon: 'tabler:carousel-horizontal',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Features Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Mi Enfoque</h3>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'Rendimiento Mejorado',
-        description:
-          'Desarrolla fortaleza mental y resistencia que te permite rendir al máximo bajo presión y enfrentar desafíos con confianza.',
-        icon: 'tabler:clock',
-      },
-      {
-        title: 'Equipos Más Fuertes',
-        description:
-          'Fomenta la confianza, comunicación e identidad compartida que capacita a los equipos para colaborar efectivamente y alcanzar objetivos comunes.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Liderazgo Sostenible',
-        description:
-          'Desarrolla cualidades de liderazgo auténticas que inspiran a otros y crean una cultura positiva donde las personas pueden dar lo mejor de sí.',
-        icon: 'tabler:coin',
-      },
-      {
-        title: 'Crecimiento Personal',
-        description:
-          'Gana claridad sobre tus valores, fortalezas y objetivos. Desarrolla la confianza y las herramientas para liberar tu pleno potencial.',
-        icon: 'tabler:file-download',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Qué Puedes Esperar</h3>
-    </Fragment>
-  </Content>
+  {contentSections && contentSections.map((section) => (
+    <Content
+      isReversed={section.isReversed}
+      isAfterContent={section.isAfterContent}
+      items={section.items}
+      image={section.image}
+    >
+      <Fragment slot="content">
+        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{section.title}</h3>
+      </Fragment>
+    </Content>
+  ))}
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Consulta gratuita',
-        href: 'mailto:haberstock.stefanie@gmail.com',
-        target: '_blank',
-        icon: 'tabler:mail',
-      },
-    ]}
-  >
-    <Fragment slot="title"> ¡Comienza Hoy! </Fragment>
-
-    <Fragment slot="subtitle"> No esperes al cambio — créalo. Liberemos tu potencial juntos. </Fragment>
-  </CallToAction>
+  {cta && (
+    <CallToAction
+      actions={cta.actions}
+    >
+      <Fragment slot="title">{cta.title}</Fragment>
+      <Fragment slot="subtitle">{cta.subtitle}</Fragment>
+    </CallToAction>
+  )}
 </Layout>

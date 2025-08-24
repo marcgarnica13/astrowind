@@ -1,188 +1,124 @@
 ---
+import { getPageContent } from '~/lib/sanity';
 import Layout from '~/layouts/PageLayout.astro';
 
 import BigNote from '~/components/widgets/BigNote.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 
-const metadata = {
-  title: 'Steffi Haberstock',
-  ignoreTitleTemplate: true,
-};
+// Get content from Sanity
+const pageData = await getPageContent('homepage', 'es');
+const { metadata, hero, note, features, content, steps, faqs, stats, testimonials, cta } = pageData || {};
 ---
 
 <Layout metadata={metadata}>
-  <Hero2
-    title="Fortaleciendo Mentes. Desarrollando Equipos. Transformando Liderazgo."
-    tagline="Hablemos."
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Imagen de pasos',
-    }}
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Consulta gratuita',
-        href: 'mailto:haberstock.stefanie@gmail.com',
-      },
-      { text: 'Descubre mis servicios', href: '#features' },
-    ]}
-  />
+  {hero && (
+    <Hero2
+      title={hero.title}
+      tagline={hero.tagline}
+      image={hero.image}
+      actions={hero.actions}
+    />
+  )}
 
   <!-- Note Widget ******************* -->
 
-  <BigNote
-    title="<span class='text-white text-7xl'>Donde la conexión humana encuentra el alto rendimiento</span>"
-    subtitle="<br/><a href='#features' class='text-white'><u>Descubre mis servicios</u></a>"
-    ><Fragment slot="bg">
-      <div class="absolute inset-0 bg-primary dark:bg-transparent"></div>
-    </Fragment>
-  </BigNote>
+  {note && (
+    <BigNote
+      title={`<span class='text-white text-7xl'>${note.title}</span>`}
+      subtitle={`<br/><a href='#features' class='text-white'><u>${note.subtitle}</u></a>`}
+    >
+      <Fragment slot="bg">
+        <div class="absolute inset-0 bg-primary dark:bg-transparent"></div>
+      </Fragment>
+    </BigNote>
+  )}
 
   <!-- Note Widget ******************* -->
   <!-- Features Widget *************** -->
 
-  <Features
-    id="features"
-    title="Lo que obtienes"
-    subtitle="Soluciones personalizadas basadas en ciencia, diseñadas para desafíos del mundo real."
-    items={[
-      {
-        title: 'Experiencia Psicológica',
-        description:
-          'Basada en psicología deportiva y ciencias del liderazgo, ofrezco métodos basados en evidencia para fortalecer la resistencia, el rendimiento y el bienestar.',
-        icon: 'tabler:brain',
-      },
-      {
-        title: 'Enfoque Holístico',
-        description:
-          'Mente, cuerpo y entorno están profundamente interconectados — mis métodos biopsicosociales crean equilibrio y efectividad a largo plazo.',
-        icon: 'tabler:broadcast',
-      },
-      {
-        title: 'Enfoques Innovadores del Deporte de Alto Rendimiento',
-        description:
-          'Traigo estrategias probadas del deporte de élite al mundo empresarial — donde la presión, el rendimiento y la dinámica grupal se llevan al límite.',
-        icon: 'tabler:exchange',
-      },
-      {
-        title: 'Filosofía Centrada en el Ser Humano',
-        description:
-          'Veo a la persona detrás del rol — cada proyecto comienza con respeto, empatía y compromiso con el desarrollo personal y colectivo real.',
-        icon: 'tabler:user-circle',
-      },
-      {
-        title: 'Enfoque de Crecimiento Estratégico',
-        description:
-          'Ya sea desarrollo personal, dinámica de equipos o salud corporativa, me concentro en un crecimiento significativo, medible y sostenible.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Prácticas Basadas en Investigación',
-        description:
-          'La investigación continua en identidad social y liderazgo asegura que mi trabajo sea tanto vanguardista como profundamente fundamentado.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
+  {features && (
+    <Features
+      id="features"
+      title={features.title}
+      subtitle={features.subtitle}
+      items={features.items}
+    />
+  )}
 
   <!-- Content Widget **************** -->
 
-  <Content
-    isReversed
-    items={[
-      {
-        title: 'Individuos y Atletas',
-        description:
-          'Fortalecer la fuerza mental, manejar el estrés, navegar desafíos personales y deportivos, y crecer más allá de las limitaciones.',
-      },
-      {
-        title: 'Equipos',
-        description: 'Construir identidad de equipo, fortalecer la cohesión, mejorar la comunicación y el rendimiento.',
-      },
-      {
-        title: 'Empresas',
-        description:
-          'Dar forma a la cultura organizacional, fomentar el liderazgo y mejorar el compromiso de los empleados a través de consultoría basada en identidad.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Imagen colorida',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Con quién trabajo</h3>
-    </Fragment>
+  {content && content.map((section) => (
+    <Content
+      isReversed={section.isReversed}
+      items={section.items}
+      image={section.image}
+    >
+      <Fragment slot="content">
+        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{section.title}</h3>
+        {section.subtitle && <p class="text-muted dark:text-gray-400">{section.subtitle}</p>}
+        {section.description && <p class="mt-3">{section.description}</p>}
+      </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+      <Fragment slot="bg">
+        <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      </Fragment>
+    </Content>
+  ))}
 
   <!-- Steps Widget ****************** -->
 
-  <Steps
-    title="Cómo trabajamos juntos"
-    items={[
-      {
-        title: 'Paso 1: <span class="font-medium">Consulta Inicial Gratuita</span>',
-        description:
-          'Comienza con una conversación gratuita y sin compromiso, en línea o en persona. Nos conocemos, aclaramos tus objetivos, desafíos y si mi enfoque es adecuado para tus necesidades.',
-        icon: 'tabler:message-circle-question',
-      },
-      {
-        title: 'Paso 2: <span class="font-medium">Concepto Personalizado</span>',
-        description:
-          'Basado en tu situación y objetivos, creo un plan personalizado — ya sea entrenamiento mental, desarrollo de liderazgo, identidad de equipo o bienestar integral.',
-        icon: 'tabler:adjustments',
-      },
-      {
-        title: 'Paso 3: <span class="font-medium">Fase de Trabajo Colaborativo</span>',
-        description:
-          'A través de sesiones regulares o talleres, ponemos las estrategias en práctica. Recibirás herramientas prácticas, retroalimentación y métodos de reflexión para un crecimiento sostenible.',
-        icon: 'tabler:brand-asana',
-      },
-      {
-        title: 'Paso 4: <span class="font-medium">Implementación Independiente</span>',
-        description:
-          'Mi objetivo final es hacerte (o a tu equipo) autosuficiente. Te equiparé con las habilidades y estrategias necesarias para continuar prosperando de forma independiente, mucho después de nuestra colaboración.',
-        icon: 'tabler:target-arrow',
-      },
-      {
-        title: '¡Listo!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Imagen de pasos',
-    }}
-  />
+  {steps && (
+    <Steps
+      title={steps.title}
+      subtitle={steps.subtitle}
+      items={steps.items}
+    />
+  )}
+
+  <!-- FAQs Widget ******************* -->
+  
+  {faqs && (
+    <FAQs
+      title={faqs.title}
+      subtitle={faqs.subtitle}
+      items={faqs.items}
+    />
+  )}
+
+  <!-- Stats Widget ****************** -->
+  
+  {stats && (
+    <Stats
+      title={stats.title}
+      stats={stats.items}
+    />
+  )}
+
+  <!-- Testimonials Widget *********** -->
+  
+  {testimonials && (
+    <Testimonials
+      title={testimonials.title}
+      subtitle={testimonials.subtitle}
+      testimonials={testimonials.items}
+    />
+  )}
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Consulta gratuita',
-        href: 'mailto:haberstock.stefanie@gmail.com',
-        target: '_blank',
-        icon: 'tabler:mail',
-      },
-    ]}
-  >
-    <Fragment slot="title"> ¡Comienza hoy! </Fragment>
-
-    <Fragment slot="subtitle"> No esperes al cambio — créalo. Desbloqueemos tu potencial juntos. </Fragment>
-  </CallToAction>
+  {cta && (
+    <CallToAction
+      actions={cta.actions}
+    >
+      <Fragment slot="title">{cta.title}</Fragment>
+      <Fragment slot="subtitle">{cta.subtitle}</Fragment>
+    </CallToAction>
+  )}
 </Layout>

@@ -1,126 +1,49 @@
 ---
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
+import { getPageContent } from '~/lib/sanity';
 import Layout from '~/layouts/PageLayout.astro';
 
-const metadata = {
-  title: 'S.H. About',
-  ignoreTitleTemplate: true,
-};
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+
+// Get content from Sanity
+const pageData = await getPageContent('about', 'es');
+const { metadata, heroWidget, steps2Sections, cta } = pageData || {};
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Imagen de Caos',
-    }}
-    ,
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Consulta gratuita',
-        href: 'mailto:haberstock.stefanie@gmail.com',
-      },
-      { text: 'Descargar CV', icon: 'tabler:download', href: 'src/assets/cv.pdf', target: '_blank' },
-    ]}
-  >
-    <Fragment slot="title"> Hola, soy Stefanie </Fragment>
+  {heroWidget && (
+    <Hero
+      image={heroWidget.image}
+      actions={heroWidget.actions}
+    >
+      <Fragment slot="title">{heroWidget.title}</Fragment>
+      <Fragment slot="subtitle">{heroWidget.subtitle}</Fragment>
+    </Hero>
+  )}
 
-    <Fragment slot="subtitle">
-      Mi pasión radica en ayudar a las personas a crecer — no solo como profesionales, sino como individuos. <br />Apoyo a atletas,
-      equipos y organizaciones para desbloquear su máximo potencial,<br />navegar desafíos y construir fortaleza duradera
-      — mental, emocional y socialmente.
-    </Fragment>
-  </Hero>
+  <!-- Steps2 Widgets ****************** -->
 
-  <!-- Stats Widget ****************** -->
+  {steps2Sections && steps2Sections.map((section) => (
+    <Steps2
+      title={section.title}
+      subtitle={section.subtitle}
+      items={section.items}
+      isReversed={section.isReversed}
+      callToAction={section.callToAction}
+    />
+  ))}
 
-  <!-- <Stats
-    title="Statistics about us"
-    stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
-    ]}
-  /> -->
+  <!-- CallToAction Widget *********** -->
 
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Mi Filosofía"
-    subtitle="Creo que el verdadero desarrollo — ya sea personal, basado en equipos u organizacional — está enraizado en la conexión auténtica, el empoderamiento estratégico y una visión holística de la experiencia humana. Estos valores fundamentales dan forma a cada aspecto de mi trabajo."
-    items={[
-      {
-        title: 'Enfoque Centrado en el Humano',
-        description:
-          'Detrás de cada meta, cada equipo y cada organización hay un ser humano — con fortalezas, historias y potencial únicos. Siempre pongo al individuo en el centro de cada proceso, respetando el crecimiento personal como la base para el éxito duradero.',
-      },
-      {
-        title: 'Empoderamiento a través del Conocimiento e Identidad',
-        description:
-          'El crecimiento real sucede cuando las personas se entienden a sí mismas y sus roles dentro de un todo más grande. Mi enfoque equipa a individuos y equipos con herramientas para fomentar la resistencia, fortalecer la identidad y tomar posesión de su viaje — haciéndome finalmente innecesaria.',
-      },
-      {
-        title: 'Desarrollo Holístico y Sostenible',
-        description:
-          'La mente, el cuerpo, el ambiente y la cultura están profundamente interconectados. Trabajo biopsicosocialmente e integrativamente — reconociendo que el rendimiento y liderazgo sostenibles emergen cuando la fortaleza mental, la salud física y el propósito compartido se unen.',
-      },
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Mi Experiencia"
-    subtitle="A lo largo de los años, he construido una base diversa de experiencia académica, experiencia práctica y colaboración internacional. Mi trabajo combina profundidad científica con comprensión del mundo real — always centrado en el desarrollo humano, rendimiento e identidad."
-    isReversed={true}
-    callToAction={{
-      text: 'Ver más',
-      href: '/services',
-    }}
-    items={[
-      {
-        title: 'Fundamentos Académicos y Profesionales',
-        description:
-          'Tengo una Maestría en Psicología del Deporte y del Ejercicio, una Licenciatura en Deporte y Salud en Prevención y Terapia, y actualmente estoy cursando un Doctorado en la Universidad Alemana del Deporte de Colonia. Además, estoy ampliando mi viaje académico con un grado en Psicología combinado con un minor en Negocios — construyendo puentes entre la psicología individual y el éxito organizacional.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Trabajo con Equipos e Individuos',
-        description:
-          'He trabajado con una amplia gama de individuos — desde atletas de élite y equipos nacionales paralímpicos hasta clientes privados que buscan crecimiento personal y resistencia. Mi experiencia práctica incluye entrenamiento mental, desarrollo de identidad y apoyo al rendimiento tanto en entornos deportivos como corporativos.',
-        icon: 'tabler:users-group',
-      },
-      {
-        title: 'Conferencias Internacionales y Compromisos de Oratoria',
-        description:
-          'Regularmente doy conferencias, talleres y charlas magistrales en alemán, inglés y español — compartiendo mi experiencia a través de fronteras.',
-        icon: 'tabler:microphone-2',
-      },
-    ]}
-  />
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Consulta gratuita',
-        href: 'mailto:haberstock.stefanie@gmail.com',
-        target: '_blank',
-        icon: 'tabler:mail',
-      },
-    ]}
-  >
-    <Fragment slot="title"> ¡Comienza Hoy! </Fragment>
-
-    <Fragment slot="subtitle"> No esperes al cambio — créalo. Liberemos tu potencial juntos. </Fragment>
-  </CallToAction>
+  {cta && (
+    <CallToAction
+      actions={cta.actions}
+    >
+      <Fragment slot="title">{cta.title}</Fragment>
+      <Fragment slot="subtitle">{cta.subtitle}</Fragment>
+    </CallToAction>
+  )}
 </Layout>

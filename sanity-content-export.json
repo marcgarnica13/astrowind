@@ -1,0 +1,1627 @@
+[
+  {
+    "_id": "homepage-de",
+    "_type": "page",
+    "title": "Homepage (Deutsch)",
+    "pageType": "homepage",
+    "language": "de",
+    "metadata": {
+      "title": "Steffi Haberstock",
+      "ignoreTitleTemplate": true
+    },
+    "hero": {
+      "title": "Geist stärken. Teams entwickeln. Führung transformieren.",
+      "tagline": "Lass uns reden.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+        "alt": "Schritte Bild"
+      },
+      "actions": [
+        {
+          "_key": "deutschAction1",
+          "variant": "primary",
+          "text": "Kostenloses Beratungsgespräch",
+          "href": "mailto:haberstock.stefanie@gmail.com"
+        },
+        {
+          "_key": "deutschAction2",
+          "text": "Meine Leistungen entdecken",
+          "href": "#features"
+        }
+      ]
+    },
+    "note": {
+      "title": "Wo menschliche Verbindung auf Höchstleistung trifft",
+      "subtitle": "Meine Leistungen entdecken"
+    },
+    "features": {
+      "title": "Was Sie bekommen",
+      "subtitle": "Maßgeschneiderte Lösungen, wissenschaftlich fundiert und für reale Herausforderungen entwickelt.",
+      "items": [
+        {
+          "_key": "deutschFeature1",
+          "title": "Psychologische Expertise",
+          "description": "Basierend auf Sportpsychologie und Führungswissenschaft biete ich evidenzbasierte Methoden zur Stärkung von Resilienz, Leistung und Wohlbefinden.",
+          "icon": "tabler:brain"
+        },
+        {
+          "_key": "deutschFeature2",
+          "title": "Ganzheitlicher Ansatz",
+          "description": "Geist, Körper und Umgebung sind tief miteinander verbunden — meine biopsychosozialen Methoden schaffen Balance und langfristige Wirksamkeit.",
+          "icon": "tabler:broadcast"
+        },
+        {
+          "_key": "deutschFeature3",
+          "title": "Innovative Ansätze aus dem Hochleistungssport",
+          "description": "Ich bringe erprobte Strategien aus dem Spitzensport in die Geschäftswelt — wo Druck, Leistung und Gruppendynamik an ihre Grenzen getrieben werden.",
+          "icon": "tabler:exchange"
+        },
+        {
+          "_key": "deutschFeature4",
+          "title": "Menschenzentrierte Philosophie",
+          "description": "Ich sehe den Menschen hinter der Rolle — jedes Projekt beginnt mit Respekt, Empathie und dem Engagement für echte persönliche und kollektive Entwicklung.",
+          "icon": "tabler:user-circle"
+        },
+        {
+          "_key": "deutschFeature5",
+          "title": "Strategischer Wachstumsfokus",
+          "description": "Ob Persönlichkeitsentwicklung, Teamdynamik oder Unternehmensgesundheit — ich konzentriere mich auf sinnvolles, messbares und nachhaltiges Wachstum.",
+          "icon": "tabler:rocket"
+        },
+        {
+          "_key": "deutschFeature6",
+          "title": "Forschungsbasierte Praktiken",
+          "description": "Laufende Forschung zu sozialer Identität und Führung sorgt dafür, dass meine Arbeit sowohl hochmodern als auch tiefgreifend fundiert ist.",
+          "icon": "tabler:bulb"
+        }
+      ]
+    },
+    "content": [
+      {
+        "_key": "deutschContent1",
+        "title": "Mit wem ich arbeite",
+        "isReversed": true,
+        "items": [
+          {
+            "_key": "deutschContentItem1",
+            "title": "Einzelpersonen & Athleten",
+            "description": "Mentale Stärke stärken, Stress bewältigen, persönliche und sportliche Herausforderungen meistern und über Grenzen hinauswachsen.",
+            "icon": "tabler:user"
+          },
+          {
+            "_key": "deutschContentItem2",
+            "title": "Teams",
+            "description": "Teamidentität aufbauen, Zusammenhalt stärken, Kommunikation und Leistung verbessern.",
+            "icon": "tabler:users-group"
+          },
+          {
+            "_key": "deutschContentItem3",
+            "title": "Unternehmen",
+            "description": "Unternehmenskultur gestalten, Führung fördern und Mitarbeiterengagement durch identitätsgetriebene Beratung verbessern.",
+            "icon": "tabler:building"
+          }
+        ],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+          "alt": "Farbenfrohes Bild"
+        }
+      }
+    ],
+    "steps": {
+      "title": "Wie wir zusammenarbeiten",
+      "subtitle": "Wir kombinieren hochmoderne Wissenschaft mit praktischen Werkzeugen für reale Herausforderungen.",
+      "items": [
+        {
+          "_key": "deutschStep1",
+          "title": "Schritt 1: Kostenloses Erstgespräch",
+          "description": "Beginnen Sie mit einem kostenlosen, unverbindlichen Gespräch — online oder persönlich. Wir lernen uns kennen, klären Ihre Ziele und Herausforderungen und prüfen, ob mein Ansatz zu Ihren Bedürfnissen passt.",
+          "icon": "tabler:message-circle-question"
+        },
+        {
+          "_key": "deutschStep2",
+          "title": "Schritt 2: Individuelles Konzept",
+          "description": "Basierend auf Ihrer Situation und Ihren Zielen erstelle ich einen maßgeschneiderten Plan — sei es Mentaltraining, Führungsentwicklung, Teamidentität oder ganzheitliches Wohlbefinden.",
+          "icon": "tabler:adjustments"
+        },
+        {
+          "_key": "deutschStep3",
+          "title": "Schritt 3: Gemeinsame Arbeitsphase",
+          "description": "In regelmäßigen Sitzungen oder Workshops setzen wir die Strategien in die Praxis um. Sie erhalten praktische Werkzeuge, Feedback und Reflexionsmethoden für nachhaltiges Wachstum.",
+          "icon": "tabler:brand-asana"
+        },
+        {
+          "_key": "deutschStep4",
+          "title": "Schritt 4: Eigenständige Umsetzung",
+          "description": "Mein Ziel ist es, Sie (oder Ihr Team) selbstständig zu machen. Ich statte Sie mit den Fähigkeiten und Strategien aus, die Sie brauchen, um auch nach unserer Zusammenarbeit erfolgreich zu sein.",
+          "icon": "tabler:target-arrow"
+        },
+        {
+          "_key": "deutschStep5",
+          "title": "Fertig!",
+          "description": "",
+          "icon": "tabler:check"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Starten Sie noch heute!",
+      "subtitle": "Warten Sie nicht auf Veränderung — gestalten Sie sie. Lassen Sie uns gemeinsam Ihr Potenzial entfalten.",
+      "actions": [
+        {
+          "_key": "deutschCTA1",
+          "variant": "primary",
+          "text": "Kostenloses Beratungsgespräch",
+          "href": "mailto:haberstock.stefanie@gmail.com",
+          "target": "_blank",
+          "icon": "tabler:mail"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "about-en",
+    "_type": "page",
+    "title": "About (English)",
+    "pageType": "about",
+    "language": "en",
+    "metadata": {
+      "title": "S.H. About",
+      "ignoreTitleTemplate": true
+    },
+    "heroWidget": {
+      "title": "Hi, I'm Stefanie",
+      "subtitle": "My passion lies in helping people grow — not just as professionals, but as individuals. I support athletes, teams, and organizations in unlocking their full potential, navigating challenges, and building lasting strength — mentally, emotionally, and socially.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "alt": "Caos Image"
+      },
+      "actions": [
+        {
+          "_key": "aboutEN1",
+          "variant": "primary",
+          "text": "Free consultation",
+          "href": "mailto:haberstock.stefanie@gmail.com"
+        },
+        {
+          "_key": "aboutEN2",
+          "text": "Download CV",
+          "icon": "tabler:download",
+          "href": "src/assets/cv.pdf",
+          "target": "_blank"
+        }
+      ]
+    },
+    "steps2Sections": [
+      {
+        "_key": "philosophyEN",
+        "title": "My Philosophy",
+        "subtitle": "I believe that true development — whether personal, team-based, or organizational — is rooted in authentic connection, strategic empowerment, and a holistic view of the human experience. These core values shape every aspect of my work.",
+        "items": [
+          {
+            "_key": "philEN1",
+            "title": "Human-Centered Approach",
+            "description": "Behind every goal, every team, and every organization is a human being — with unique strengths, stories, and potential. I always put the individual at the center of every process, respecting personal growth as the foundation for lasting success.",
+            "icon": "tabler:user-heart"
+          },
+          {
+            "_key": "philEN2",
+            "title": "Empowerment through Knowledge and Identity",
+            "description": "Real growth happens when people understand themselves and their roles within a larger whole. My approach equips individuals and teams with tools to foster resilience, strengthen identity, and take ownership of their journey — making me ultimately unnecessary.",
+            "icon": "tabler:bulb"
+          },
+          {
+            "_key": "philEN3",
+            "title": "Holistic and Sustainable Development",
+            "description": "Mind, body, environment, and culture are deeply interconnected. I work biopsychosocially and integratively — recognizing that sustainable performance and leadership emerge when mental strength, physical health, and shared purpose come together.",
+            "icon": "tabler:plant"
+          }
+        ],
+        "isReversed": false
+      },
+      {
+        "_key": "experienceEN",
+        "title": "My Experience",
+        "subtitle": "Over the past years, I have built a diverse foundation of academic expertise, practical experience, and international collaboration. My work combines scientific depth with real-world understanding — always centered around human development, performance, and identity.",
+        "items": [
+          {
+            "_key": "expEN1",
+            "title": "Academic and Professional Foundations",
+            "description": "I hold a Master's degree in Sport and Exercise Psychology, a Bachelor's degree in Sport and Health in Prevention and Therapy, and I am currently pursuing a PhD at the German Sport University Cologne. In addition, I am expanding my academic journey with a Psychology degree combined with a Business minor — building bridges between individual psychology and organizational success.",
+            "icon": "tabler:school"
+          },
+          {
+            "_key": "expEN2",
+            "title": "Work with Teams and Individuals",
+            "description": "I have worked with a wide range of individuals — from elite athletes and national Paralympic teams to private clients seeking personal growth and resilience. My practical experience includes mental training, identity development, and performance support in both sports and corporate environments.",
+            "icon": "tabler:users-group"
+          },
+          {
+            "_key": "expEN3",
+            "title": "International Lectures and Speaking Engagements",
+            "description": "I regularly deliver lectures, workshops, and keynote talks in German, English, and Spanish — sharing my expertise across borders.",
+            "icon": "tabler:microphone-2"
+          }
+        ],
+        "isReversed": true,
+        "callToAction": {
+          "text": "See more",
+          "href": "/services"
+        }
+      }
+    ],
+    "cta": {
+      "title": "Get Started Today!",
+      "subtitle": "Don't wait for change — create it. Let's unlock your potential together.",
+      "actions": [
+        {
+          "_key": "aboutCTAEN",
+          "variant": "primary",
+          "text": "Free consultation",
+          "href": "mailto:haberstock.stefanie@gmail.com",
+          "target": "_blank",
+          "icon": "tabler:mail"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "about-de",
+    "_type": "page",
+    "title": "About (Deutsch)",
+    "pageType": "about",
+    "language": "de",
+    "metadata": {
+      "title": "S.H. Über mich",
+      "ignoreTitleTemplate": true
+    },
+    "heroWidget": {
+      "title": "Hi, ich bin Stefanie",
+      "subtitle": "Meine Leidenschaft liegt darin, Menschen beim Wachsen zu helfen — nicht nur als Fachkräfte, sondern als Individuen. Ich unterstütze Athleten, Teams und Organisationen dabei, ihr volles Potenzial zu entfalten, Herausforderungen zu meistern und nachhaltige Stärke aufzubauen — mental, emotional und sozial.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "alt": "Chaos Bild"
+      },
+      "actions": [
+        {
+          "_key": "aboutDE1",
+          "variant": "primary",
+          "text": "Kostenloses Beratungsgespräch",
+          "href": "mailto:haberstock.stefanie@gmail.com"
+        },
+        {
+          "_key": "aboutDE2",
+          "text": "Lebenslauf herunterladen",
+          "icon": "tabler:download",
+          "href": "src/assets/cv.pdf",
+          "target": "_blank"
+        }
+      ]
+    },
+    "steps2Sections": [
+      {
+        "_key": "philosophyDE",
+        "title": "Meine Philosophie",
+        "subtitle": "Ich glaube, dass wahre Entwicklung — sei es persönlich, teambezogen oder organisational — in authentischer Verbindung, strategischer Ermächtigung und einer ganzheitlichen Sicht der menschlichen Erfahrung verwurzelt ist. Diese Grundwerte prägen jeden Aspekt meiner Arbeit.",
+        "items": [
+          {
+            "_key": "philDE1",
+            "title": "Menschenzentrierter Ansatz",
+            "description": "Hinter jedem Ziel, jedem Team und jeder Organisation steht ein Mensch — mit einzigartigen Stärken, Geschichten und Potenzial. Ich stelle das Individuum immer in den Mittelpunkt jedes Prozesses und respektiere das persönliche Wachstum als Grundlage für nachhaltigen Erfolg.",
+            "icon": "tabler:user-heart"
+          },
+          {
+            "_key": "philDE2",
+            "title": "Ermächtigung durch Wissen und Identität",
+            "description": "Echtes Wachstum geschieht, wenn Menschen sich selbst und ihre Rollen in einem größeren Ganzen verstehen. Mein Ansatz stattet Individuen und Teams mit Werkzeugen aus, um Resilienz zu fördern, die Identität zu stärken und Verantwortung für ihre Reise zu übernehmen — wodurch ich mich letztendlich überflüssig mache.",
+            "icon": "tabler:bulb"
+          },
+          {
+            "_key": "philDE3",
+            "title": "Ganzheitliche und nachhaltige Entwicklung",
+            "description": "Geist, Körper, Umgebung und Kultur sind tief miteinander verbunden. Ich arbeite biopsychosozial und integrativ — in der Erkenntnis, dass nachhaltige Leistung und Führung entstehen, wenn mentale Stärke, körperliche Gesundheit und gemeinsamer Zweck zusammenkommen.",
+            "icon": "tabler:plant"
+          }
+        ],
+        "isReversed": false
+      },
+      {
+        "_key": "experienceDE",
+        "title": "Meine Erfahrung",
+        "subtitle": "In den letzten Jahren habe ich eine vielfältige Grundlage aus akademischer Expertise, praktischer Erfahrung und internationaler Zusammenarbeit aufgebaut. Meine Arbeit verbindet wissenschaftliche Tiefe mit praxisnahem Verständnis — immer zentriert um menschliche Entwicklung, Leistung und Identität.",
+        "items": [
+          {
+            "_key": "expDE1",
+            "title": "Akademische und berufliche Grundlagen",
+            "description": "Ich habe einen Master-Abschluss in Sport- und Leistungspsychologie, einen Bachelor-Abschluss in Sport und Gesundheit in Prävention und Therapie, und promoviere derzeit an der Deutschen Sporthochschule Köln. Zusätzlich erweitere ich meine akademische Laufbahn mit einem Psychologie-Studium kombiniert mit einem Business-Minor — um Brücken zwischen individueller Psychologie und organisationalem Erfolg zu schlagen.",
+            "icon": "tabler:school"
+          },
+          {
+            "_key": "expDE2",
+            "title": "Arbeit mit Teams und Individuen",
+            "description": "Ich habe mit einer breiten Palette von Individuen gearbeitet — von Spitzensportlern und nationalen Paralympics-Teams bis hin zu privaten Klienten, die persönliches Wachstum und Resilienz suchen. Meine praktische Erfahrung umfasst Mentaltraining, Identitätsentwicklung und Leistungsunterstützung sowohl im Sport- als auch im Unternehmensumfeld.",
+            "icon": "tabler:users-group"
+          },
+          {
+            "_key": "expDE3",
+            "title": "Internationale Vorträge und Sprechertätigkeit",
+            "description": "Ich halte regelmäßig Vorträge, Workshops und Keynote-Talks auf Deutsch, Englisch und Spanisch — und teile meine Expertise über Grenzen hinweg.",
+            "icon": "tabler:microphone-2"
+          }
+        ],
+        "isReversed": true,
+        "callToAction": {
+          "text": "Mehr sehen",
+          "href": "/de/services"
+        }
+      }
+    ],
+    "cta": {
+      "title": "Starten Sie heute!",
+      "subtitle": "Warten Sie nicht auf Veränderung — gestalten Sie sie. Lassen Sie uns gemeinsam Ihr Potenzial entfalten.",
+      "actions": [
+        {
+          "_key": "aboutCTADE",
+          "variant": "primary",
+          "text": "Kostenloses Beratungsgespräch",
+          "href": "mailto:haberstock.stefanie@gmail.com",
+          "target": "_blank",
+          "icon": "tabler:mail"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "about-es",
+    "_type": "page",
+    "title": "About (Español)",
+    "pageType": "about",
+    "language": "es",
+    "metadata": {
+      "title": "S.H. Acerca de",
+      "ignoreTitleTemplate": true
+    },
+    "heroWidget": {
+      "title": "Hola, soy Stefanie",
+      "subtitle": "Mi pasión radica en ayudar a las personas a crecer — no solo como profesionales, sino como individuos. Apoyo a atletas, equipos y organizaciones para desbloquear su máximo potencial, navegar desafíos y construir una fortaleza duradera — mental, emocional y socialmente.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "alt": "Imagen del Caos"
+      },
+      "actions": [
+        {
+          "_key": "aboutES1",
+          "variant": "primary",
+          "text": "Consulta gratuita",
+          "href": "mailto:haberstock.stefanie@gmail.com"
+        },
+        {
+          "_key": "aboutES2",
+          "text": "Descargar CV",
+          "icon": "tabler:download",
+          "href": "src/assets/cv.pdf",
+          "target": "_blank"
+        }
+      ]
+    },
+    "steps2Sections": [
+      {
+        "_key": "philosophyES",
+        "title": "Mi Filosofía",
+        "subtitle": "Creo que el verdadero desarrollo — ya sea personal, basado en equipos u organizacional — se basa en la conexión auténtica, el empoderamiento estratégico y una visión holística de la experiencia humana. Estos valores fundamentales dan forma a cada aspecto de mi trabajo.",
+        "items": [
+          {
+            "_key": "philES1",
+            "title": "Enfoque Centrado en el Ser Humano",
+            "description": "Detrás de cada objetivo, cada equipo y cada organización hay un ser humano — con fortalezas, historias y potencial únicos. Siempre pongo al individuo en el centro de cada proceso, respetando el crecimiento personal como la base del éxito duradero.",
+            "icon": "tabler:user-heart"
+          },
+          {
+            "_key": "philES2",
+            "title": "Empoderamiento a través del Conocimiento y la Identidad",
+            "description": "El crecimiento real sucede cuando las personas se entienden a sí mismas y sus roles dentro de un todo mayor. Mi enfoque equipa a individuos y equipos con herramientas para fomentar la resistencia, fortalecer la identidad y tomar posesión de su viaje — haciéndome finalmente innecesaria.",
+            "icon": "tabler:bulb"
+          },
+          {
+            "_key": "philES3",
+            "title": "Desarrollo Holístico y Sostenible",
+            "description": "La mente, el cuerpo, el entorno y la cultura están profundamente interconectados. Trabajo de forma biopsicosocial e integrativa — reconociendo que el rendimiento sostenible y el liderazgo emergen cuando la fortaleza mental, la salud física y el propósito compartido se unen.",
+            "icon": "tabler:plant"
+          }
+        ],
+        "isReversed": false
+      },
+      {
+        "_key": "experienceES",
+        "title": "Mi Experiencia",
+        "subtitle": "A lo largo de los años, he construido una base diversa de experiencia académica, experiencia práctica y colaboración internacional. Mi trabajo combina profundidad científica con comprensión del mundo real — siempre centrado en el desarrollo humano, el rendimiento y la identidad.",
+        "items": [
+          {
+            "_key": "expES1",
+            "title": "Fundamentos Académicos y Profesionales",
+            "description": "Tengo un Máster en Psicología del Deporte y el Ejercicio, una Licenciatura en Deporte y Salud en Prevención y Terapia, y actualmente estoy cursando un Doctorado en la Universidad Alemana del Deporte de Colonia. Además, estoy ampliando mi viaje académico con un grado en Psicología combinado con un minor en Negocios — construyendo puentes entre la psicología individual y el éxito organizacional.",
+            "icon": "tabler:school"
+          },
+          {
+            "_key": "expES2",
+            "title": "Trabajo con Equipos e Individuos",
+            "description": "He trabajado con una amplia gama de individuos — desde atletas de élite y equipos paralímpicos nacionales hasta clientes privados que buscan crecimiento personal y resistencia. Mi experiencia práctica incluye entrenamiento mental, desarrollo de identidad y apoyo al rendimiento tanto en entornos deportivos como corporativos.",
+            "icon": "tabler:users-group"
+          },
+          {
+            "_key": "expES3",
+            "title": "Conferencias Internacionales y Compromisos como Oradora",
+            "description": "Regularmente doy conferencias, talleres y charlas magistrales en alemán, inglés y español — compartiendo mi experiencia a través de las fronteras.",
+            "icon": "tabler:microphone-2"
+          }
+        ],
+        "isReversed": true,
+        "callToAction": {
+          "text": "Ver más",
+          "href": "/es/services"
+        }
+      }
+    ],
+    "cta": {
+      "title": "¡Comienza hoy!",
+      "subtitle": "No esperes al cambio — créalo. Desbloqueemos tu potencial juntos.",
+      "actions": [
+        {
+          "_key": "aboutCTAES",
+          "variant": "primary",
+          "text": "Consulta gratuita",
+          "href": "mailto:haberstock.stefanie@gmail.com",
+          "target": "_blank",
+          "icon": "tabler:mail"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "about-en",
+    "_type": "page",
+    "title": "About (English)",
+    "pageType": "about",
+    "language": "en",
+    "metadata": {
+      "title": "About us"
+    },
+    "heroWidget": {
+      "title": "Great companies are made by great teams",
+      "subtitle": "Our philosophy is simple: hire great people and give them the resources and support to do their best work.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "alt": "Colorful Image"
+      },
+      "actions": [
+        {
+          "_key": "aboutEnAction1",
+          "variant": "primary",
+          "text": "Know more",
+          "href": "#",
+          "icon": "tabler:download"
+        },
+        {
+          "_key": "aboutEnAction2",
+          "text": "Contact",
+          "href": "#"
+        }
+      ]
+    },
+    "steps2Sections": [
+      {
+        "_key": "aboutEnSteps1",
+        "title": "Make your mark with our mission-driven team",
+        "subtitle": "Opportunities that fit your passion and skills. Join our team and help build solutions that matter.",
+        "items": [
+          {
+            "_key": "aboutEnStep1",
+            "title": "Excellence",
+            "description": "We strive for excellence in everything we do, from the quality of our work to the way we treat our customers and partners."
+          },
+          {
+            "_key": "aboutEnStep2", 
+            "title": "Community Impact",
+            "description": "We believe in giving back to our community and making a positive impact on the world around us."
+          },
+          {
+            "_key": "aboutEnStep3",
+            "title": "Innovation",
+            "description": "We are constantly pushing the boundaries of what's possible, embracing new technologies and ideas."
+          }
+        ],
+        "isReversed": false,
+        "callToAction": {
+          "text": "Be part of our team",
+          "href": "#",
+          "icon": "tabler:chevron-right"
+        }
+      }
+    ],
+    "cta": {
+      "title": "Ready to boost your productivity?",
+      "subtitle": "Join thousands of satisfied users who have transformed their workflow with our solutions.",
+      "actions": [
+        {
+          "_key": "aboutEnCta1",
+          "variant": "primary",
+          "text": "Get started now",
+          "href": "#"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "about-de",
+    "_type": "page", 
+    "title": "About (Deutsch)",
+    "pageType": "about",
+    "language": "de",
+    "metadata": {
+      "title": "Über uns"
+    },
+    "heroWidget": {
+      "title": "Große Unternehmen werden von großartigen Teams gemacht",
+      "subtitle": "Unsere Philosophie ist einfach: großartige Menschen einstellen und ihnen die Ressourcen und Unterstützung geben, um ihre beste Arbeit zu leisten.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "alt": "Buntes Bild"
+      },
+      "actions": [
+        {
+          "_key": "aboutDeAction1", 
+          "variant": "primary",
+          "text": "Mehr erfahren",
+          "href": "#",
+          "icon": "tabler:download"
+        },
+        {
+          "_key": "aboutDeAction2",
+          "text": "Kontakt",
+          "href": "#"
+        }
+      ]
+    },
+    "steps2Sections": [
+      {
+        "_key": "aboutDeSteps1",
+        "title": "Hinterlassen Sie Ihren Eindruck mit unserem zielorientierten Team",
+        "subtitle": "Möglichkeiten, die zu Ihrer Leidenschaft und Ihren Fähigkeiten passen. Treten Sie unserem Team bei und helfen Sie dabei, Lösungen zu entwickeln, die wichtig sind.",
+        "items": [
+          {
+            "_key": "aboutDeStep1",
+            "title": "Exzellenz",
+            "description": "Wir streben nach Exzellenz in allem, was wir tun, von der Qualität unserer Arbeit bis hin zur Art, wie wir unsere Kunden und Partner behandeln."
+          },
+          {
+            "_key": "aboutDeStep2",
+            "title": "Gemeinschaftlicher Einfluss", 
+            "description": "Wir glauben daran, etwas an unsere Gemeinschaft zurückzugeben und einen positiven Einfluss auf die Welt um uns herum zu haben."
+          },
+          {
+            "_key": "aboutDeStep3",
+            "title": "Innovation",
+            "description": "Wir erweitern ständig die Grenzen des Möglichen und nehmen neue Technologien und Ideen auf."
+          }
+        ],
+        "isReversed": false,
+        "callToAction": {
+          "text": "Seien Sie Teil unseres Teams",
+          "href": "#",
+          "icon": "tabler:chevron-right"
+        }
+      }
+    ],
+    "cta": {
+      "title": "Bereit, Ihre Produktivität zu steigern?",
+      "subtitle": "Schließen Sie sich Tausenden von zufriedenen Benutzern an, die ihren Arbeitsablauf mit unseren Lösungen transformiert haben.",
+      "actions": [
+        {
+          "_key": "aboutDeCta1",
+          "variant": "primary", 
+          "text": "Jetzt anfangen",
+          "href": "#"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "about-es",
+    "_type": "page",
+    "title": "About (Español)", 
+    "pageType": "about",
+    "language": "es",
+    "metadata": {
+      "title": "Acerca de nosotros"
+    },
+    "heroWidget": {
+      "title": "Las grandes empresas están hechas por grandes equipos",
+      "subtitle": "Nuestra filosofía es simple: contratar personas excelentes y darles los recursos y apoyo para hacer su mejor trabajo.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+        "alt": "Imagen Colorida"
+      },
+      "actions": [
+        {
+          "_key": "aboutEsAction1",
+          "variant": "primary",
+          "text": "Saber más",
+          "href": "#",
+          "icon": "tabler:download"
+        },
+        {
+          "_key": "aboutEsAction2",
+          "text": "Contacto", 
+          "href": "#"
+        }
+      ]
+    },
+    "steps2Sections": [
+      {
+        "_key": "aboutEsSteps1",
+        "title": "Deje su huella con nuestro equipo orientado a la misión",
+        "subtitle": "Oportunidades que se ajustan a su pasión y habilidades. Únase a nuestro equipo y ayude a construir soluciones que importan.",
+        "items": [
+          {
+            "_key": "aboutEsStep1",
+            "title": "Excelencia",
+            "description": "Nos esforzamos por la excelencia en todo lo que hacemos, desde la calidad de nuestro trabajo hasta la forma en que tratamos a nuestros clientes y socios."
+          },
+          {
+            "_key": "aboutEsStep2",
+            "title": "Impacto Comunitario",
+            "description": "Creemos en devolver algo a nuestra comunidad y hacer un impacto positivo en el mundo que nos rodea."
+          },
+          {
+            "_key": "aboutEsStep3", 
+            "title": "Innovación",
+            "description": "Estamos constantemente empujando los límites de lo que es posible, abrazando nuevas tecnologías e ideas."
+          }
+        ],
+        "isReversed": false,
+        "callToAction": {
+          "text": "Sea parte de nuestro equipo",
+          "href": "#",
+          "icon": "tabler:chevron-right"
+        }
+      }
+    ],
+    "cta": {
+      "title": "¿Listo para impulsar su productividad?",
+      "subtitle": "Únase a miles de usuarios satisfechos que han transformado su flujo de trabajo con nuestras soluciones.",
+      "actions": [
+        {
+          "_key": "aboutEsCta1",
+          "variant": "primary",
+          "text": "Comenzar ahora",
+          "href": "#"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "services-en",
+    "_type": "page",
+    "title": "Services (English)",
+    "pageType": "services",
+    "language": "en",
+    "metadata": {
+      "title": "S.H. Services",
+      "ignoreTitleTemplate": true
+    },
+    "heroWidget": {
+      "title": "Find the right path for your growth.",
+      "subtitle": "Everyone's path is unique. Choose the focus that fits your goals — whether you're growing as a person, building a team, or transforming an organization.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+        "alt": "AstroWind Hero Image"
+      },
+      "actions": [
+        {
+          "_key": "servicesEnAction1",
+          "text": "I am an Individual or Athlete",
+          "href": "#athletes"
+        },
+        {
+          "_key": "servicesEnAction2",
+          "variant": "primary",
+          "text": "I am part of a Team",
+          "href": "#teams"
+        },
+        {
+          "_key": "servicesEnAction3", 
+          "text": "I represent a Business or Organization",
+          "href": "#organizations"
+        }
+      ]
+    },
+    "features2": {
+      "columns": 3,
+      "items": [
+        {
+          "_key": "servicesEnFeature1",
+          "title": "I am an Individual or Athlete",
+          "description": "I want to strengthen my mindset, boost resilience, and overcome personal or professional challenges. I'm ready to develop clarity, motivation, and sustainable inner strength.",
+          "icon": "tabler:user"
+        },
+        {
+          "_key": "servicesEnFeature2",
+          "title": "I am part of a Team", 
+          "description": "We want to grow stronger together — building trust, a shared vision, and a powerful team identity. We aim to communicate better, collaborate more effectively, and reach our full potential as a group.",
+          "icon": "tabler:users-group"
+        },
+        {
+          "_key": "servicesEnFeature3",
+          "title": "I represent a Business or Organization",
+          "description": "We are looking to empower leadership, create a healthy workplace culture, and align our people behind a shared purpose. We want sustainable growth — built on identity, connection, and performance.",
+          "icon": "tabler:loader"
+        }
+      ]
+    },
+    "contentSections": [
+      {
+        "_key": "servicesEnContent1",
+        "title": "Main Features",
+        "isReversed": true,
+        "isAfterContent": false,
+        "items": [
+          {
+            "_key": "servicesEnContentItem1",
+            "title": "High-Quality Designs",
+            "description": "Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.",
+            "icon": "tabler:wand"
+          },
+          {
+            "_key": "servicesEnContentItem2",
+            "title": "Customization Tools", 
+            "description": "Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.",
+            "icon": "tabler:settings"
+          },
+          {
+            "_key": "servicesEnContentItem3",
+            "title": "Pre-Designed Elements",
+            "description": "Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.",
+            "icon": "tabler:presentation"
+          },
+          {
+            "_key": "servicesEnContentItem4",
+            "title": "Preview and Mockup Views",
+            "description": "Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.",
+            "icon": "tabler:carousel-horizontal"
+          }
+        ],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+          "alt": "Features Image"
+        }
+      },
+      {
+        "_key": "servicesEnContent2",
+        "title": "Benefits",
+        "isReversed": false,
+        "isAfterContent": true,
+        "items": [
+          {
+            "_key": "servicesEnBenefit1",
+            "title": "Time Savings",
+            "description": "Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.",
+            "icon": "tabler:clock"
+          },
+          {
+            "_key": "servicesEnBenefit2",
+            "title": "Professional Appearance",
+            "description": "Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.",
+            "icon": "tabler:school"
+          },
+          {
+            "_key": "servicesEnBenefit3",
+            "title": "Cost-Efficiency",
+            "description": "Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.",
+            "icon": "tabler:coin"
+          },
+          {
+            "_key": "servicesEnBenefit4",
+            "title": "Instant Download",
+            "description": "Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.",
+            "icon": "tabler:file-download"
+          }
+        ],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+          "alt": "Benefits Image"
+        }
+      }
+    ],
+    "cta": {
+      "title": "Get Started Today!",
+      "subtitle": "Don't wait for change — create it. Let's unlock your potential together.",
+      "actions": [
+        {
+          "_key": "servicesEnCta1",
+          "variant": "primary",
+          "text": "Free consultation",
+          "href": "mailto:haberstock.stefanie@gmail.com",
+          "target": "_blank",
+          "icon": "tabler:mail"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "services-de",
+    "_type": "page",
+    "title": "Services (Deutsch)",
+    "pageType": "services",
+    "language": "de", 
+    "metadata": {
+      "title": "S.H. Services",
+      "ignoreTitleTemplate": true
+    },
+    "heroWidget": {
+      "title": "Finden Sie den richtigen Weg für Ihr Wachstum.",
+      "subtitle": "Jeder Weg ist einzigartig. Wählen Sie den Fokus, der zu Ihren Zielen passt — ob Sie als Person wachsen, ein Team aufbauen oder eine Organisation transformieren.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+        "alt": "AstroWind Hero Bild"
+      },
+      "actions": [
+        {
+          "_key": "servicesDeAction1",
+          "text": "Ich bin eine Einzelperson oder ein Athlet",
+          "href": "#athletes"
+        },
+        {
+          "_key": "servicesDeAction2",
+          "variant": "primary",
+          "text": "Ich bin Teil eines Teams",
+          "href": "#teams"
+        },
+        {
+          "_key": "servicesDeAction3",
+          "text": "Ich vertrete ein Unternehmen oder eine Organisation", 
+          "href": "#organizations"
+        }
+      ]
+    },
+    "features2": {
+      "columns": 3,
+      "items": [
+        {
+          "_key": "servicesDeFeature1",
+          "title": "Ich bin eine Einzelperson oder ein Athlet",
+          "description": "Ich möchte meine Denkweise stärken, Resilienz steigern und persönliche oder berufliche Herausforderungen überwinden. Ich bin bereit, Klarheit, Motivation und nachhaltige innere Stärke zu entwickeln.",
+          "icon": "tabler:user"
+        },
+        {
+          "_key": "servicesDeFeature2",
+          "title": "Ich bin Teil eines Teams",
+          "description": "Wir wollen gemeinsam stärker werden — Vertrauen aufbauen, eine gemeinsame Vision und eine starke Teamidentität schaffen. Wir streben danach, besser zu kommunizieren, effektiver zusammenzuarbeiten und unser volles Potenzial als Gruppe zu erreichen.",
+          "icon": "tabler:users-group"
+        },
+        {
+          "_key": "servicesDeFeature3", 
+          "title": "Ich vertrete ein Unternehmen oder eine Organisation",
+          "description": "Wir möchten Führung stärken, eine gesunde Arbeitsplatzkultur schaffen und unsere Mitarbeiter hinter einem gemeinsamen Zweck vereinen. Wir wollen nachhaltiges Wachstum — aufgebaut auf Identität, Verbindung und Leistung.",
+          "icon": "tabler:loader"
+        }
+      ]
+    },
+    "contentSections": [
+      {
+        "_key": "servicesDeContent1",
+        "title": "Mein Ansatz",
+        "isReversed": true,
+        "isAfterContent": false,
+        "items": [
+          {
+            "_key": "servicesDeContentItem1",
+            "title": "Personalisierte Strategien",
+            "description": "Jede Person, jedes Team und jede Organisation ist einzigartig. Ich entwickle maßgeschneiderte Ansätze, die auf Ihre spezifischen Herausforderungen und Ziele eingehen.",
+            "icon": "tabler:wand"
+          },
+          {
+            "_key": "servicesDeContentItem2",
+            "title": "Wissenschaftlich fundiert",
+            "description": "Meine Methoden basieren auf aktueller Forschung in Sport- und Leistungspsychologie, kombiniert mit praktischer Erfahrung aus der Arbeit mit Elite-Athleten und Teams.",
+            "icon": "tabler:settings"
+          },
+          {
+            "_key": "servicesDeContentItem3",
+            "title": "Ganzheitlicher Ansatz",
+            "description": "Ich betrachte mentale, emotionale und soziale Aspekte als untrennbar verbunden. Nachhaltige Veränderung entsteht, wenn wir alle Dimensionen des menschlichen Erlebens einbeziehen.",
+            "icon": "tabler:presentation"
+          },
+          {
+            "_key": "servicesDeContentItem4",
+            "title": "Langfristige Entwicklung",
+            "description": "Mein Ziel ist es, Sie mit Werkzeugen und Strategien auszustatten, die über unsere Zusammenarbeit hinaus wirken. Sie werden befähigt, Ihren eigenen Weg fortzusetzen.",
+            "icon": "tabler:carousel-horizontal"
+          }
+        ],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+          "alt": "Features Image"
+        }
+      },
+      {
+        "_key": "servicesDeContent2",
+        "title": "Was Sie erwarten können",
+        "isReversed": false,
+        "isAfterContent": true,
+        "items": [
+          {
+            "_key": "servicesDeBenefit1",
+            "title": "Verbesserte Leistung",
+            "description": "Entwickeln Sie mentale Stärke und Resilienz, die es Ihnen ermöglicht, unter Druck Höchstleistungen zu erbringen und Herausforderungen mit Zuversicht zu meistern.",
+            "icon": "tabler:clock"
+          },
+          {
+            "_key": "servicesDeBenefit2",
+            "title": "Stärkere Teams",
+            "description": "Fördern Sie Vertrauen, Kommunikation und gemeinsame Identität, die Teams befähigen, effektiv zusammenzuarbeiten und gemeinsame Ziele zu erreichen.",
+            "icon": "tabler:school"
+          },
+          {
+            "_key": "servicesDeBenefit3",
+            "title": "Nachhaltige Führung",
+            "description": "Entwickeln Sie authentische Führungsqualitäten, die andere inspirieren und eine positive Kultur schaffen, in der Menschen ihr Bestes geben können.",
+            "icon": "tabler:coin"
+          },
+          {
+            "_key": "servicesDeBenefit4",
+            "title": "Persönliches Wachstum",
+            "description": "Gewinnen Sie Klarheit über Ihre Werte, Stärken und Ziele. Entwickeln Sie das Selbstvertrauen und die Werkzeuge, um Ihr volles Potenzial zu entfalten.",
+            "icon": "tabler:file-download"
+          }
+        ],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+          "alt": "Benefits Image"
+        }
+      }
+    ],
+    "cta": {
+      "title": "Starten Sie noch heute!",
+      "subtitle": "Warten Sie nicht auf Veränderung — erschaffen Sie sie. Lassen Sie uns gemeinsam Ihr Potenzial entfalten.",
+      "actions": [
+        {
+          "_key": "servicesDeCta1",
+          "variant": "primary",
+          "text": "Kostenloses Beratungsgespräch",
+          "href": "mailto:haberstock.stefanie@gmail.com",
+          "target": "_blank",
+          "icon": "tabler:mail"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "services-es",
+    "_type": "page",
+    "title": "Services (Español)",
+    "pageType": "services",
+    "language": "es",
+    "metadata": {
+      "title": "S.H. Services",
+      "ignoreTitleTemplate": true
+    },
+    "heroWidget": {
+      "title": "Encuentra el camino correcto para tu crecimiento.",
+      "subtitle": "El camino de cada persona es único. Elige el enfoque que se adapte a tus objetivos — ya sea creciendo como persona, construyendo un equipo o transformando una organización.",
+      "image": {
+        "src": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+        "alt": "Imagen Hero de AstroWind"
+      },
+      "actions": [
+        {
+          "_key": "servicesEsAction1",
+          "text": "Soy un Individuo o Atleta",
+          "href": "#athletes"
+        },
+        {
+          "_key": "servicesEsAction2",
+          "variant": "primary",
+          "text": "Soy parte de un Equipo",
+          "href": "#teams"
+        },
+        {
+          "_key": "servicesEsAction3",
+          "text": "Represento una Empresa u Organización",
+          "href": "#organizations"
+        }
+      ]
+    },
+    "features2": {
+      "columns": 3,
+      "items": [
+        {
+          "_key": "servicesEsFeature1",
+          "title": "Soy un Individuo o Atleta",
+          "description": "Quiero fortalecer mi mentalidad, aumentar la resiliencia y superar desafíos personales o profesionales. Estoy listo para desarrollar claridad, motivación y fuerza interior sostenible.",
+          "icon": "tabler:user"
+        },
+        {
+          "_key": "servicesEsFeature2",
+          "title": "Soy parte de un Equipo",
+          "description": "Queremos crecer más fuertes juntos — construyendo confianza, una visión compartida y una identidad de equipo poderosa. Buscamos comunicarnos mejor, colaborar más efectivamente y alcanzar nuestro máximo potencial como grupo.",
+          "icon": "tabler:users-group"
+        },
+        {
+          "_key": "servicesEsFeature3",
+          "title": "Represento una Empresa u Organización",
+          "description": "Buscamos empoderar el liderazgo, crear una cultura laboral saludable y alinear a nuestra gente detrás de un propósito compartido. Queremos un crecimiento sostenible — construido sobre identidad, conexión y rendimiento.",
+          "icon": "tabler:loader"
+        }
+      ]
+    },
+    "contentSections": [
+      {
+        "_key": "servicesEsContent1",
+        "title": "Mi Enfoque",
+        "isReversed": true,
+        "isAfterContent": false,
+        "items": [
+          {
+            "_key": "servicesEsContentItem1",
+            "title": "Estrategias Personalizadas",
+            "description": "Cada persona, equipo y organización es única. Desarrollo enfoques a medida que se centran en sus desafíos y objetivos específicos.",
+            "icon": "tabler:wand"
+          },
+          {
+            "_key": "servicesEsContentItem2",
+            "title": "Basado en Ciencia",
+            "description": "Mis métodos se basan en la investigación actual en psicología del deporte y del rendimiento, combinada con experiencia práctica trabajando con atletas de élite y equipos.",
+            "icon": "tabler:settings"
+          },
+          {
+            "_key": "servicesEsContentItem3",
+            "title": "Enfoque Holístico",
+            "description": "Veo los aspectos mentales, emocionales y sociales como inseparablemente conectados. El cambio sostenible surge cuando incluimos todas las dimensiones de la experiencia humana.",
+            "icon": "tabler:presentation"
+          },
+          {
+            "_key": "servicesEsContentItem4",
+            "title": "Desarrollo a Largo Plazo",
+            "description": "Mi objetivo es equiparte con herramientas y estrategias que funcionen más allá de nuestra colaboración. Serás empoderado para continuar tu propio camino.",
+            "icon": "tabler:carousel-horizontal"
+          }
+        ],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+          "alt": "Features Image"
+        }
+      },
+      {
+        "_key": "servicesEsContent2",
+        "title": "Qué Puedes Esperar",
+        "isReversed": false,
+        "isAfterContent": true,
+        "items": [
+          {
+            "_key": "servicesEsBenefit1",
+            "title": "Rendimiento Mejorado",
+            "description": "Desarrolla fortaleza mental y resistencia que te permite rendir al máximo bajo presión y enfrentar desafíos con confianza.",
+            "icon": "tabler:clock"
+          },
+          {
+            "_key": "servicesEsBenefit2",
+            "title": "Equipos Más Fuertes",
+            "description": "Fomenta la confianza, comunicación e identidad compartida que capacita a los equipos para colaborar efectivamente y alcanzar objetivos comunes.",
+            "icon": "tabler:school"
+          },
+          {
+            "_key": "servicesEsBenefit3",
+            "title": "Liderazgo Sostenible",
+            "description": "Desarrolla cualidades de liderazgo auténticas que inspiran a otros y crean una cultura positiva donde las personas pueden dar lo mejor de sí.",
+            "icon": "tabler:coin"
+          },
+          {
+            "_key": "servicesEsBenefit4",
+            "title": "Crecimiento Personal",
+            "description": "Gana claridad sobre tus valores, fortalezas y objetivos. Desarrolla la confianza y las herramientas para liberar tu pleno potencial.",
+            "icon": "tabler:file-download"
+          }
+        ],
+        "image": {
+          "src": "https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+          "alt": "Benefits Image"
+        }
+      }
+    ],
+    "cta": {
+      "title": "¡Comienza Hoy!",
+      "subtitle": "No esperes al cambio — créalo. Liberemos tu potencial juntos.",
+      "actions": [
+        {
+          "_key": "servicesEsCta1",
+          "variant": "primary",
+          "text": "Consulta gratuita",
+          "href": "mailto:haberstock.stefanie@gmail.com",
+          "target": "_blank",
+          "icon": "tabler:mail"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "contact-en",
+    "_type": "page",
+    "title": "Contact (English)",
+    "pageType": "contact",
+    "language": "en",
+    "metadata": {
+      "title": "Contact"
+    },
+    "heroText": {
+      "tagline": "Contact",
+      "title": "Let's Connect!"
+    },
+    "contactUs": {
+      "id": "form",
+      "title": "Drop us a message today!",
+      "subtitle": "For quicker answers, explore our FAQs section. You may find the solution you're looking for right there! If not, our support team is delighted to help you.",
+      "inputs": [
+        {
+          "_key": "contactEnInput1",
+          "type": "text",
+          "name": "name",
+          "label": "Name"
+        },
+        {
+          "_key": "contactEnInput2",
+          "type": "email",
+          "name": "email",
+          "label": "Email"
+        }
+      ],
+      "textarea": {
+        "label": "Message"
+      },
+      "disclaimer": {
+        "label": "By submitting this contact form, you acknowledge and agree to the collection of your personal information."
+      },
+      "description": "Our support team typically responds within 24 business hours."
+    },
+    "contactFeatures2": {
+      "title": "We are here to help!",
+      "items": [
+        {
+          "_key": "contactEnFeature1",
+          "title": "General support",
+          "description": "Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality."
+        },
+        {
+          "_key": "contactEnFeature2",
+          "title": "Contact sales",
+          "description": "Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc."
+        },
+        {
+          "_key": "contactEnFeature3",
+          "title": "Technical support",
+          "description": "Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates."
+        },
+        {
+          "_key": "contactEnFeature4",
+          "title": "Phone",
+          "description": "+1 (234) 567-890",
+          "icon": "tabler:headset"
+        },
+        {
+          "_key": "contactEnFeature5",
+          "title": "Email",
+          "description": "haberstock.stefanie@gmail.com",
+          "icon": "tabler:mail"
+        },
+        {
+          "_key": "contactEnFeature6",
+          "title": "Location",
+          "description": "Available worldwide via video consultation",
+          "icon": "tabler:map-pin"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "contact-de",
+    "_type": "page",
+    "title": "Contact (Deutsch)",
+    "pageType": "contact",
+    "language": "de",
+    "metadata": {
+      "title": "Kontakt"
+    },
+    "heroText": {
+      "tagline": "Kontakt",
+      "title": "Lassen Sie uns verbinden!"
+    },
+    "contactUs": {
+      "id": "form",
+      "title": "Schreiben Sie uns heute eine Nachricht!",
+      "subtitle": "Für schnellere Antworten erkunden Sie unseren FAQ-Bereich. Vielleicht finden Sie die Lösung, nach der Sie suchen, direkt dort! Wenn nicht, hilft Ihnen unser Support-Team gerne weiter.",
+      "inputs": [
+        {
+          "_key": "contactDeInput1",
+          "type": "text",
+          "name": "name",
+          "label": "Name"
+        },
+        {
+          "_key": "contactDeInput2",
+          "type": "email",
+          "name": "email",
+          "label": "E-Mail"
+        }
+      ],
+      "textarea": {
+        "label": "Nachricht"
+      },
+      "disclaimer": {
+        "label": "Durch das Absenden dieses Kontaktformulars erkennen Sie die Erhebung Ihrer persönlichen Daten an und stimmen dieser zu."
+      },
+      "description": "Unser Support-Team antwortet normalerweise innerhalb von 24 Stunden."
+    },
+    "contactFeatures2": {
+      "title": "Wir sind hier, um zu helfen!",
+      "items": [
+        {
+          "_key": "contactDeFeature1",
+          "title": "Persönliche Beratung",
+          "description": "Kontaktieren Sie mich für Fragen zur mentalen Stärke, Resilienz-Training und individueller Leistungsoptimierung."
+        },
+        {
+          "_key": "contactDeFeature2",
+          "title": "Team-Entwicklung",
+          "description": "Sprechen Sie mit mir über Teambuilding, Kommunikationsverbesserung und die Stärkung der Gruppendynamik."
+        },
+        {
+          "_key": "contactDeFeature3",
+          "title": "Organisationsentwicklung",
+          "description": "Erfahren Sie mehr über Führungsentwicklung, Unternehmenskultur und nachhaltige Organisationsveränderungen."
+        },
+        {
+          "_key": "contactDeFeature4",
+          "title": "Telefon",
+          "description": "+49 (0) 123 456 789",
+          "icon": "tabler:headset"
+        },
+        {
+          "_key": "contactDeFeature5",
+          "title": "E-Mail",
+          "description": "haberstock.stefanie@gmail.com",
+          "icon": "tabler:mail"
+        },
+        {
+          "_key": "contactDeFeature6",
+          "title": "Standort",
+          "description": "Weltweit verfügbar über Video-Beratung",
+          "icon": "tabler:map-pin"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "contact-es",
+    "_type": "page",
+    "title": "Contact (Español)",
+    "pageType": "contact",
+    "language": "es",
+    "metadata": {
+      "title": "Contacto"
+    },
+    "heroText": {
+      "tagline": "Contacto",
+      "title": "¡Conectémonos!"
+    },
+    "contactUs": {
+      "id": "form",
+      "title": "¡Envíanos un mensaje hoy!",
+      "subtitle": "Para respuestas más rápidas, explora nuestra sección de preguntas frecuentes. ¡Podrías encontrar la solución que buscas allí mismo! Si no, nuestro equipo de soporte estará encantado de ayudarte.",
+      "inputs": [
+        {
+          "_key": "contactEsInput1",
+          "type": "text",
+          "name": "name",
+          "label": "Nombre"
+        },
+        {
+          "_key": "contactEsInput2",
+          "type": "email",
+          "name": "email",
+          "label": "Correo"
+        }
+      ],
+      "textarea": {
+        "label": "Mensaje"
+      },
+      "disclaimer": {
+        "label": "Al enviar este formulario de contacto, reconoces y aceptas la recopilación de tu información personal."
+      },
+      "description": "Nuestro equipo de soporte generalmente responde dentro de 24 horas."
+    },
+    "contactFeatures2": {
+      "title": "¡Estamos aquí para ayudar!",
+      "items": [
+        {
+          "_key": "contactEsFeature1",
+          "title": "Consultoría Personal",
+          "description": "Contáctame para preguntas sobre fortaleza mental, entrenamiento de resistencia y optimización del rendimiento individual."
+        },
+        {
+          "_key": "contactEsFeature2",
+          "title": "Desarrollo de Equipos",
+          "description": "Habla conmigo sobre construcción de equipos, mejora de comunicación y fortalecimiento de la dinámica grupal."
+        },
+        {
+          "_key": "contactEsFeature3",
+          "title": "Desarrollo Organizacional",
+          "description": "Aprende sobre desarrollo de liderazgo, cultura empresarial y cambios organizacionales sostenibles."
+        },
+        {
+          "_key": "contactEsFeature4",
+          "title": "Teléfono",
+          "description": "+34 123 456 789",
+          "icon": "tabler:headset"
+        },
+        {
+          "_key": "contactEsFeature5",
+          "title": "Correo",
+          "description": "haberstock.stefanie@gmail.com",
+          "icon": "tabler:mail"
+        },
+        {
+          "_key": "contactEsFeature6",
+          "title": "Ubicación",
+          "description": "Disponible mundialmente vía consulta por video",
+          "icon": "tabler:map-pin"
+        }
+      ]
+    }
+  },
+  {
+    "_id": "pricing-en",
+    "_type": "page",
+    "title": "Pricing (English)",
+    "pageType": "pricing",
+    "language": "en",
+    "metadata": {
+      "title": "Pricing"
+    },
+    "pricingHeroText": {
+      "tagline": "Pricing",
+      "title": "Investment in Your Growth",
+      "subtitle": "Choose the right support that aligns with your goals and budget."
+    },
+    "pricingWidget": {
+      "title": "Our Services",
+      "subtitle": "Transparent pricing for transformational results",
+      "prices": [
+        {
+          "_key": "pricingEnBasic",
+          "title": "Individual Session",
+          "subtitle": "Perfect for focused, one-on-one support",
+          "price": 120,
+          "period": "per session",
+          "items": [
+            {
+              "_key": "pricingEnBasic1",
+              "description": "1-hour individual consultation"
+            },
+            {
+              "_key": "pricingEnBasic2", 
+              "description": "Personalized mental training strategies"
+            },
+            {
+              "_key": "pricingEnBasic3",
+              "description": "Goal-setting and action planning"
+            },
+            {
+              "_key": "pricingEnBasic4",
+              "description": "Follow-up resources and exercises"
+            }
+          ],
+          "callToAction": {
+            "target": "_blank",
+            "text": "Book Session",
+            "href": "mailto:haberstock.stefanie@gmail.com"
+          }
+        },
+        {
+          "_key": "pricingEnStandard",
+          "title": "Team Development",
+          "subtitle": "Optimal for small to medium teams",
+          "price": 800,
+          "period": "per workshop",
+          "items": [
+            {
+              "_key": "pricingEnStandard1",
+              "description": "Half-day team workshop (4 hours)"
+            },
+            {
+              "_key": "pricingEnStandard2",
+              "description": "Team dynamics assessment"
+            },
+            {
+              "_key": "pricingEnStandard3",
+              "description": "Communication enhancement training"
+            },
+            {
+              "_key": "pricingEnStandard4",
+              "description": "Collaborative goal setting"
+            },
+            {
+              "_key": "pricingEnStandard5",
+              "description": "30-day follow-up check-in"
+            }
+          ],
+          "callToAction": {
+            "target": "_blank",
+            "text": "Book Workshop",
+            "href": "mailto:haberstock.stefanie@gmail.com"
+          },
+          "hasRibbon": true,
+          "ribbonTitle": "popular"
+        },
+        {
+          "_key": "pricingEnPremium",
+          "title": "Organizational Transformation",
+          "subtitle": "Comprehensive support for lasting change",
+          "price": 2500,
+          "period": "per month",
+          "items": [
+            {
+              "_key": "pricingEnPremium1",
+              "description": "Monthly leadership development sessions"
+            },
+            {
+              "_key": "pricingEnPremium2",
+              "description": "Culture transformation strategy"
+            },
+            {
+              "_key": "pricingEnPremium3",
+              "description": "Team coaching and facilitation"
+            },
+            {
+              "_key": "pricingEnPremium4",
+              "description": "Ongoing progress monitoring"
+            }
+          ],
+          "callToAction": {
+            "target": "_blank",
+            "text": "Get Started",
+            "href": "mailto:haberstock.stefanie@gmail.com"
+          }
+        }
+      ]
+    },
+    "features3": {
+      "title": "Why Choose Our Approach",
+      "subtitle": "Experience the advantages of evidence-based psychology and personalized support",
+      "columns": 2,
+      "items": [
+        {
+          "_key": "pricingEnFeature1",
+          "title": "Scientifically Grounded",
+          "description": "All methods are based on current research in sports and performance psychology, ensuring effective and reliable results.",
+          "icon": "tabler:brain"
+        },
+        {
+          "_key": "pricingEnFeature2",
+          "title": "Personalized Approach",
+          "description": "Each program is tailored to your specific needs, goals, and challenges for maximum impact.",
+          "icon": "tabler:user-star"
+        },
+        {
+          "_key": "pricingEnFeature3",
+          "title": "Flexible Delivery",
+          "description": "Sessions available in-person or via video call, accommodating your schedule and preferences.",
+          "icon": "tabler:device-laptop"
+        },
+        {
+          "_key": "pricingEnFeature4",
+          "title": "Holistic Integration",
+          "description": "Mental, emotional, and social aspects are addressed together for sustainable transformation.",
+          "icon": "tabler:circle-dot"
+        },
+        {
+          "_key": "pricingEnFeature5",
+          "title": "Ongoing Support",
+          "description": "Follow-up resources and check-ins ensure lasting change beyond our sessions.",
+          "icon": "tabler:heart-handshake"
+        },
+        {
+          "_key": "pricingEnFeature6",
+          "title": "Professional Expertise",
+          "description": "Backed by extensive experience working with elite athletes, teams, and organizations.",
+          "icon": "tabler:award"
+        }
+      ],
+      "classes": {
+        "container": "max-w-5xl"
+      }
+    },
+    "stepsWidget": {
+      "title": "Your Journey to Growth",
+      "tagline": "simplified process",
+      "isReversed": true,
+      "items": [
+        {
+          "_key": "pricingEnStep1",
+          "title": "Free Consultation",
+          "description": "We discuss your goals and challenges",
+          "icon": "tabler:number-1"
+        },
+        {
+          "_key": "pricingEnStep2",
+          "title": "Personalized Plan",
+          "description": "I create a tailored approach for you",
+          "icon": "tabler:number-2"
+        },
+        {
+          "_key": "pricingEnStep3",
+          "title": "Begin Sessions",
+          "description": "Start your transformation journey",
+          "icon": "tabler:number-3"
+        },
+        {
+          "_key": "pricingEnStep4",
+          "title": "Track Progress",
+          "description": "Monitor development and adjust as needed",
+          "icon": "tabler:number-4"
+        },
+        {
+          "_key": "pricingEnStep5",
+          "title": "Achieve Goals",
+          "description": "Reach your objectives with confidence",
+          "icon": "tabler:number-5"
+        }
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+        "alt": "Growth journey image"
+      }
+    },
+    "faqsWidget": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "I understand that choosing the right support is important. Here are answers to common questions about my services.",
+      "columns": 1,
+      "items": [
+        {
+          "_key": "pricingEnFaq1",
+          "title": "How long does each session last?",
+          "description": "Individual sessions are typically 60 minutes, while team workshops can range from half-day (4 hours) to full-day formats depending on your needs."
+        },
+        {
+          "_key": "pricingEnFaq2",
+          "title": "Do you offer online sessions?",
+          "description": "Yes, I provide both in-person and video call sessions. Many clients find online sessions just as effective and more convenient."
+        },
+        {
+          "_key": "pricingEnFaq3",
+          "title": "What if I need to reschedule?",
+          "description": "Life happens! I offer flexible rescheduling with 24-hour advance notice whenever possible."
+        },
+        {
+          "_key": "pricingEnFaq4",
+          "title": "How quickly will I see results?",
+          "description": "While everyone's journey is unique, many clients report noticeable improvements in confidence and clarity within 2-3 sessions."
+        },
+        {
+          "_key": "pricingEnFaq5",
+          "title": "Do you work with athletes specifically?",
+          "description": "Yes, I have extensive experience with elite athletes and sports teams, but my methods are equally effective for business professionals and anyone seeking peak performance."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to unlock your potential?",
+      "subtitle": "Take the first step towards mental strength, resilience, and peak performance.",
+      "actions": [
+        {
+          "_key": "pricingEnCta1",
+          "variant": "primary",
+          "text": "Start with a free consultation",
+          "href": "mailto:haberstock.stefanie@gmail.com"
+        }
+      ]
+    }
+  }
+]

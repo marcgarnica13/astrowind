@@ -1,126 +1,49 @@
 ---
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
+import { getPageContent } from '~/lib/sanity';
 import Layout from '~/layouts/PageLayout.astro';
 
-const metadata = {
-  title: 'S.H. About',
-  ignoreTitleTemplate: true,
-};
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+
+// Get content from Sanity
+const pageData = await getPageContent('about', 'de');
+const { metadata, heroWidget, steps2Sections, cta } = pageData || {};
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Bild',
-    }}
-    ,
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Kostenloses Beratungsgespräch',
-        href: 'mailto:haberstock.stefanie@gmail.com',
-      },
-      { text: 'Lebenslauf herunterladen', icon: 'tabler:download', href: 'src/assets/cv.pdf', target: '_blank' },
-    ]}
-  >
-    <Fragment slot="title"> Hallo, ich bin Stefanie </Fragment>
+  {heroWidget && (
+    <Hero
+      image={heroWidget.image}
+      actions={heroWidget.actions}
+    >
+      <Fragment slot="title">{heroWidget.title}</Fragment>
+      <Fragment slot="subtitle">{heroWidget.subtitle}</Fragment>
+    </Hero>
+  )}
 
-    <Fragment slot="subtitle">
-      Meine Leidenschaft liegt darin, Menschen beim Wachsen zu helfen — nicht nur als Fachkräfte, sondern als Individuen. <br />Ich unterstütze Athleten,
-      Teams und Organisationen dabei, ihr volles Potenzial zu entfalten,<br />Herausforderungen zu meistern und dauerhafte
-      Stärke aufzubauen — mental, emotional und sozial.
-    </Fragment>
-  </Hero>
+  <!-- Steps2 Widgets ****************** -->
 
-  <!-- Stats Widget ****************** -->
+  {steps2Sections && steps2Sections.map((section) => (
+    <Steps2
+      title={section.title}
+      subtitle={section.subtitle}
+      items={section.items}
+      isReversed={section.isReversed}
+      callToAction={section.callToAction}
+    />
+  ))}
 
-  <!-- <Stats
-    title="Statistics about us"
-    stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
-    ]}
-  /> -->
+  <!-- CallToAction Widget *********** -->
 
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Meine Philosophie"
-    subtitle="Ich glaube, dass wahre Entwicklung — sei es persönlich, teambezogen oder organisatorisch — in authentischer Verbindung, strategischer Befähigung und einer ganzheitlichen Sicht der menschlichen Erfahrung verwurzelt ist. Diese Grundwerte prägen jeden Aspekt meiner Arbeit."
-    items={[
-      {
-        title: 'Menschenzentrierter Ansatz',
-        description:
-          'Hinter jedem Ziel, jedem Team und jeder Organisation steht ein Mensch — mit einzigartigen Stärken, Geschichten und Potenzial. Ich stelle immer das Individuum ins Zentrum jedes Prozesses und respektiere persönliches Wachstum als Grundlage für dauerhaften Erfolg.',
-      },
-      {
-        title: 'Befähigung durch Wissen und Identität',
-        description:
-          'Echtes Wachstum geschieht, wenn Menschen sich selbst und ihre Rolle in einem größeren Ganzen verstehen. Mein Ansatz stattet Individuen und Teams mit Werkzeugen aus, um Resilienz zu fördern, Identität zu stärken und Verantwortung für ihre Reise zu übernehmen — wodurch ich letztendlich überflüssig werde.',
-      },
-      {
-        title: 'Ganzheitliche und nachhaltige Entwicklung',
-        description:
-          'Geist, Körper, Umgebung und Kultur sind tief miteinander verbunden. Ich arbeite biopsychosozial und integrativ — in der Erkenntnis, dass nachhaltige Leistung und Führung entstehen, wenn mentale Stärke, körperliche Gesundheit und gemeinsamer Zweck zusammenkommen.',
-      },
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Meine Erfahrung"
-    subtitle="In den vergangenen Jahren habe ich eine vielfältige Grundlage aus akademischer Expertise, praktischer Erfahrung und internationaler Zusammenarbeit aufgebaut. Meine Arbeit verbindet wissenschaftliche Tiefe mit realem Verständnis — immer zentriert um menschliche Entwicklung, Leistung und Identität."
-    isReversed={true}
-    callToAction={{
-      text: 'Mehr erfahren',
-      href: '/services',
-    }}
-    items={[
-      {
-        title: 'Akademische und berufliche Grundlagen',
-        description:
-          'Ich habe einen Master-Abschluss in Sport- und Leistungspsychologie, einen Bachelor-Abschluss in Sport und Gesundheit in Prävention und Therapie und promoviere derzeit an der Deutschen Sporthochschule Köln. Zusätzlich erweitere ich meine akademische Laufbahn mit einem Psychologie-Studium kombiniert mit einem Business-Minor — um Brücken zwischen individueller Psychologie und organisatorischem Erfolg zu schlagen.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Arbeit mit Teams und Individuen',
-        description:
-          'Ich habe mit einer breiten Palette von Individuen gearbeitet — von Elite-Athleten und nationalen Paralympic-Teams bis hin zu privaten Klienten, die persönliches Wachstum und Resilienz suchen. Meine praktische Erfahrung umfasst mentales Training, Identitätsentwicklung und Leistungsunterstützung sowohl im Sport- als auch im Unternehmensumfeld.',
-        icon: 'tabler:users-group',
-      },
-      {
-        title: 'Internationale Vorträge und Sprechertätigkeiten',
-        description:
-          'Ich halte regelmäßig Vorträge, Workshops und Keynote-Talks auf Deutsch, Englisch und Spanisch — und teile meine Expertise über Grenzen hinweg.',
-        icon: 'tabler:microphone-2',
-      },
-    ]}
-  />
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Kostenloses Beratungsgespräch',
-        href: 'mailto:haberstock.stefanie@gmail.com',
-        target: '_blank',
-        icon: 'tabler:mail',
-      },
-    ]}
-  >
-    <Fragment slot="title"> Starten Sie noch heute! </Fragment>
-
-    <Fragment slot="subtitle"> Warten Sie nicht auf Veränderung — erschaffen Sie sie. Lassen Sie uns gemeinsam Ihr Potenzial entfalten. </Fragment>
-  </CallToAction>
+  {cta && (
+    <CallToAction
+      actions={cta.actions}
+    >
+      <Fragment slot="title">{cta.title}</Fragment>
+      <Fragment slot="subtitle">{cta.subtitle}</Fragment>
+    </CallToAction>
+  )}
 </Layout>

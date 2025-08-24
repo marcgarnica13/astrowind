@@ -1,172 +1,86 @@
 ---
+import { getPageContent } from '~/lib/sanity';
 import Layout from '~/layouts/PageLayout.astro';
 
 import BigNote from '~/components/widgets/BigNote.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 
-const metadata = {
-  title: 'Steffi Haberstock',
-  ignoreTitleTemplate: true,
-};
+// Get content from Sanity
+const pageData = await getPageContent('homepage', 'en');
+const { metadata, hero, note, features, content, steps, faqs, stats, testimonials, cta } = pageData || {};
 ---
 
 <Layout metadata={metadata}>
-  <Hero2
-    title="Empowering Minds. Developing Teams. Transforming Leadership."
-    tagline="Let's talk."
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Free consultation',
-        href: 'mailto:haberstock.stefanie@gmail.com',
-      },
-      { text: 'Explore my services', href: '#features' },
-    ]}
-  />
+  {hero && (
+    <Hero2
+      title={hero.title}
+      tagline={hero.tagline}
+      image={hero.image}
+      actions={hero.actions}
+    />
+  )}
 
   <!-- Note Widget ******************* -->
-
-  <BigNote
-    title="<span class='text-white text-7xl'>Where human connnection meets high performance</span>"
-    subtitle="<br/><a href='#features' class='text-white'><u>Explore my services</u></a>"
-    ><Fragment slot="bg">
-      <div class="absolute inset-0 bg-primary dark:bg-transparent"></div>
-    </Fragment>
-  </BigNote>
+  
+  {note && (
+    <BigNote
+      title={`<span class='text-white text-7xl'>${note.title}</span>`}
+      subtitle={`<br/><a href='#features' class='text-white'><u>${note.subtitle}</u></a>`}
+    >
+      <Fragment slot="bg">
+        <div class="absolute inset-0 bg-primary dark:bg-transparent"></div>
+      </Fragment>
+    </BigNote>
+  )}
 
   <!-- Note Widget ******************* -->
   <!-- Features Widget *************** -->
 
-  <Features
-    id="features"
-    title="What you get"
-    subtitle="Tailored solutions grounded in science, designed for real-world challenges."
-    items={[
-      {
-        title: 'Psychological Expertise',
-        description:
-          'Grounded in sport psychology and leadership science, I offer evidence-based methods to strengthen resilience, performance, and well-being.',
-        icon: 'tabler:brain',
-      },
-      {
-        title: 'Holistic Approach',
-        description:
-          'Mind, body, and environment are deeply interconnected — my biopsychosocial methods create balance and long-term effectiveness.',
-        icon: 'tabler:broadcast',
-      },
-      {
-        title: 'Innovative Approaches from High-Performance Sports',
-        description:
-          'I bring tested strategies from elite sports into the business world — where pressure, performance, and group dynamics are pushed to their limits.',
-        icon: 'tabler:exchange',
-      },
-      {
-        title: 'Human-Centered Philosophy',
-        description:
-          'I see the person behind the role — every project starts with respect, empathy, and a commitment to real personal and collective development.',
-        icon: 'tabler:user-circle',
-      },
-      {
-        title: 'Strategic Growth Focus',
-        description:
-          "Whether it's personal development, team dynamics, or corporate health, I focus on meaningful, measurable, and sustainable growth.",
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Research-Driven Practices',
-        description:
-          'Ongoing research in social identity and leadership ensures that my work is both cutting-edge and deeply grounded.',
-        icon: 'tabler:bulb',
-      },
-    ]}
-  />
+  {features && (
+    <Features
+      id="features"
+      title={features.title}
+      subtitle={features.subtitle}
+      items={features.items}
+    />
+  )}
 
   <!-- Content Widget **************** -->
 
-  <Content
-    isReversed
-    items={[
-      {
-        title: 'Individuals & Athletes',
-        description:
-          'Boost mental strength, manage stress, navigate personal and athletic challenges, and grow beyond limitations.',
-      },
-      {
-        title: 'Teams',
-        description: 'Build team identity, strengthen cohesion, improve communication and performance.',
-      },
-      {
-        title: 'Businesses',
-        description:
-          'Shape organizational culture, foster leadership, and improve employee engagement through identity-driven consulting.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Who I work with</h3>
-    </Fragment>
+  {content && content.map((section) => (
+    <Content
+      isReversed={section.isReversed}
+      items={section.items}
+      image={section.image}
+    >
+      <Fragment slot="content">
+        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{section.title}</h3>
+        {section.subtitle && <p class="text-muted dark:text-gray-400">{section.subtitle}</p>}
+        {section.description && <p class="mt-3">{section.description}</p>}
+      </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+      <Fragment slot="bg">
+        <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      </Fragment>
+    </Content>
+  ))}
 
   <!-- Steps Widget ****************** -->
 
-  <Steps
-    title="How we work together"
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Free Initial Consultation</span>',
-        description:
-          'Start with a free, no-obligation conversation, online or in person, where we get to know each other. We clarify your goals, challenges, and whether my approach is the right fit for your needs.',
-        icon: 'tabler:message-circle-question',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Personalized Concept</span>',
-        description:
-          "Based on your situation and goals, I create a tailored plan — whether it's focused on mental training, leadership development, team identity, or holistic well-being.",
-        icon: 'tabler:adjustments',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Collaborative Work Phase</span>',
-        description:
-          "Through regular sessions or workshops, we put the strategies into practice. You'll receive practical tools, feedback, and reflection methods that empower sustainable growth.",
-        icon: 'tabler:brand-asana',
-      },
-      {
-        title: 'Step 4: <span class="font-medium">Independent Implementation</span>',
-        description:
-          'My ultimate goal is to make you (or your team) self-sufficient. I equip you with the skills and strategies needed to continue thriving independently — long after our collaboration.',
-        icon: 'tabler:target-arrow',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
+  {steps && (
+    <Steps
+      title={steps.title}
+      subtitle={steps.subtitle}
+      items={steps.items}
+    />
+  )}
 
   <!-- <Testimonials
     title="Words from real customers"
@@ -219,21 +133,43 @@ const metadata = {
                 `}
   /> -->
 
+  <!-- FAQs Widget ******************* -->
+  
+  {faqs && (
+    <FAQs
+      title={faqs.title}
+      subtitle={faqs.subtitle}
+      items={faqs.items}
+    />
+  )}
+
+  <!-- Stats Widget ****************** -->
+  
+  {stats && (
+    <Stats
+      title={stats.title}
+      stats={stats.items}
+    />
+  )}
+
+  <!-- Testimonials Widget *********** -->
+  
+  {testimonials && (
+    <Testimonials
+      title={testimonials.title}
+      subtitle={testimonials.subtitle}
+      testimonials={testimonials.items}
+    />
+  )}
+
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Free consultation',
-        href: 'mailto:haberstock.stefanie@gmail.com',
-        target: '_blank',
-        icon: 'tabler:mail',
-      },
-    ]}
-  >
-    <Fragment slot="title"> Get Started Today! </Fragment>
-
-    <Fragment slot="subtitle"> Don't wait for change — create it. Let's unlock your potential together. </Fragment>
-  </CallToAction>
+  {cta && (
+    <CallToAction
+      actions={cta.actions}
+    >
+      <Fragment slot="title">{cta.title}</Fragment>
+      <Fragment slot="subtitle">{cta.subtitle}</Fragment>
+    </CallToAction>
+  )}
 </Layout>

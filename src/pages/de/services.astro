@@ -1,155 +1,61 @@
 ---
+import { getPageContent } from '~/lib/sanity';
+import Layout from '~/layouts/PageLayout.astro';
+
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
-import Layout from '~/layouts/PageLayout.astro';
 
-const metadata = {
-  title: 'S.H. Services',
-  ignoreTitleTemplate: true,
-};
+// Get content from Sanity
+const pageData = await getPageContent('services', 'de');
+const { metadata, heroWidget, features2, contentSections, cta } = pageData || {};
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    title="Finden Sie den richtigen Weg für Ihr Wachstum."
-    subtitle="Jeder Weg ist einzigartig. Wählen Sie den Fokus, der zu Ihren Zielen passt — ob Sie als Person wachsen, ein Team aufbauen oder eine Organisation transformieren."
-    actions={[
-      { text: 'Ich bin eine Einzelperson oder ein Athlet', href: '#athletes' },
-      { variant: 'primary', text: 'Ich bin Teil eines Teams', href: '#teams' },
-      { text: 'Ich vertrete ein Unternehmen oder eine Organisation', href: '#organizations' },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'AstroWind Hero Bild',
-    }}
-  />
+  {heroWidget && (
+    <Hero
+      title={heroWidget.title}
+      subtitle={heroWidget.subtitle}
+      actions={heroWidget.actions}
+      image={heroWidget.image}
+    />
+  )}
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
-    columns={3}
-    items={[
-      {
-        title: 'Ich bin eine Einzelperson oder ein Athlet',
-        description:
-          'Ich möchte meine Denkweise stärken, Resilienz steigern und persönliche oder berufliche Herausforderungen überwinden. Ich bin bereit, Klarheit, Motivation und nachhaltige innere Stärke zu entwickeln.',
-        icon: 'tabler:user',
-      },
-      {
-        title: 'Ich bin Teil eines Teams',
-        description:
-          'Wir wollen gemeinsam stärker werden — Vertrauen aufbauen, eine gemeinsame Vision und eine starke Teamidentität schaffen. Wir streben danach, besser zu kommunizieren, effektiver zusammenzuarbeiten und unser volles Potenzial als Gruppe zu erreichen.',
-        icon: 'tabler:users-group',
-      },
-      {
-        title: 'Ich vertrete ein Unternehmen oder eine Organisation',
-        description:
-          'Wir möchten Führung stärken, eine gesunde Arbeitsplatzkultur schaffen und unsere Mitarbeiter hinter einem gemeinsamen Zweck vereinen. Wir wollen nachhaltiges Wachstum — aufgebaut auf Identität, Verbindung und Leistung.',
-        icon: 'tabler:loader',
-      },
-    ]}
-  />
+  {features2 && (
+    <Features2
+      columns={features2.columns}
+      items={features2.items}
+    />
+  )}
 
-  <!-- Content Widget **************** -->
+  <!-- Content Widgets *************** -->
 
-  <Content
-    isReversed
-    items={[
-      {
-        title: 'Personalisierte Strategien',
-        description:
-          'Jede Person, jedes Team und jede Organisation ist einzigartig. Ich entwickle maßgeschneiderte Ansätze, die auf Ihre spezifischen Herausforderungen und Ziele eingehen.',
-        icon: 'tabler:wand',
-      },
-      {
-        title: 'Wissenschaftlich fundiert',
-        description:
-          'Meine Methoden basieren auf aktueller Forschung in Sport- und Leistungspsychologie, kombiniert mit praktischer Erfahrung aus der Arbeit mit Elite-Athleten und Teams.',
-        icon: 'tabler:settings',
-      },
-      {
-        title: 'Ganzheitlicher Ansatz',
-        description:
-          'Ich betrachte mentale, emotionale und soziale Aspekte als untrennbar verbunden. Nachhaltige Veränderung entsteht, wenn wir alle Dimensionen des menschlichen Erlebens einbeziehen.',
-        icon: 'tabler:presentation',
-      },
-      {
-        title: 'Langfristige Entwicklung',
-        description:
-          'Mein Ziel ist es, Sie mit Werkzeugen und Strategien auszustatten, die über unsere Zusammenarbeit hinaus wirken. Sie werden befähigt, Ihren eigenen Weg fortzusetzen.',
-        icon: 'tabler:carousel-horizontal',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Features Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Mein Ansatz</h3>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'Verbesserte Leistung',
-        description:
-          'Entwickeln Sie mentale Stärke und Resilienz, die es Ihnen ermöglicht, unter Druck Höchstleistungen zu erbringen und Herausforderungen mit Zuversicht zu meistern.',
-        icon: 'tabler:clock',
-      },
-      {
-        title: 'Stärkere Teams',
-        description:
-          'Fördern Sie Vertrauen, Kommunikation und gemeinsame Identität, die Teams befähigen, effektiv zusammenzuarbeiten und gemeinsame Ziele zu erreichen.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Nachhaltige Führung',
-        description:
-          'Entwickeln Sie authentische Führungsqualitäten, die andere inspirieren und eine positive Kultur schaffen, in der Menschen ihr Bestes geben können.',
-        icon: 'tabler:coin',
-      },
-      {
-        title: 'Persönliches Wachstum',
-        description:
-          'Gewinnen Sie Klarheit über Ihre Werte, Stärken und Ziele. Entwickeln Sie das Selbstvertrauen und die Werkzeuge, um Ihr volles Potenzial zu entfalten.',
-        icon: 'tabler:file-download',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Was Sie erwarten können</h3>
-    </Fragment>
-  </Content>
+  {contentSections && contentSections.map((section) => (
+    <Content
+      isReversed={section.isReversed}
+      isAfterContent={section.isAfterContent}
+      items={section.items}
+      image={section.image}
+    >
+      <Fragment slot="content">
+        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{section.title}</h3>
+      </Fragment>
+    </Content>
+  ))}
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Kostenloses Beratungsgespräch',
-        href: 'mailto:haberstock.stefanie@gmail.com',
-        target: '_blank',
-        icon: 'tabler:mail',
-      },
-    ]}
-  >
-    <Fragment slot="title"> Starten Sie noch heute! </Fragment>
-
-    <Fragment slot="subtitle"> Warten Sie nicht auf Veränderung — erschaffen Sie sie. Lassen Sie uns gemeinsam Ihr Potenzial entfalten. </Fragment>
-  </CallToAction>
+  {cta && (
+    <CallToAction
+      actions={cta.actions}
+    >
+      <Fragment slot="title">{cta.title}</Fragment>
+      <Fragment slot="subtitle">{cta.subtitle}</Fragment>
+    </CallToAction>
+  )}
 </Layout>

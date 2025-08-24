@@ -1,155 +1,61 @@
 ---
+import { getPageContent } from '~/lib/sanity';
+import Layout from '~/layouts/PageLayout.astro';
+
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
-import Layout from '~/layouts/PageLayout.astro';
 
-const metadata = {
-  title: 'S.H. Services',
-  ignoreTitleTemplate: true,
-};
+// Get content from Sanity
+const pageData = await getPageContent('services', 'en');
+const { metadata, heroWidget, features2, contentSections, cta } = pageData || {};
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    title="Find the right path for your growth."
-    subtitle="Everyone’s path is unique. Choose the focus that fits your goals — whether you're growing as a person, building a team, or transforming an organization."
-    actions={[
-      { text: 'I am an Individual or Athlete', href: '#athletes' },
-      { variant: 'primary', text: 'I am part of a Team', href: '#teams' },
-      { text: 'I represent a Business or Organization', href: '#organizations' },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'AstroWind Hero Image',
-    }}
-  />
+  {heroWidget && (
+    <Hero
+      title={heroWidget.title}
+      subtitle={heroWidget.subtitle}
+      actions={heroWidget.actions}
+      image={heroWidget.image}
+    />
+  )}
 
   <!-- Features2 Widget ************** -->
 
-  <Features2
-    columns={3}
-    items={[
-      {
-        title: 'I am an Individual or Athlete',
-        description:
-          'I want to strengthen my mindset, boost resilience, and overcome personal or professional challenges. I’m ready to develop clarity, motivation, and sustainable inner strength.',
-        icon: 'tabler:user',
-      },
-      {
-        title: 'I am part of a Team',
-        description:
-          'We want to grow stronger together — building trust, a shared vision, and a powerful team identity. We aim to communicate better, collaborate more effectively, and reach our full potential as a group.',
-        icon: 'tabler:users-group',
-      },
-      {
-        title: 'I represent a Business or Organization',
-        description:
-          'We are looking to empower leadership, create a healthy workplace culture, and align our people behind a shared purpose. We want sustainable growth — built on identity, connection, and performance.',
-        icon: 'tabler:loader',
-      },
-    ]}
-  />
+  {features2 && (
+    <Features2
+      columns={features2.columns}
+      items={features2.items}
+    />
+  )}
 
-  <!-- Content Widget **************** -->
+  <!-- Content Widgets *************** -->
 
-  <Content
-    isReversed
-    items={[
-      {
-        title: 'High-Quality Designs',
-        description:
-          'Our templates feature top-tier designs that ensure a professional and polished appearance for your projects.',
-        icon: 'tabler:wand',
-      },
-      {
-        title: 'Customization Tools',
-        description:
-          'Tailor each template to your unique needs with user-friendly customization tools that let you personalize colors, fonts, and content.',
-        icon: 'tabler:settings',
-      },
-      {
-        title: 'Pre-Designed Elements',
-        description:
-          'Save time and effort with our ready-to-use elements, including graphics, icons, and layouts that enhance the visual appeal of your creations.',
-        icon: 'tabler:presentation',
-      },
-      {
-        title: 'Preview and Mockup Views',
-        description:
-          'Visualize the final outcome before making any changes using our preview and mockup views, ensuring your projects meet your expectations.',
-        icon: 'tabler:carousel-horizontal',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Features Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Main Features</h3>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'Time Savings',
-        description:
-          'Streamline your workflow, enabling you to create stunning materials efficiently and allocate more time to your core tasks.',
-        icon: 'tabler:clock',
-      },
-      {
-        title: 'Professional Appearance',
-        description:
-          'Elevate your projects with the polished and sophisticated look that our templates provide, making a lasting impression on your audience.',
-        icon: 'tabler:school',
-      },
-      {
-        title: 'Cost-Efficiency',
-        description:
-          'Benefit from cost savings by avoiding the need for custom design work, as our templates offer professional-grade designs at a fraction of the cost.',
-        icon: 'tabler:coin',
-      },
-      {
-        title: 'Instant Download',
-        description:
-          'Enjoy immediate access to your chosen templates upon purchase, enabling you to begin working on your projects without delay.',
-        icon: 'tabler:file-download',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Benefits Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Benefits</h3>
-    </Fragment>
-  </Content>
+  {contentSections && contentSections.map((section) => (
+    <Content
+      isReversed={section.isReversed}
+      isAfterContent={section.isAfterContent}
+      items={section.items}
+      image={section.image}
+    >
+      <Fragment slot="content">
+        <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">{section.title}</h3>
+      </Fragment>
+    </Content>
+  ))}
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Free consultation',
-        href: 'mailto:haberstock.stefanie@gmail.com',
-        target: '_blank',
-        icon: 'tabler:mail',
-      },
-    ]}
-  >
-    <Fragment slot="title"> Get Started Today! </Fragment>
-
-    <Fragment slot="subtitle"> Don't wait for change — create it. Let’s unlock your potential together. </Fragment>
-  </CallToAction>
+  {cta && (
+    <CallToAction
+      actions={cta.actions}
+    >
+      <Fragment slot="title">{cta.title}</Fragment>
+      <Fragment slot="subtitle">{cta.subtitle}</Fragment>
+    </CallToAction>
+  )}
 </Layout>
