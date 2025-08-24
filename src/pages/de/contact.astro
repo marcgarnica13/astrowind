@@ -1,5 +1,5 @@
 ---
-import { getPageContent } from '~/lib/sanity';
+import { getContactContent } from '~/lib/sanity';
 import Layout from '~/layouts/PageLayout.astro';
 
 import HeroText from '~/components/widgets/HeroText.astro';
@@ -7,7 +7,7 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 // Get content from Sanity
-const pageData = await getPageContent('contact', 'de');
+const pageData = await getContactContent('de');
 const { metadata, heroText, contactUs, contactFeatures2 } = pageData || {};
 ---
 

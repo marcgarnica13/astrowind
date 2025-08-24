@@ -1,5 +1,5 @@
 ---
-import { getPageContent } from '~/lib/sanity';
+import { getPricingContent } from '~/lib/sanity';
 import Layout from '~/layouts/PageLayout.astro';
 
 import HeroText from '~/components/widgets/HeroText.astro';
@@ -10,7 +10,7 @@ import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 // Get content from Sanity
-const pageData = await getPageContent('pricing', 'de');
+const pageData = await getPricingContent('de');
 const { metadata, pricingHeroText, pricingWidget, features3, stepsWidget, faqsWidget, cta } = pageData || {};
 ---
 

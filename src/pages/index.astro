@@ -1,5 +1,5 @@
 ---
-import { getPageContent } from '~/lib/sanity';
+import { getHomepageContent } from '~/lib/sanity';
 import Layout from '~/layouts/PageLayout.astro';
 
 import BigNote from '~/components/widgets/BigNote.astro';
@@ -13,7 +13,7 @@ import Steps from '~/components/widgets/Steps.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 
 // Get content from Sanity
-const pageData = await getPageContent('homepage', 'en');
+const pageData = await getHomepageContent('en');
 const { metadata, hero, note, features, content, steps, faqs, stats, testimonials, cta } = pageData || {};
 ---
 
