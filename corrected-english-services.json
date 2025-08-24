@@ -1,0 +1,147 @@
+{
+  "_id": "services-en",
+  "_type": "servicesPage", 
+  "title": "Services (English)",
+  "language": "en",
+  "metadata": {
+    "title": "S.H. Services",
+    "ignoreTitleTemplate": true
+  },
+  "heroWidget": {
+    "title": "Find the right path for your growth.",
+    "subtitle": "Everyone's path is unique. Choose the focus that fits your goals — whether you're growing as a person, building a team, or transforming an organization.",
+    "image": {
+      "src": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+      "alt": "AstroWind Hero Image"
+    },
+    "actions": [
+      {
+        "_key": "servicesEnAction1",
+        "text": "I am an Individual or Athlete",
+        "href": "#athletes"
+      },
+      {
+        "_key": "servicesEnAction2", 
+        "variant": "primary",
+        "text": "I am part of a Team",
+        "href": "#teams"
+      },
+      {
+        "_key": "servicesEnAction3",
+        "text": "I represent a Business or Organization", 
+        "href": "#organizations"
+      }
+    ]
+  },
+  "features2": {
+    "columns": 3,
+    "items": [
+      {
+        "_key": "servicesEnFeature1",
+        "title": "I am an Individual or Athlete",
+        "description": "I want to strengthen my mindset, boost resilience, and overcome personal or professional challenges. I'm ready to develop clarity, motivation, and sustainable inner strength.",
+        "icon": "tabler:user"
+      },
+      {
+        "_key": "servicesEnFeature2",
+        "title": "I am part of a Team", 
+        "description": "We want to grow stronger together — building trust, a shared vision, and a powerful team identity. We aim to communicate better, collaborate more effectively, and reach our full potential as a group.",
+        "icon": "tabler:users-group"
+      },
+      {
+        "_key": "servicesEnFeature3",
+        "title": "I represent a Business or Organization",
+        "description": "We are looking to empower leadership, create a healthy workplace culture, and align our people behind a shared purpose. We want sustainable growth — built on identity, connection, and performance.",
+        "icon": "tabler:loader"
+      }
+    ]
+  },
+  "contentSections": [
+    {
+      "_key": "servicesEnContent1",
+      "title": "My Approach",
+      "isReversed": true,
+      "isAfterContent": false,
+      "items": [
+        {
+          "_key": "servicesEnContentItem1",
+          "title": "Personalized Strategies",
+          "description": "Every person, team, and organization is unique. I develop tailored approaches that focus on your specific challenges and goals.",
+          "icon": "tabler:wand"
+        },
+        {
+          "_key": "servicesEnContentItem2", 
+          "title": "Science-Based Methods",
+          "description": "My methods are based on current research in sports and performance psychology, combined with practical experience working with elite athletes and teams.",
+          "icon": "tabler:settings"
+        },
+        {
+          "_key": "servicesEnContentItem3",
+          "title": "Holistic Approach", 
+          "description": "I view mental, emotional, and social aspects as inseparably connected. Sustainable change emerges when we include all dimensions of human experience.",
+          "icon": "tabler:presentation"
+        },
+        {
+          "_key": "servicesEnContentItem4",
+          "title": "Long-term Development",
+          "description": "My goal is to equip you with tools and strategies that work beyond our collaboration. You will be empowered to continue your own journey.",
+          "icon": "tabler:carousel-horizontal"
+        }
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+        "alt": "Features Image"
+      }
+    },
+    {
+      "_key": "servicesEnContent2",
+      "title": "What You Can Expect",
+      "isReversed": false,
+      "isAfterContent": true,
+      "items": [
+        {
+          "_key": "servicesEnBenefit1",
+          "title": "Enhanced Performance",
+          "description": "Develop mental strength and resilience that enables you to perform at your best under pressure and face challenges with confidence.",
+          "icon": "tabler:clock"
+        },
+        {
+          "_key": "servicesEnBenefit2",
+          "title": "Stronger Teams",
+          "description": "Foster trust, communication, and shared identity that empowers teams to collaborate effectively and achieve common goals.",
+          "icon": "tabler:school"
+        },
+        {
+          "_key": "servicesEnBenefit3",
+          "title": "Sustainable Leadership", 
+          "description": "Develop authentic leadership qualities that inspire others and create a positive culture where people can give their best.",
+          "icon": "tabler:coin"
+        },
+        {
+          "_key": "servicesEnBenefit4",
+          "title": "Personal Growth",
+          "description": "Gain clarity about your values, strengths, and goals. Develop the confidence and tools to unlock your full potential.",
+          "icon": "tabler:file-download"
+        }
+      ],
+      "image": {
+        "src": "https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80",
+        "alt": "Benefits Image"
+      }
+    }
+  ],
+  "cta": {
+    "title": "Get Started Today!",
+    "subtitle": "Don't wait for change — create it. Let's unlock your potential together.",
+    "actions": [
+      {
+        "_key": "servicesEnCta1",
+        "variant": "primary", 
+        "text": "Free consultation",
+        "href": "mailto:haberstock.stefanie@gmail.com",
+        "target": "_blank",
+        "icon": "tabler:mail"
+      }
+    ]
+  }
+}
