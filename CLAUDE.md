@@ -1,238 +1,120 @@
-# CLAUDE.md - Project Context for Claude Code
+# CLAUDE.md — astrowind (public website)
 
-## Project: STEFFI AstroWind Website
+> Read the umbrella `../CLAUDE.md` first — it carries the cross-cutting context
+> (brand, Sanity project IDs, i18n rules, deployment state, open threads). This
+> file is the astrowind-specific reference. Where they ever disagree, the umbrella
+> file wins.
 
-### 🎯 Project Purpose
-This is a personal/business website built on the AstroWind template, customized for the STEFFI brand. The site is deployed to GitHub Pages and serves as a professional web presence.
+## What this is
 
-### 🏗️ Architecture Overview
+The public **Steffi Haberstock** website. Astro 5 + Tailwind, **SSR** on Vercel,
+with all page content fetched from Sanity **at request time**.
 
-#### Technology Stack
-- **Framework**: Astro 5.0 (Static Site Generation)
-- **Styling**: Tailwind CSS with custom configuration
-- **Language**: TypeScript
-- **Build Tool**: Vite
-- **Package Manager**: npm
-- **Deployment**: GitHub Pages via GitHub Actions
+- Framework: Astro 5 (`output: 'server'`, adapter `@astrojs/vercel/serverless`)
+- Styling: Tailwind (`@astrojs/tailwind`, `applyBaseStyles: false`)
+- Content: Sanity CMS via GROQ (see `src/lib/sanity.ts`)
+- Deploy: Vercel, auto-deploy on push to `main` (independent git repo — this
+  directory has its own `.git`, unrelated to `../sanity`)
+- Node: `^18.17.1 || ^20.3.0 || >= 21.0.0`
 
-#### Key Dependencies
-- `astro`: Core framework
-- `@astrojs/tailwind`: Tailwind CSS integration
-- `@astrojs/mdx`: MDX support for enhanced markdown
-- `astro-icon`: Icon system using Tabler and Flat Color Icons
-- `astro-compress`: Production optimization
-- `@astrolib/seo`: SEO utilities
-- `@astrolib/analytics`: Analytics integration
+## Reference docs
 
-### 📁 Project Structure
+- @PROJECT_RULES.md — the always-apply working rules (imported, loads every session).
+- `ARCHITECTURE.md` — the deep codebase map (routing, Sanity data flow, i18n,
+  components, config, blog, build). Read it on demand; it's intentionally **not**
+  imported so it doesn't bloat context.
+- `../CLAUDE.md` — the umbrella file with cross-cutting ecosystem context.
 
-```
-/home/marc/Development/steffi/astrowind/
-├── src/
-│   ├── assets/          # Static assets (images, styles, PDFs)
-│   ├── components/      # Reusable Astro components
-│   │   ├── blog/       # Blog-specific components
-│   │   ├── common/     # Shared utilities
-│   │   ├── ui/         # UI primitives
-│   │   └── widgets/    # Page sections (Hero, Footer, etc.)
-│   ├── content/        # Content collections config
-│   ├── data/           # Blog posts and data files
-│   ├── layouts/        # Page layouts
-│   ├── pages/          # Route pages
-│   ├── utils/          # Helper functions
-│   ├── config.yaml     # Site configuration
-│   └── navigation.ts   # Navigation structure
-├── public/             # Static files served directly
-├── dist/               # Build output (git-ignored)
-└── .github/workflows/  # CI/CD configuration
-```
+## Commands
 
-### 🔧 Development Workflow
-
-#### Essential Commands
 ```bash
-# Development
-npm run dev          # Start dev server (http://localhost:4321)
-npm run build        # Build for production
-npm run preview      # Preview production build
-
-# Code Quality (ALWAYS run before committing)
-npm run check        # Run all checks
-npm run check:astro  # Check Astro files
-npm run check:eslint # Check ESLint
-npm run check:prettier # Check formatting
-npm run fix          # Auto-fix issues
-npm run fix:eslint   # Fix ESLint issues
-npm run fix:prettier # Fix formatting
+npm run dev            # dev server at http://localhost:4321
+npm run build          # production build
+npm run preview        # preview the build locally
+npm run check          # astro check + eslint + prettier (run before committing)
+npm run fix            # eslint --fix + prettier -w
 ```
 
-#### Git Workflow
-1. Make changes
-2. Run `npm run check` to ensure code quality
-3. Fix any issues with `npm run fix`
-4. Commit changes
-5. Push to `main` branch to trigger automatic Vercel deployment
+## How content flows (the thing to internalize)
 
-### 🚀 Deployment & Hostname Configuration
+1. A route in `src/pages/**` calls a helper from `src/lib/sanity.ts`
+   (`getHomepageContent`, `getAboutContent`, `getServicesContent`,
+   `getContactContent`, `getPricingContent`), passing a `language`.
+2. That helper runs a GROQ query with a **hard-coded field projection**.
+3. The `.astro` page maps the returned object onto widget components in
+   `src/components/widgets/`.
 
-#### Current Configuration
-**Local Development:**
-- **URL**: `http://localhost:4321`
-- **Base Path**: `/` (root)
-- **Configuration**: Uses original GitHub Pages config with base path, but Astro dev server ignores it
-- **Works because**: Local development always serves from root regardless of config
+**The #1 silent-bug source:** a field can exist in the Sanity schema
+(`../sanity/schemaTypes/`) and be filled in the Studio, but if it isn't listed in
+the GROQ projection in `src/lib/sanity.ts`, it never reaches the page. Any schema
+change needs a matching query change here.
 
-**Production (Vercel):**
-- **URL**: `https://steffi.vercel.app`
-- **Base Path**: `/` (root - updated in `src/config.yaml`)
-- **Domain**: Custom Vercel domain (not subdirectory)
+Sanity is read with `useCdn: false`, so Studio edits appear on the next request.
 
-#### Key Configuration Files
+## i18n
 
-**`src/config.yaml`:**
-```yaml
-site:
-  name: STEFFI
-  site: 'https://steffi.vercel.app'  # Production URL
-  base: '/'                          # Root deployment
-  trailingSlash: false
+Three locales, `prefixDefaultLocale: false`:
+
+| Locale | URL prefix | Routes                 |
+| ------ | ---------- | ---------------------- |
+| `en`   | none       | `src/pages/*.astro`    |
+| `de`   | `/de`      | `src/pages/de/*.astro` |
+| `es`   | `/es`      | `src/pages/es/*.astro` |
+
+Each localized route calls the same helper with a different `language`. Add a
+section to one locale → populate the matching Sanity document in all three, or the
+page renders blank for the other two. Nav labels live in code
+(`src/navigation.ts`, `navigationLabels`), **not** in Sanity.
+
+## Layout of `src/` (quick map — full detail in `ARCHITECTURE.md`)
+
+```
+src/
+├── lib/sanity.ts        # Sanity client + all GROQ queries (source of truth for what renders)
+├── pages/               # routes; en at root, de/ and es/ subdirs, [...blog] dynamic blog
+├── components/widgets/  # page sections (Hero, Features, Steps, Pricing, FAQ, CTA, Footer…)
+├── components/{ui,common,blog}/
+├── layouts/             # Layout → PageLayout → {Markdown,Landing}Layout
+├── navigation.ts        # header/footer nav + per-locale labels (code, not CMS)
+├── config.yaml          # site metadata, SEO defaults, blog config  (see caveats)
+├── utils/               # blog, permalinks, image optimisation, frontmatter plugins
+└── data/post/           # blog posts (MDX) — still AstroWind template content
 ```
 
-**`astro.config.ts`:**
-```typescript
-export default defineConfig({
-  output: 'static',
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'de', 'es'],
-    routing: {
-      prefixDefaultLocale: false  # English at root: /
-    }
-  }
-})
-```
+## Environment
 
-**`vercel.json`:**
-```json
-{
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "headers": [
-    {
-      "source": "/_astro/(.*)",
-      "headers": [{
-        "key": "Cache-Control",
-        "value": "public, max-age=31536000, immutable"
-      }]
-    }
-  ]
-}
-```
+`.env` (and mirror in Vercel): `SANITY_PROJECT_ID`, `SANITY_DATASET`,
+`SANITY_API_VERSION`, `SANITY_TOKEN` (write token, only for scripts/migrations),
+`SANITY_READ_TOKEN`. Defaults are baked into `src/lib/sanity.ts` so reads work
+without a token; the client falls back to project `j1zdlt7i` / `production`.
 
-#### How URLs Work
+## Known cruft & launch blockers (flag, don't silently fix)
 
-**Local Development (`npm run dev`):**
-- `http://localhost:4321/` → English homepage
-- `http://localhost:4321/de/` → German homepage  
-- `http://localhost:4321/es/` → Spanish homepage
-- `http://localhost:4321/about` → English about page
-- `http://localhost:4321/de/about` → German about page
-
-**Production (Vercel):**
-- `https://steffi.vercel.app/` → English homepage
-- `https://steffi.vercel.app/de/` → German homepage
-- `https://steffi.vercel.app/es/` → Spanish homepage
-- `https://steffi.vercel.app/about` → English about page
-- `https://steffi.vercel.app/de/about` → German about page
-
-#### Deployment Process
-1. Push changes to `main` branch
-2. Vercel automatically detects changes via Git integration
-3. Builds the site using `npm run build`
-4. Deploys to Vercel edge network with custom domain
-5. Site updates at https://steffi.vercel.app
-
-#### Manual Build Testing
-```bash
-npm run build       # Build the site locally
-npm run preview     # Preview production build locally
-# The dist/ folder contains the built site
-# Vercel handles automatic deployment on push
-```
-
-### ⚙️ Configuration
-
-#### Main Configuration (src/config.yaml)
-- Site name: STEFFI
-- Base URL: /astrowind
-- Theme: light:only
-- Blog enabled with custom permalinks
-- Google site verification configured
-
-#### Important Files to Know
-- `src/config.yaml`: Main site configuration
-- `src/navigation.ts`: Navigation menu structure
-- `astro.config.ts`: Astro build configuration
-- `.github/workflows/actions.yaml`: GitHub Pages deployment
-
-### 🎨 Customization Points
-
-#### Styling
-- `src/assets/styles/tailwind.css`: Global styles
-- `src/components/CustomStyles.astro`: Custom CSS variables
-- `tailwind.config.js`: Tailwind configuration
-
-#### Content
-- `src/data/post/`: Blog posts (Markdown/MDX)
-- `src/pages/`: Static pages
-- `src/assets/images/`: Image assets
-
-### 📝 Current Project State
-
-#### Recent Changes
-- Migrated from GitHub Pages to Vercel deployment
-- Updated base path from `/astrowind` to root
-- Removed GitHub Actions workflow
-- Updated internal links and asset paths
-
-#### Deployment Status
-- Vercel deployment configured and working
-- Site live at https://steffi.vercel.app
-- Automatic deployment on push to main
-
-### 🚨 Important Notes
-
-1. **Always run checks before committing**: Use `npm run check` and fix issues
-2. **Base path**: Remember the `/astrowind` base path for internal links
-3. **Image optimization**: Use Astro's Image component for performance
-4. **Blog permalinks**: Currently set to `/%slug%` pattern
-5. **Node version**: Requires Node 18.17.1+ or 20.3.0+ or 21.0.0+
-
-### 🔍 Debugging Tips
-
-1. **Build errors**: Check `npm run check:astro` first
-2. **Styling issues**: Verify Tailwind classes and custom styles
-3. **Deployment issues**: Check Vercel deployment logs
-4. **404 errors**: Verify internal link paths
-5. **Image issues**: Ensure proper imports and optimization
-
-### 🎯 Common Tasks
-
-#### Adding a New Page
-1. Create file in `src/pages/`
-2. Use appropriate layout from `src/layouts/`
-3. Update navigation in `src/navigation.ts`
-
-#### Adding a Blog Post
-1. Create MDX/MD file in `src/data/post/`
-2. Include required frontmatter
-3. Use existing posts as templates
-
-#### Updating Site Metadata
-1. Edit `src/config.yaml`
-2. Update SEO defaults and social cards
-
-### 📚 Resources
-- [Astro Documentation](https://docs.astro.build)
-- [AstroWind Template](https://github.com/onwidget/astrowind)
-- [Tailwind CSS](https://tailwindcss.com/docs)
+- **`src/config.yaml` still ships AstroWind template defaults**: `site:
+'https://steffi.vercel.app'` (a subdomain this project does NOT own — a third
+  party serves an age-gate there), `metadata.title: AstroWind`, the rocket-emoji
+  description, `twitter.handle: '@onwidget'`, and `googleAnalytics.id: null`.
+  These are real pre-launch fixes. The live preview URL is
+  `https://astrowind-kappa-ten.vercel.app`; the production domain isn't chosen yet.
+- **Blog is live but unpopulated** — `src/data/post/` holds 6 AstroWind template
+  posts. Nav link, footer link, RSS (`rss.xml.ts`) and sitemap all advertise it.
+  Either curate or remove before launch.
+- **Template pages still shipped**: `src/pages/homes/*` and `src/pages/landing/*`
+  are AstroWind demo pages, unrelated to Steffi. Safe to delete.
+- **Contact is a raw `mailto:`** to `haberstock.stefanie@gmail.com` — no form, no
+  spam handling.
+- **`getPageContent`/`getAllPages` legacy fallback** in `src/lib/sanity.ts` query
+  `_type == "page"`, but the `page` document schema is NOT registered in
+  `../sanity/schemaTypes/index.ts` — so that path returns nothing. Live pages use
+  the page-specific helpers instead.
+- **Missing content-collection config** — `src/utils/blog.ts` calls
+  `getCollection('post')`, but there is no `src/content.config.ts` in the tree (it was
+  deleted in commit `979fc75`; the only copy is in `backups/`). The prerendered blog
+  won't build correctly until it's restored or the blog surface is removed.
+- One-off migration artifacts (`scripts/migrate-*.ts`, `sanity-content-export.*`,
+  `SANITY_MIGRATION_SUMMARY.md`, `corrected-*.json/.txt`) and the archival
+  `src/content/` JSON have been moved into `backups/`, which is now gitignored along
+  with `dist/` and `.vercel/`. `backups/` also holds the only copy of the content
+  config above — keep it.
+- `ONBOARDED` in this directory is a July-2025 doc describing the old GitHub
+  Pages / static setup — outdated, superseded by this file.
