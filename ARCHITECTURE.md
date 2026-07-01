@@ -208,11 +208,10 @@ Nesting: `Layout → PageLayout → {MarkdownLayout, LandingLayout}`.
 - Blog routes set `prerender = true` (statically generated even though the site is SSR).
 - `rss.xml.ts` emits the feed.
 
-> **⚠ Build risk:** `getCollection('post')` requires an Astro content-collection
-> config, but there is **no** `src/content.config.ts` / `src/content/config.ts` in the
-> tree — it was deleted in commit `979fc75` and now survives only under
-> `backups/decap-cms-backup-20250824/`. The prerendered blog will not build correctly
-> until this is restored (or the blog surface is removed). See §11.
+- **Collection config:** `src/content.config.ts` defines the `post` collection via a
+  `glob` loader over `src/data/post`. It lives at `src/` root (not inside the
+  gitignored `src/content/` dir) and was restored from the backup after being dropped
+  in commit `979fc75`; `npm run build` prerenders all posts successfully.
 
 ---
 
@@ -233,8 +232,6 @@ Nesting: `Layout → PageLayout → {MarkdownLayout, LandingLayout}`.
 
 ## 11. Known gaps & risks (flag — pre-existing, don't silently fix)
 
-- **Missing content-collection config** (§9) — blog build risk; only copy is in
-  `backups/`.
 - **`src/config.yaml` still has AstroWind template defaults** — `site:
 'https://steffi.vercel.app'` (a subdomain the project does **not** own),
   `metadata.title: AstroWind`, `twitter.handle: '@onwidget'`, `googleAnalytics.id: null`.

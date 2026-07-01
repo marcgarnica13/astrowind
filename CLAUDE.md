@@ -107,10 +107,6 @@ without a token; the client falls back to project `j1zdlt7i` / `production`.
   `_type == "page"`, but the `page` document schema is NOT registered in
   `../sanity/schemaTypes/index.ts` — so that path returns nothing. Live pages use
   the page-specific helpers instead.
-- **Missing content-collection config** — `src/utils/blog.ts` calls
-  `getCollection('post')`, but there is no `src/content.config.ts` in the tree (it was
-  deleted in commit `979fc75`; the only copy is in `backups/`). The prerendered blog
-  won't build correctly until it's restored or the blog surface is removed.
 - One-off migration artifacts (`scripts/migrate-*.ts`, `sanity-content-export.*`,
   `SANITY_MIGRATION_SUMMARY.md`, `corrected-*.json/.txt`) and the archival
   `src/content/` JSON have been moved into `backups/`, which is now gitignored along

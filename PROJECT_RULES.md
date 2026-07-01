@@ -39,6 +39,6 @@ demand). For ecosystem context, read the umbrella `../CLAUDE.md`.
 ## Flag, don't silently fix
 
 The pre-launch blockers in `ARCHITECTURE.md` §11 and the umbrella `../CLAUDE.md`
-"Open threads" (template `config.yaml` defaults, unpopulated blog + missing
-content-collection config, leftover `homes/`/`landing/` pages, raw `mailto:` contact,
-null analytics) are known. Surface them to the user rather than working around them.
+"Open threads" (template `config.yaml` defaults, unpopulated template blog, leftover
+`homes/`/`landing/` pages, raw `mailto:` contact, null analytics) are known. Surface
+them to the user rather than working around them.
