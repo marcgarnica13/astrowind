@@ -19,8 +19,7 @@
     "check:prettier": "prettier --check .",
     "fix": "npm run fix:eslint && npm run fix:prettier",
     "fix:eslint": "eslint --fix .",
-    "fix:prettier": "prettier -w .",
-    "migrate:sanity": "tsx scripts/migrate-to-sanity.ts"
+    "fix:prettier": "prettier -w ."
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.10",
